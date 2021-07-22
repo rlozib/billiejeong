@@ -243,10 +243,11 @@
         <li><a href="#sample8">08. do while문</a></li>
         <li><a href="#sample9">09. for문</a></li>
         <li><a href="#sample10">10. 중첩 for문</a></li>
-        <li><a href="#sample11">11. for in문</a></li>
-        <li><a href="#">12. for of</a></li>
-        <li><a href="#">13. break문</a></li>
-        <li><a href="#">14. continue문</a></li>
+        <li><a href="#sample11">11. forEach문</a></li>
+        <li><a href="#sample12">12. for in문</a></li>
+        <li><a href="#sample13">13. for of</a></li>
+        <li><a href="#sample14">14. break문</a></li>
+        <li><a href="#sample15">15. continue문</a></li>
     </ul>
 
     <hr>
@@ -481,7 +482,7 @@
 
     <!-- sample11-->
     <div id="sample11" class="sample">
-        <h2>11. for in문 <span class="dot"></span></h2>
+        <h2>11. forEach문 <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     
@@ -899,6 +900,31 @@
             document.write("<br>");
         }
 
+        //for문을 이용해서 화면에 1부터 100까지 출력
+        {
+            for( let i=1; i<=100; i++ ){
+                document.write(i);
+            } 
+            document.write("<br><br>");
+        }
+
+        //for문을 이용해서 화면에 1부터 100까지 출력 (짝수만 출력)
+        {
+            // a + b
+            // a - b
+            // a * b
+            // a / b
+            // a % b
+
+            let i
+            for( let i=1; i<=100; i++ ){
+                document.write(i);
+
+                
+            } 
+            document.write("<br><br>");
+        }
+
         //sample101 : 테이블 만들기
         {   
             document.write("*** 101. 테이블 만들기 ***<br>");
@@ -945,28 +971,13 @@
             document.write("<br>");
         }
 
-        //sample102 : 테이블 만들기2
+        //sample103 : 테이블 만들기3
         //짝수만 나오게
         {   
 
             document.write("*** 102. 테이블 만들기3 ***<br>");
 
-            let num = 100;
-            let table = "<table>";
-
-            for( let i=1; i<=10; i++ ){
-                table += "<tr>";
-                    for( let j=1; j<=10; j++ ){ 
-                    table += "<td>" + num + "</td>";
-                    num -= 1;
-                }
-                table += "</tr>";
-            }
-
-            table += "</table>";
-                
-            document.write(table);
-            document.write("<br>");
+            
             }
     </script>
 </body>
