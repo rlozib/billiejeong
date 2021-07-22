@@ -323,13 +323,13 @@
     <hr>
 
     <!-- sample5-->
-    <div id="sample4" class="sample">
+    <div id="sample5" class="sample">
         <h2>05. 1부터 100까지 합 출력하기  <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     let sum = 0;
 
-    for(let i=1; i<=100; i++){
+    for(let i=1; i&lt;=100; i++){
         //sum = sum + i;
         sum += i;
     }
@@ -399,7 +399,8 @@
         table += "&lt;tr&gt;";
             for( let j=1; j&lt;=10; j++ ){ 
             table += "&lt;td&gt;" + num + "&lt;/td&gt;";
-            num -= 1;
+            num--;
+            //num -= 1;
         }
         table += "&lt;/tr&gt;";
     }
@@ -582,7 +583,8 @@
                 table += "<tr>";
                     for( let j=1; j<=10; j++ ){ 
                     table += "<td>" + num + "</td>";
-                    num -= 1;
+                    num--;
+                    //num -= 1;
                 }
                 table += "</tr>";
             }
@@ -599,8 +601,23 @@
 
             document.write("*** 09. 테이블 만들기3 ***<br>");
 
-            
+            let table = "<table>";
+
+            for( let i=1; i<=100; i++ ){
+                table += "<tr>";
+                    if( i%2==0 ){ 
+                    table += "<td>" + i + "</td>";
+                }
+                table += "</tr>";
             }
+            
+            table += "</table>";
+                
+            document.write(table);
+            document.write("<br>");
+        }
+        
+            
 
     </script>
 </body>
