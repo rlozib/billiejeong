@@ -680,7 +680,7 @@
 
     <!-- sample102-->
     <div id="sample102" class="sample">
-        <h2>102. 역순 테이블 만들기 <span class="dot"></span></h2>
+        <h2>102. 테이블 만들기2 <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     let num = 100;
@@ -888,6 +888,8 @@
             // 2 * 8 = 16;
             // 2 * 9 = 18;
 
+            document.write("*** 100. 구구단 만들기 ***<br>");
+
             for(var i=2; i<=9; i++){
                 for(var j=1; j<=9; j++){
                     var sum = i * j;
@@ -899,6 +901,8 @@
 
         //sample101 : 테이블 만들기
         {   
+            document.write("*** 101. 테이블 만들기 ***<br>");
+
             let num = 1;
             let table = "<table>";
 
@@ -918,8 +922,11 @@
             document.write("<br>");
         }
 
-        //sample102 : 테이블 역순 만들기
+        //sample102 : 테이블 만들기2
         {   
+
+            document.write("*** 102. 테이블 만들기2 ***<br>");
+
             let num = 100;
             let table = "<table>";
 
@@ -935,7 +942,32 @@
             table += "</table>";
                 
             document.write(table);
+            document.write("<br>");
         }
+
+        //sample102 : 테이블 만들기2
+        //짝수만 나오게
+        {   
+
+            document.write("*** 102. 테이블 만들기3 ***<br>");
+
+            let num = 100;
+            let table = "<table>";
+
+            for( let i=1; i<=10; i++ ){
+                table += "<tr>";
+                    for( let j=1; j<=10; j++ ){ 
+                    table += "<td>" + num + "</td>";
+                    num -= 1;
+                }
+                table += "</tr>";
+            }
+
+            table += "</table>";
+                
+            document.write(table);
+            document.write("<br>");
+            }
     </script>
 </body>
 
