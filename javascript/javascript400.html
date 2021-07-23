@@ -431,32 +431,31 @@
     <hr>
 
      <!-- sample9-->
-     <div id="sample8" class="sample">
+     <div id="sample9" class="sample">
         <h2>09. 테이블 만들기3 <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
+    let num = 2;
+    let table = "&lt;table&gt;";
 
+    for( let i=1; i&lt;=10; i++ ){
+        table += "&lt;tr&gt;";
+            for( let j=1; j&lt;=10; j++ ){ 
+            table += "&lt;td&gt;" + num + "&lt;/td&gt;";
+            num += 2;
+        }
+        table += "&lt;/tr&gt;";
+    }
+    
+    table += "&lt;/table&gt;";
+        
+    document.write(table);
 }
 </code></pre>
         </div>
     </div>
     <!-- sample9-->
     <hr>
-
-     <!-- sample10-->
-     <div id="sample10" class="sample">
-        <h2>10 <span class="dot"></span></h2>
-        <div class="code">
-<pre class="line-numbers"><code class="language-js">{
-
-}
-</code></pre>
-        </div>
-    </div>
-    <!-- sample10-->
-    <hr>
-
-    
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
