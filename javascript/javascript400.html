@@ -211,22 +211,37 @@
             border: 1px solid #989898;
             padding: 5px;
         }
+        .ol1::before{
+            content: "데이터 저장하기 : ";
+        }
+        .ol2::before{
+            content: "데이터 불러오기 : ";
+        }
+        .ol3::before{
+            content: "데이터 실행하기 : ";
+        }
+        .ol4::before{
+            content: "데이터 제어하기 : ";
+        }
     </style>
 </head>
 
 <body>
 
     <h1>Javascript 문법 정리</h1>
-    <ol>
+    <ol class="ol1">
         <li><a href="javascript100.html">변수</a></li>
         <li><a href="javascript100.html">상수</a></li>
         <li><a href="javascript100.html">배열(Array)</a></li>
         <li><a href="javascript100.html">객체(Object)</a></li>
     </ol>
-    <ol>
+    <ol class="ol2">
+        <li><a href="javascript500.html">데이터</a></li>
+    </ol>
+    <ol class="ol3">
         <li><a href="javascript300.html">함수(function)</a></li>
     </ol>
-    <ol>
+    <ol class="ol4">
         <li><a href="javascript200.html">조건문</a></li>
         <li><a href="javascript200.html">반복문</a></li>
     </ol>
@@ -310,9 +325,9 @@
 <pre class="line-numbers"><code class="language-js">{
     for(let i=1; i&lt;=100; i++){
         if( i % 2 == 0){
-            document.write("<span style='color:red'> "+ i + " </span>");
+            document.write("&lt;span style='color:red'&gt; "+ i + " &lt;/span&gt;");
         } else {
-            document.write("<span style='color:blue'> "+ i + " </span>"); 
+            document.write("&lt;span style='color:blue'&gt; "+ i + " &lt;/span&gt;"); 
         }
     }
 }
