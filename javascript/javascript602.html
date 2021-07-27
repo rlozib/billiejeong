@@ -248,11 +248,10 @@
             padding-right: 5px;
             padding-bottom: 11px;
             padding-left: 5px; */
-            padding: 13px 5px 11px 5px; 위/오른쪽/아래/왼쪽
+            /* padding: 13px 5px 11px 5px; 위/오른쪽/아래/왼쪽
             padding: 13px 5px 11px;     위:13px /왼쪽.오른쪽: 5px / 아래:11px
             padding: 13px 5px;          위.아래:13px / 왼쪽.오른쪽: 5px
-            padding: 13px;              위/오른쪽/아래/왼쪽:13px
-            */
+            padding: 13px;              위/오른쪽/아래/왼쪽:13px */
         }
         .view table td{
             border: 1px solid #e6e6e6;
@@ -555,7 +554,7 @@
 
     <!-- sample05-->
     <div id="sample05" class="sample">
-        <h2>05. 문자열 메서드 : indexOf() / lastIndexOf() / search() : 문자열 검색하기 : 반환(숫자) <span class="dot"></span></h2>
+        <h2>05. 문자열 메서드 : indexOf() / lastIndexOf() / search() / includes() / startsWith() / endsWith() : 문자열 검색하기 : 반환(숫자, 불린) <span class="dot"></span></h2>
         <div class="view">
             <table>
                 <colgroup>
@@ -644,7 +643,62 @@
         </div>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
+    const str = "자바스크립트(javascript) 공부"; 
+
+    const text1 = str.indexOf("javascript");
+
+    document.querySelector(".sample05_Q1").innerHTML = str;
+    document.querySelector(".sample05_R1").innerHTML = text1;
+
+    const text2 = str.indexOf("자바스크립트");
     
+    document.querySelector(".sample05_Q2").innerHTML = str;
+    document.querySelector(".sample05_R2").innerHTML = text2;
+
+    const text3 = str.indexOf("제이쿼리");
+
+    document.querySelector(".sample05_Q3").innerHTML = str;
+    document.querySelector(".sample05_R3").innerHTML = text3;
+
+    const text4 = str.indexOf("a");
+
+    document.querySelector(".sample05_Q4").innerHTML = str;
+    document.querySelector(".sample05_R4").innerHTML = text4;
+
+    const text5 = str.lastIndexOf("a");
+
+    document.querySelector(".sample05_Q5").innerHTML = str;
+    document.querySelector(".sample05_R5").innerHTML = text5;
+
+    const text6 = str.search(/javascript/);
+
+    document.querySelector(".sample05_Q6").innerHTML = str;
+    document.querySelector(".sample05_R6").innerHTML = text6;
+
+    const text7 = str.search(/jquery/);
+
+    document.querySelector(".sample05_Q7").innerHTML = str;
+    document.querySelector(".sample05_R7").innerHTML = text7;
+
+    const text8 = str.includes("javascript");
+
+    document.querySelector(".sample05_Q8").innerHTML = str;
+    document.querySelector(".sample05_R8").innerHTML = text8;
+
+    const text9 = str.includes("jquery");
+
+    document.querySelector(".sample05_Q9").innerHTML = str;
+    document.querySelector(".sample05_R9").innerHTML = text9;
+
+    const text10 = str.startsWith("자바스크립트");
+
+    document.querySelector(".sample05_Q10").innerHTML = str;
+    document.querySelector(".sample05_R10").innerHTML = text10;
+
+    const text11 = str.endsWith("javascript");
+
+    document.querySelector(".sample05_Q11").innerHTML = str;
+    document.querySelector(".sample05_R11").innerHTML = text11;
 }
 </code></pre>
         </div>
@@ -750,7 +804,7 @@
         }
 
         //sample05
-        //05. 문자열 메서드 : indexOf() / lastIndexOf() / search() : 문자열 검색하기 : 반환(숫자)
+        //05. 문자열 메서드 : indexOf() / lastIndexOf() / search() / search() / includes() / startsWith() / endsWith() : 문자열 검색하기 : 반환(숫자, 불린)
         //문자열의 인덱스 위치를 반환, 문자열의 첫 번째 문자의 위치는 0, 다섯번째 4
         //문자열이 없는 경우는 -1
         //영문 대소문자 구별하여 검색
