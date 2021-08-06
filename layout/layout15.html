@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 연습15</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #e3f2fd;
+        }
+        #wrap{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        header{
+            width: 100%;
+            height: 100px;
+            background-color: #bbdefb;
+        }
+        main{
+            width: 100%;
+            overflow: hidden;
+        }
+        nav{
+            width: 100%;
+            height: 100px;
+            background-color: #90caf9;
+        }
+        aside{
+            width: 20%;
+            height: 750px;
+            background-color: #64b5f6;
+            float: left;
+        }
+        address{
+            width: 80%;
+            height: 250px;
+            background-color: #42a5f5;
+            float: left;
+        }
+        section{
+            width: 80%;
+            height: 250px;
+            background-color: #2196f3;
+            float: left;
+        }
+        article{
+            width: 80%;
+            height: 250px;
+            background-color: #1e88e5;
+            float: left;
+        }
+        footer{
+            width: 100%;
+            height: 100px;
+            background-color: #1976d2;
+        }
+        @media (max-width: 1220px){
+            #wrap{
+                width: 100%;
+            }
+            aside{
+                height: 500px;
+            }
+            address{
+                height: 250px;
+            }
+            section{
+                height: 250px;
+            }
+            article{
+                width: 100%;
+                height: 200px;
+            }
+        }
+        @media (max-width: 600px){
+            aside{
+                width: 100%;
+                height: 100px;
+            }
+            address{
+                width: 100%;
+                height: 250px;
+            }
+            section{
+                width: 100%;
+                height: 100px;
+            }
+            article{
+                width: 100%;
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header></header>
+        <main>
+            <nav></nav>
+            <aside></aside>
+            <address></address>
+            <section></section>
+            <article></article>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+</html>
