@@ -181,14 +181,6 @@
         }
         .view table th{
             padding: 13px 5px 11px 5px;
-            /* padding-top: 13px;
-            padding-right: 5px;
-            padding-bottom: 11px;
-            padding-left: 5px; */
-            /* padding: 13px 5px 11px 5px; 위/오른쪽/아래/왼쪽
-            padding: 13px 5px 11px;     위:13px /왼쪽.오른쪽: 5px / 아래:11px
-            padding: 13px 5px;          위.아래:13px / 왼쪽.오른쪽: 5px
-            padding: 13px;              위/오른쪽/아래/왼쪽:13px */
         }
         .view table td{
             border: 1px solid #e6e6e6;
@@ -258,7 +250,9 @@
                 max-width: 800px;
                 overflow: auto;
             }
-            .view th{
+            .view th,
+            .view table td{
+                white-space: nowrap;
                 font-weight: normal;
             }
             .view table td.result {
@@ -1168,12 +1162,6 @@
                         <td class="sample11_Q4"></td>
                         <td class="sample11_M4"></td>
                         <td class="sample11_R4 result"></td>
-                    </tr>
-                    <tr>
-                        <td class="sample11_N5"></td>
-                        <td class="sample11_Q5"></td>
-                        <td class="sample11_M5"></td>
-                        <td class="sample11_R5 result"></td>
                     </tr>
                 </tbody>
             </table>
