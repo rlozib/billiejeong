@@ -484,7 +484,7 @@
     </script>
     <!-- //sample01 -->
 
-    <!-- sample01 -->
+    <!-- sample01j -->
     <div id="sample1j" class="sample">
         <h2>01. 기본 선택자 - javascript <span class="dot"></span></h2>
         <div class="view view1j">
@@ -514,13 +514,14 @@
     <hr>
     <script>
         const btn1 = document.querySelector(".btn1-1j"); //선택자를 변수에 저장
-        const class = document.querySelector(".class")
+        const btn1 = document.querySelector(".view1j, .class"); //선택자를 변수에 저장
+        //const cla = document.querySelector(".class")
         
         btn1.addEventListener("click", function(){  //버튼을 클릭하면 함수를 실행
-            
+            cla.classList.add("red")
         });
     </script>
-    <!-- //sample01 -->
+    <!-- //sample01j -->
 
     
 
