@@ -25,26 +25,26 @@ body {
 }
 
 /* float을 이용한 레이아웃 */
-/* .card-warp {
+/* .card-wrap {
     overflow: hidden;
 }
-.card-warp > div {
+.card-wrap > div {
     float: left;
     width: 387px;
     margin-right: 19px;
 }
-.card-warp > div:last-child {
+.card-wrap > div:last-child {
     margin-right: 0;
 } */
 
 
 /* flex를 이용한 레이아웃 */
 
-.cardType01 .card-warp {
+.cardType01 .card-wrap {
     display: flex;
     justify-content: space-between;
 }
-.cardType01 .card-warp > div {
+.cardType01 .card-wrap > div {
     width: 387px;
 }
 .cardType01 .card {}
@@ -73,9 +73,6 @@ body {
 /* //cardType01 */
 
 /* cardType02 */
-
-/* //cardType02 */
-
 .cardType02 {
     padding: 150px 0;
     font-family: 'S-CoreDream';
@@ -128,5 +125,100 @@ body {
     border: solid 1px #000;
     background-color: #000;
     color: #fff;
-    padding : 4px 14px 3px 15px;
+    padding : 4px 14px;
 }
+/* //cardType02 */
+
+/* cardType03 */
+.cardType03 {
+    padding: 90px 0;
+    font-family: 'S-CoreDream';
+}
+.cardType03 h2 {
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 22px;
+}
+.cardType03 p {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 30px;
+    display: inline;
+    
+}
+.cardType03 .index {
+    float: right;
+    margin:  0 33px 204px;
+    font-size: 14px;
+    font-weight: 300;
+    display: inline-block;
+    
+}
+.cardType03 .card-wrap {
+    overflow: hidden;
+}
+.cardType03 .card-wrap .card {
+    width: 100%;
+}
+.cardType03 .card-wrap .card .card-img {
+    display: inline-block;
+    width: 285px;
+    height: 185px;
+    margin: 30px 19px 30px 3px;
+    object-fit: contain;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.cardType03 .card-wrap .card .card-word1 {
+    display: inline-block;
+    margin: 46px 716px 9px 20px;
+    padding: 4px 14px 3px 15px;
+    border-radius: 20px;
+    background-color: #ff5151;
+    color: #fff;
+    font-size: 10px;
+}
+.cardType03 .card-wrap .card .card-word2 {
+    display: inline-block;
+    margin: 46px 716px 9px 20px;
+    padding: 4px 14px 3px 15px;
+    border-radius: 20px;
+    background-color: #5465ff;
+    color: #fff;
+    font-size: 10px;
+}
+.cardType03 .card-wrap .card .card-word3 {
+    display: inline-block;
+    margin: 46px 716px 9px 20px;
+    padding: 4px 14px 3px 15px;
+    border-radius: 20px;
+    background-color: #ff5151;
+    color: #fff;
+    font-size: 10px;
+}
+.cardType03 .card-wrap .card .card-word4 {
+    display: inline-block;
+    margin: 46px 716px 9px 20px;
+    padding: 4px 14px 3px 15px;
+    border-radius: 20px;
+    background-color: #11c865;
+    color: #fff;
+    font-size: 10px;
+}
+.cardType03 .card-wrap .card .card-title {
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+}
+.cardType03 .card-wrap .card .card-desc {
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+}
+.cardType03 .card-wrap .card .date {
+    display: block;
+    font-size: 12px;
+    font-weight: 200;
+    text-decoration: underline;
+}
+/* //cardType03 */
