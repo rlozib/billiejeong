@@ -131,94 +131,85 @@ body {
 
 /* cardType03 */
 .cardType03 {
-    padding: 90px 0;
-    font-family: 'S-CoreDream';
+    padding: 100px 0;
+    font-family: "NanumSquare";
+    position: relative;
 }
 .cardType03 h2 {
     font-size: 50px;
     font-weight: 800;
-    margin-bottom: 22px;
+    margin-bottom: 4px;
 }
 .cardType03 p {
-    font-size: 16px;
-    font-weight: 300;
-    margin-bottom: 30px;
-    display: inline;
-    
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.28;
+    margin-bottom: 50px;
 }
-.cardType03 .index {
-    float: right;
-    margin:  0 33px 204px;
-    font-size: 14px;
-    font-weight: 300;
-    display: inline-block;
-    
+.cardType03 .popular {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.28;
+    position: absolute;
+    right: 0;
+    top: 180px;   
 }
-.cardType03 .card-wrap {
-    overflow: hidden;
+.cardType03 .popular a {
+    margin-right: 20px;
 }
+.cardType03 .card-wrap {}
+.cardType03 .card-wrap ul {}
 .cardType03 .card-wrap .card {
-    width: 100%;
+    margin-bottom: 50px;
 }
+
 .cardType03 .card-wrap .card .card-img {
-    display: inline-block;
     width: 285px;
     height: 185px;
-    margin: 30px 19px 30px 3px;
-    object-fit: contain;
-    border-radius: 10px;
-    box-sizing: border-box;
+    position: absolute;
 }
-.cardType03 .card-wrap .card .card-word1 {
-    display: inline-block;
-    margin: 46px 716px 9px 20px;
-    padding: 4px 14px 3px 15px;
-    border-radius: 20px;
-    background-color: #ff5151;
-    color: #fff;
-    font-size: 10px;
+.cardType03 .card-wrap .card .right {
+    padding-left: 305px;
 }
-.cardType03 .card-wrap .card .card-word2 {
-    display: inline-block;
-    margin: 46px 716px 9px 20px;
-    padding: 4px 14px 3px 15px;
-    border-radius: 20px;
-    background-color: #5465ff;
-    color: #fff;
-    font-size: 10px;
-}
-.cardType03 .card-wrap .card .card-word3 {
-    display: inline-block;
-    margin: 46px 716px 9px 20px;
-    padding: 4px 14px 3px 15px;
-    border-radius: 20px;
-    background-color: #ff5151;
-    color: #fff;
-    font-size: 10px;
-}
-.cardType03 .card-wrap .card .card-word4 {
-    display: inline-block;
-    margin: 46px 716px 9px 20px;
-    padding: 4px 14px 3px 15px;
-    border-radius: 20px;
-    background-color: #11c865;
-    color: #fff;
-    font-size: 10px;
-}
-.cardType03 .card-wrap .card .card-title {
-    display: block;
-    font-size: 20px;
-    font-weight: 500;
-}
-.cardType03 .card-wrap .card .card-desc {
-    display: block;
+.cardType03 .card-wrap .card .right .card-cate {
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 800;
+    padding: 4px 14px 3px 15px;
+    color: #fff;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    display: inline-block;
 }
-.cardType03 .card-wrap .card .date {
+.cardType03 .card-wrap .card .right .card-cate.red {
+    background: #ff5151;
+}
+.cardType03 .card-wrap .card .right .card-cate.blue {
+    background: #5465ff;
+}
+.cardType03 .card-wrap .card .right .card-cate.green {
+    background: #11c865;
+}
+.cardType03 .card-wrap .card .right .card-title {
     display: block;
-    font-size: 12px;
-    font-weight: 200;
-    text-decoration: underline;
+    font-weight: bold;
+    font-size: 26px;
 }
+.cardType03 .card-wrap .card .right .card-desc {
+    height: 75px;
+    font-size: 16px;
+    line-height: 1.53;
+    color: #555;
+    font-weight: 300;
+    margin-bottom: 17px;
+}
+.cardType03 .card-wrap .card .right .card-date {
+    display: block;
+    color: #555;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.4;
+    text-decoration: underline;
+    margin-top: 10px;
+}
+
 /* //cardType03 */
