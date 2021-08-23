@@ -47,6 +47,7 @@ body {
 .imageType01 .card-wrap .card .inner .image-desc {
     font-size: 14px;
     font-weight: 500;
+    line-height: 1.4;
     margin-top: 6px;
     margin-bottom: 14px;
     display: block;
