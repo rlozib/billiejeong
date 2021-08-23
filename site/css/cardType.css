@@ -7,6 +7,7 @@ body {
     background-color: #fff;
     box-shadow: 0 0 50px rgba(0,0,0,0.1);
 }
+
 /* cardType01 */
 .cardType01 {
     font-family: 'GmarketSans';
@@ -174,6 +175,7 @@ body {
 .cardType03 .card-wrap .card .right .card-cate {
     font-size: 14px;
     font-weight: 800;
+    font-style: normal;
     padding: 4px 14px 3px 15px;
     color: #fff;
     border-radius: 20px;
@@ -213,3 +215,4 @@ body {
 }
 
 /* //cardType03 */
+
