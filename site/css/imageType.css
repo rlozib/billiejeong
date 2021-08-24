@@ -123,3 +123,14 @@ body {
     display: block;
 }
 /* //imageType02 */
+
+/* //imageType03 */
+.imageType03 {
+    font-family: "GmarketSans";
+    font-weight: 500;
+}
+.imageType03 h2 {
+    font-size: 50px;
+    font-weight: 500;
+}
+/* //imageType03 */
