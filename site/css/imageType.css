@@ -10,60 +10,65 @@ body {
 /* imageType01 */
 .imageType01 {
     padding: 100px 0;
-    font-family: 'GmarketSans';
-    overflow: hidden;
+    font-family: 'GmarketSans';  
 }
 .imageType01 h2 {
     font-size: 50px;
     font-weight: 500;
-    margin-bottom: 40px;
+    margin-bottom: 36px;
 }
-.imageType01 .card-wrap {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    margin-top: 20px;
-    margin-bottom: 100px;
+.imageType01 .image-wrap {
+    overflow: hidden;
 }
-.imageType01 .card-wrap .card{
+.imageType01 .image {
     position: relative;
-}
-.imageType01 .card-wrap .card .card-img{
+    float: left;
     width: 590px;
     height: 385px;
 }
-.imageType01 .card-wrap .card .inner{
-    color: #fff;
-    position: absolute;
-    width: 400px;
-    bottom: 45px;
-    left: 30px;
+.imageType01 .image:first-child {
+    margin-right: 20px;
 }
-.imageType01 .card-wrap .card .inner .image-title {
+
+.imageType01 .image .image-cont {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    color: #fff;
+}
+.imageType01 .image .image-title {
     font-size: 30px;
     font-weight: 500;
-    display: inline-block;
+    margin-bottom:7px;
 }
-.imageType01 .card-wrap .card .inner .image-desc {
+.imageType01 .image .image-desc {
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 300;
+    padding-right: 30%;
     line-height: 1.4;
-    margin-top: 6px;
-    margin-bottom: 14px;
-    display: block;
-    overflow: hidden;   /* 두줄 효과 */
-    display: -webkit-box; /* 벤터 프리픽스 */
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+    word-break: keep-all;
 }
-.imageType01 .card-wrap .card .inner .image-btn {
-    font-size: 14px;
-    font-weight: 500;
-    color: #fff;
-    margin-bottom: 30px;
-    padding: 8px 18px 7px;
+.imageType01 .image .image-btn {
+    padding: 8px 18px;
     background-color: rgba(47, 35, 35, 0.67);
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 10px;
 }
+.imageType01 .image .image-cont.s2 {
+    background-color: rgba(47, 35, 35, 0.67);
+    width: 400px;
+    padding: 20px;
+}
+.imageType01 .image .image-cont.s2 .image-desc {
+    padding-right: 0;
+}
+.imageType01 .image .image-cont.s2 .image-btn {
+    padding: 0;
+    border-bottom: 1px solid #fff;
+}
+
 /* //imageType01 */
 
 /* imageType02 */
