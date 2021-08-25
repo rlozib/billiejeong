@@ -836,15 +836,35 @@
 
     document.querySelector(".sample10_R2").innerHTML = text2;
 
-    const num3 = "7";
-    const text3 = num3.padEnd(2, '0');
+    const num3 = "abc";
+    const text3 = num3.padStart(3, '0');
 
     document.querySelector(".sample10_R3").innerHTML = text3;
 
-    const num4 = "456";
-    const text4 = num4.padEnd(6, '123');
+    const num4 = "abc";
+    const text4 = num4.padStart(6);
 
-    document.querySelector(".sample10_R4").innerHTML = text4;
+    document.querySelector(".sample10_R4").innerHTML = "&lt;pre&gt;'" + text4 + "'&lt;pre&gt;";
+
+    const num5 = "7";
+    const text5 = num5.padEnd(2, '0');
+
+    document.querySelector(".sample10_R5").innerHTML = text5;
+
+    const num6 = "456";
+    const text6 = num6.padEnd(6, '123');
+
+    document.querySelector(".sample10_R6").innerHTML = text6;
+
+    const num7 = "abc";
+    const text7 = num7.padEnd(3, '0');
+
+    document.querySelector(".sample10_R7").innerHTML = text7;
+
+    const num8 = "abc";
+    const text8 = num8.padEnd(6);
+
+    document.querySelector(".sample10_R8").innerHTML = "&lt;pre&gt;'" + text8 + "'&lt;pre&gt;";
 }
 </code></pre>
         </div>
@@ -1314,7 +1334,7 @@
             document.querySelector(".sample10_N4").innerHTML = "4";
             document.querySelector(".sample10_Q4").innerHTML = num4;
             document.querySelector(".sample10_M4").innerHTML = ".padStart(6)";
-            document.querySelector(".sample10_R4").innerHTML = "<pre>" + text4 + "<pre>";
+            document.querySelector(".sample10_R4").innerHTML = "<pre>'" + text4 + "'<pre>";
 
             const num5 = "7";
             const text5 = num5.padEnd(2, '0');
@@ -1346,7 +1366,7 @@
             document.querySelector(".sample10_N8").innerHTML = "8";
             document.querySelector(".sample10_Q8").innerHTML = num8;
             document.querySelector(".sample10_M8").innerHTML = ".padEnd(6)";
-            document.querySelector(".sample10_R8").innerHTML = "<pre>" + text8 + "<pre>";
+            document.querySelector(".sample10_R8").innerHTML = "<pre>'" + text8 + "'<pre>";
         }
 
         //sample11
