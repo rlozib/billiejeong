@@ -100,12 +100,20 @@
             document.write(y, "&nbsp");
             document.write(z, "&nbsp");
 
-            document.querySelector(".sampleR").addEventListener("click", ()=>{
-               document.querySelector(".sampleR_Open").toggle.innerHTML = ".sampleR";
-            });
-            
+            const btn1 = document.querySelector(".sampleR");
+            const btn2 = document.querySelector(".sampleR");
+            const btn3 = document.querySelector(".sampleR");
+            const btn4 = document.querySelector(".sampleR");
 
-
+            btn1.addEventListener("click", () => {
+            document.querySelector(".sampleR_Open").classList.toggle("sampleR_Open").innerHTML = btn1;
+            btn2.addEventListener("click", () => {
+            document.querySelector(".sampleR_Open").classList.toggle(x).innerHTML = btn2;
+            btn3.addEventListener("click", () => {
+            document.querySelector(".sampleR_Open").classList.toggle(y).innerHTML = btn3;
+            btn4.addEventListener("click", () => {
+            document.querySelector(".sampleR_Open").classList.toggle(z).innerHTML = btn4;
+        });
         </script>
     </div>
     <hr>

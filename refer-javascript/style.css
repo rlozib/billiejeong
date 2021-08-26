@@ -58,13 +58,12 @@ a {
     background-color: #f2f2f2;
     border-radius: 5px 5px 0 0;
     padding: 10px;
-    
+    display: inline-block;  
 }
 .sampleR_Open{
     background-color: #333;
     color: #fff;
-    padding: 10px;
-    
+    padding: 10px;   
 }
 .sample h2 {
     position: relative;
