@@ -34,11 +34,11 @@ hr {
     border-width: 0px;
     border-bottom-width: 1px;
 }
-/* img {
+img {
     vertical-align: top;
     border-radius: 5px;
-    margin: 5px;
-} */
+    margin: 0;
+}
 ul {
     list-style: none;
 }
@@ -53,17 +53,6 @@ a {
     border: 1px solid #e6e6e6;
     border-radius: 5px;
     margin-bottom: 10px;
-}
-.Rbtn {
-    background-color: #f2f2f2;
-    border-radius: 5px 5px 0 0;
-    padding: 10px;
-    display: inline-block;  
-}
-.sampleR_Open{
-    background-color: #333;
-    color: #fff;
-    padding: 10px;   
 }
 .sample h2 {
     position: relative;
@@ -275,6 +264,28 @@ a {
     color: #fff;
     border-style: solid;
 }
+.result h3 {
+    font-size: 16px;
+    padding: 10px 15px;
+    background: #f2f2f2;
+    display: inline-block;
+    border-radius: 5px 5px 0 0;
+    margin-top: 5px;
+}
+.result h3:hover {
+    cursor: pointer;
+}
+.result .key {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 0 5px 5px 5px;
+    display: none;
+    box-sizing: border-box;
+}
+.result .key.open {
+    display: block;
+}
 @media (max-width: 800px){
     body{
         padding: 5%;
@@ -282,6 +293,7 @@ a {
     }
     h1{
         text-align: center;
+        margin-top: 20px;
     }
     .sample h2{
         font-size: 14px;
@@ -323,5 +335,9 @@ a {
     }
     .sample pre {
         font-size: 14px;
+    }
+    .btn a{
+        width: 80%;
+        font-size: 11px;
     }
 }
