@@ -87,7 +87,9 @@
 </code></pre>
         </div>
     </div>
-    <div class="sampleR">결과보기</div>
+    <div class="Rbtn">
+        <a href="#c" class="sampleR">결과보기</a>
+    </div>
     <div class="sampleR_Open">
         <script>
             var x = 100; //변수 x에 숫자 100을 저장
@@ -99,7 +101,7 @@
             document.write(z, "&nbsp");
 
             document.querySelector(".sampleR").addEventListener("click", ()=>{
-               document.querySelector(".sampleR_Open").innerHTML
+               document.querySelector(".sampleR_Open").toggle.innerHTML = ".sampleR";
             });
             
 
