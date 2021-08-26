@@ -87,9 +87,26 @@
 </code></pre>
         </div>
     </div>
+    <div class="sampleR">결과보기</div>
+    <div class="sampleR_Open">
+        <script>
+            var x = 100; //변수 x에 숫자 100을 저장
+            var y = 200; //변수 y에 숫자 200을 저장
+            var z = "javascript"; //변수 z에 문자 javascript 저장
 
+            document.write(x, "&nbsp");
+            document.write(y, "&nbsp");
+            document.write(z, "&nbsp");
+
+            document.querySelector(".sampleR").addEventListener("click", ()=>{
+               document.querySelector(".sampleR_Open").innerHTML
+            });
+            
+
+
+        </script>
+    </div>
     <hr>
-
     <div id="sample2" class="sample">
         <h2>02. 변수 : 데이터 저장 + 데이터 변경<span class="dot"></span></h2>
         <div class="code">
