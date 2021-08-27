@@ -280,7 +280,26 @@
         </div>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-   
+    const date = Date.parse("2021/8/11");
+
+    document.querySelector(".sample03_N1").innerHTML = "1";
+    document.querySelector(".sample03_Q1").innerHTML = "2021/8/11";
+    document.querySelector(".sample03_M1").innerHTML = "Date.parse()";
+    document.querySelector(".sample03_R1").innerHTML = date;
+
+    const date2 = Date.parse("8 11 2021");
+
+    document.querySelector(".sample03_N2").innerHTML = "2";
+    document.querySelector(".sample03_Q2").innerHTML = "8 11 2021";
+    document.querySelector(".sample03_M2").innerHTML = "Date.parse()";
+    document.querySelector(".sample03_R2").innerHTML = date2;
+
+    const date3 = Date.now();
+
+    document.querySelector(".sample03_N3").innerHTML = "3";
+    document.querySelector(".sample03_Q3").innerHTML = "";
+    document.querySelector(".sample03_M3").innerHTML = "Date.now()";
+    document.querySelector(".sample03_R3").innerHTML = date3; 
 }
 </code></pre>
         </div>
@@ -415,7 +434,6 @@
             document.querySelector(".sample03_Q3").innerHTML = "";
             document.querySelector(".sample03_M3").innerHTML = "Date.now()";
             document.querySelector(".sample03_R3").innerHTML = date3;
-
         }
     </script>
 </body>
