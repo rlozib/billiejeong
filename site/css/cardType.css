@@ -93,7 +93,6 @@ body {
 .cardType02 .card-wrap {
     display: flex;
 }
-.cardType02 .card-wrap .card{}
 .cardType02 .card-wrap .card{
     width: 285px;
     height: 356px;
@@ -216,3 +215,41 @@ body {
 
 /* //cardType03 */
 
+/* cardType04 */
+.cardType04 {
+    font-family: 'NEXONLv2Gothic';
+    padding: 100px 0;
+}
+.cardType04 h2{
+    font-family: 'NEXONLv1Gothic';
+    font-size: 53px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 65px;
+}
+.cardType04 .card-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+.cardType04 .card-wrap .card{
+    width: 386px; height: 609px;
+    position: relative;
+}
+.cardType04 .card-wrap .card .card-img{
+
+}
+.cardType04 .card-wrap .card .card-title{
+    font-size: 15px;
+    font-weight: 700;
+    display: inline-block;
+    position: absolute;
+    left: 45px; top: 55px;
+    color: #999;
+}
+.cardType04 .card-wrap .card .card-desc{
+    font-size: 25px;
+    font-weight: 700;
+    position: absolute;
+    left: 45px; top: 92px;
+}
+/* //cardType04 */
