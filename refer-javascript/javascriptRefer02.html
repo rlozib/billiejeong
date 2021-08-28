@@ -18,6 +18,7 @@
         <li><a href="../refer-html/index.html">HTML</a></li>
         <li><a href="../refer-css/index.html">CSS</a></li>
         <li><a href="../refer-javascript/index.html">JAVASCRIPT</a></li>
+        <li><a href="../refer-jquery/index.html">JQUERY</a></li>
     </ul>
     <nav class="menu">
         <ul>
@@ -44,15 +45,15 @@
     <h2 class="mt20"></h2>
     <div class="list">
         <ol>
-            <li><a href="#sample1">변수 : 데이터 불러오기 : 기본</a></li>
-            <li><a href="#sample2">상수 : 데이터 불러오기 : 기본</a></li>
-            <li><a href="#sample3">배열 : 데이터 불러오기 : 기본</a></li>
-            <li><a href="#sample4">배열 : 데이터 불러오기 : 2차 배열 </a></li>
-            <li><a href="#sample5">배열 : 데이터 불러오기 : 갯수 구하기</a></li>
-            <li><a href="#sample6">배열 : 데이터 불러오기 : for문</a></li>
-            <li><a href="#sample7">배열 : 데이터 불러오기 : forEach()</a></li>
-            <li><a href="#sample8">배열 : 데이터 불러오기 : for of문</a></li>
-            <li><a href="#sample9">배열 : 데이터 불러오기 : for in문</a></li>
+            <li><a href="#sample01">변수 : 데이터 불러오기 : 기본</a></li>
+            <li><a href="#sample02">상수 : 데이터 불러오기 : 기본</a></li>
+            <li><a href="#sample03">배열 : 데이터 불러오기 : 기본</a></li>
+            <li><a href="#sample04">배열 : 데이터 불러오기 : 2차 배열 </a></li>
+            <li><a href="#sample05">배열 : 데이터 불러오기 : 갯수 구하기</a></li>
+            <li><a href="#sample06">배열 : 데이터 불러오기 : for문</a></li>
+            <li><a href="#sample07">배열 : 데이터 불러오기 : forEach()</a></li>
+            <li><a href="#sample08">배열 : 데이터 불러오기 : for of문</a></li>
+            <li><a href="#sample09">배열 : 데이터 불러오기 : for in문</a></li>
             <li><a href="#sample10">배열 : 데이터 불러오기 : map()</a></li>
             <li><a href="#sample11">배열 : 데이터 불러오기 : 펼침 연산자</a></li>
             <li><a href="#sample12">객체 : 데이터 불러오기 :  기본</a></li>
@@ -478,10 +479,13 @@
         c: "javascript",
     }
 
+    //해당되는 key의 유무를 찾아 ture/false로 알려줌.
     document.write(obj.hasOwnProperty('a'));
     document.write(obj.hasOwnProperty('b'));
     document.write(obj.hasOwnProperty('c'));
     document.write(obj.hasOwnProperty('100'));
+
+    //이렇게도 사용 가능
     document.write('a' in obj);
     document.write('b' in obj);
     document.write('c' in obj);
@@ -590,6 +594,7 @@
         b: 200,
         c: "javascript",
     }
+    //객체의 내용을 분해해서 저장하는 방법
     const { a, b, c } = obj;
 
     document.write(a);
@@ -903,7 +908,7 @@
         //sample16
         //16. 객체 : 데이터 불러오기 : map() : 배열 속에 객체가 있는 경우
         {
-            document.write("*** 16. 객체 : 데이터 불러오기 : map() ***<br>");
+            // document.write("*** 16. 객체 : 데이터 불러오기 : map() ***<br>");
 
             const obj = [
                 {a: 100, b: 200, c: "javascript1"},
@@ -926,18 +931,19 @@
             // obj.map(el => {});
 
             obj.map(el => {
-                document.write(el.a, "<br>");
-                document.write(el.b, "<br>");
-                document.write(el.c, "<br>");
+                document.querySelector("#sample16 .result .key").innerHTML += `${el.a} ${el.b} ${el.c} <br>`;
             });
-            document.write("<br>");
+
+            document.querySelector("#sample16 .result h3").addEventListener("click", function () {
+                document.querySelector("#sample16 .result .key").classList.toggle("open");
+            });
         }
 
 
         //sample17
         //17. 객체 : 데이터 불러오기 : hasOwnProperty() : 데이터 유무 확인
         {
-            document.write("*** 17. 객체 : 데이터 불러오기 : hasOwnProperty() ***<br>");
+            // document.write("*** 17. 객체 : 데이터 불러오기 : hasOwnProperty() ***<br>");
         
             const obj = {
                 a: 100,
@@ -945,20 +951,19 @@
                 c: "javascript",
             }
 
-            document.write(obj.hasOwnProperty('a'), "<br>");
-            document.write(obj.hasOwnProperty('b'), "<br>");
-            document.write(obj.hasOwnProperty('c'), "<br>");
-            document.write(obj.hasOwnProperty('100'), "<br><br>");
-            document.write('a' in obj, "<br>");
-            document.write('b' in obj, "<br>");
-            document.write('c' in obj, "<br>");
-            document.write('100' in obj, "<br><br>");
+            document.querySelector("#sample17 .result .key").innerHTML += `${obj.hasOwnProperty('a')} ${obj.hasOwnProperty('b')} ${obj.hasOwnProperty('c')} ${obj.hasOwnProperty('100')} <br>`;
+
+            document.querySelector("#sample17 .result .key").innerHTML += `${'a' in obj} ${'b' in obj} ${'c' in obj} ${'100' in obj} `;
+
+            document.querySelector("#sample17 .result h3").addEventListener("click", function () {
+                document.querySelector("#sample17 .result .key").classList.toggle("open");
+            });
         }
 
         //sample18
         //18. 객체 : 데이터 불러오기 : 펼침 연산자 - 복사
         {
-            document.write("*** 18. 객체 : 데이터 불러오기 : 펼침 연산자 - 복사 ***<br>");
+            // document.write("*** 18. 객체 : 데이터 불러오기 : 펼침 연산자 - 복사 ***<br>");
         
             const obj = {
                 a: 100,
@@ -967,15 +972,17 @@
             }
             const spread = {...obj}
 
-            document.write(spread.a, "<br>");
-            document.write(spread.b, "<br>");
-            document.write(spread.c, "<br><br>");
+            document.querySelector("#sample18 .result .key").innerHTML += `${spread.a} ${spread.b} ${spread.c} `;
+
+            document.querySelector("#sample18 .result h3").addEventListener("click", function () {
+                document.querySelector("#sample18 .result .key").classList.toggle("open");
+            });
         }
 
         //sample19
         //19. 객체 : 데이터 불러오기 : 펼침 연산자 - 추가
         {
-            document.write("*** 19. 객체 : 데이터 불러오기 : 펼침 연산자 - 추가 ***<br>");
+            // document.write("*** 19. 객체 : 데이터 불러오기 : 펼침 연산자 - 추가 ***<br>");
         
             const obj = {
                 a: 100,
@@ -984,16 +991,17 @@
             }
             const spread = {...obj, d: "jquery"}
 
-            document.write(spread.a, "<br>");
-            document.write(spread.b, "<br>");
-            document.write(spread.c, "<br>");
-            document.write(spread.d, "<br><br>");
+            document.querySelector("#sample19 .result .key").innerHTML += `${spread.a} ${spread.b} ${spread.c} ${spread.d} `;
+
+            document.querySelector("#sample19 .result h3").addEventListener("click", function () {
+            document.querySelector("#sample19 .result .key").classList.toggle("open");
+            });
         }
 
         //sample20
         //20. 객체 : 데이터 불러오기 : 펼침 연산자 - 결합
         {
-            document.write("*** 20. 객체 : 데이터 불러오기 : 펼침 연산자 - 결합 ***<br>");
+            // document.write("*** 20. 객체 : 데이터 불러오기 : 펼침 연산자 - 결합 ***<br>");
         
             const objA = {
                 a: 100,
@@ -1005,33 +1013,37 @@
             }
             const spread = {...objA, ...objB}
 
-            document.write(spread.a, "<br>");
-            document.write(spread.b, "<br>");
-            document.write(spread.c, "<br>");
-            document.write(spread.d, "<br><br>");
+            document.querySelector("#sample20 .result .key").innerHTML += `${spread.a} ${spread.b} ${spread.c} ${spread.d} `;
+
+            document.querySelector("#sample20 .result h3").addEventListener("click", function () {
+            document.querySelector("#sample20 .result .key").classList.toggle("open");
+            });
         }
 
         //sample21
         //21. 객체 : 데이터 불러오기 : 비구조화 할당
         {
-            document.write("*** 21. 객체 : 데이터 불러오기 : 비구조화 할당 ***<br>");
+            // document.write("*** 21. 객체 : 데이터 불러오기 : 비구조화 할당 ***<br>");
 
             const obj = {
                 a: 100,
                 b: 200,
                 c: "javascript",
             }
+            //객체의 내용을 분해해서 저장하는 방법
             const { a, b, c} = obj;
 
-            document.write(a, "<br>");
-            document.write(b, "<br>");
-            document.write(c, "<br><br>");
+            document.querySelector("#sample21 .result .key").innerHTML += `${a} ${b} ${c} `;
+
+            document.querySelector("#sample21 .result h3").addEventListener("click", function () {
+            document.querySelector("#sample21 .result .key").classList.toggle("open");
+            });
         }
 
         //sample22
         //22. 객체 : 데이터 불러오기 : 비구조화 할당 : 별도 이름 저장
         {
-            document.write("*** 22. 객체 : 데이터 불러오기 : 비구조화 할당 : 별도 이름 저장 ***<br>");
+            // document.write("*** 22. 객체 : 데이터 불러오기 : 비구조화 할당 : 별도 이름 저장 ***<br>");
 
             const obj = {
                 a: 100,
@@ -1040,9 +1052,11 @@
             }
             const { a:name1, b:name2, c:name3 } = obj;
 
-            document.write(name1, "<br>");
-            document.write(name2, "<br>");
-            document.write(name3, "<br><br>");
+            document.querySelector("#sample22 .result .key").innerHTML += `${name1} ${name2} ${name3} `;
+
+            document.querySelector("#sample22 .result h3").addEventListener("click", function () {
+            document.querySelector("#sample22 .result .key").classList.toggle("open");
+            });
         }
 
         // 7월 26일 숙제
