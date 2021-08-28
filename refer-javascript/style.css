@@ -23,6 +23,8 @@ body {
 }
 h1 {
     padding-bottom: 50px 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 h1 a {
     font-family: 'TmonMonsori';
@@ -50,7 +52,6 @@ a {
     color: #333;
 }
 .sample {
-    border: 1px solid #e6e6e6;
     border-radius: 5px;
     margin-bottom: 10px;
 }
@@ -91,6 +92,31 @@ a {
     border-radius: 50%;
     right: -15px;
     top: 0;
+}
+.sample .result {
+    margin-top: 10px;
+}
+.sample .result h3 {
+    background-color: #f2f2f2;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 5px 5px 0 0;
+    font-size: 15px;
+}
+.sample .result h3:hover {
+    cursor: pointer;
+}
+.sample .result .key {
+    display: none;
+    border-radius: 0 5px 5px 5px;
+    color: #fff;
+    background-color: #272822;
+    font-size: 14px;
+    padding: 16px;
+    line-height: 1.8;
+}
+.sample .result .key.open {
+    display: block;
 }
 .sample .ex {
     padding: 20px;
@@ -158,6 +184,7 @@ a {
 }
 .view{
     padding: 20px;
+    border: 1px solid #e6e6e6;
 }
 .view table{
     width: 100%;
@@ -286,30 +313,7 @@ a {
 .result .key.open {
     display: block;
 } */
-.result .result-btn{
-    display: inline-block;
-    font-size: 15px;
-    background-color:#f2f2f2;
-    padding: 8px 12px;
-    color: #333;
-    margin-top: 10px;
-    border-radius: 5px;
-}
-.result .result-btn:hover {
-    cursor: pointer;
-}
-.result .open{
-    display: none;
-    color: #fff;
-    background-color: #333;
-    padding: 20px;
-    border-radius: 0 0 5px 5px;
-} 
-.result .open.active {
-    display: block;
-    font-size: 15px;
-    color: #fff;
-}
+
 @media (max-width: 800px){
     body{
         padding: 5%;
@@ -317,7 +321,7 @@ a {
     }
     h1{
         text-align: center;
-        margin-top: 20px;
+        margin-top: 30px;
     }
     .sample h2{
         font-size: 14px;
