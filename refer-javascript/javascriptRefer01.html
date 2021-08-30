@@ -87,18 +87,18 @@
 }
 </code></pre>
         </div>
-        <div class="result">
+        <!-- <div class="result">
             <h3>결과보기</h3>
             <div class="key"></div>
-        </div>
-        <!-- <div class="result show">
+        </div> -->
+        <div class="result show">
             <h3><a href="#">결과보기</a></h3>
             <div class="show">
                 <span class="result1-1"></span>
                 <span class="result1-2"></span>
                 <span class="result1-3"></span>
             </div>
-        </div> -->
+        </div>
     </div>
 
     <hr>
@@ -120,20 +120,17 @@
 }   
 </code></pre>
         </div>
-        <div class="result">
-            <h3>결과보기</h3>
-            <div class="key"></div>
-        </div>
-        <!-- <div class="result show">
+        <div class="result show">
             <h3><a href="#">결과보기</a></h3>
             <div class="show">
                 <span class="result2-1"></span>
                 <span class="result2-2"></span>
                 <span class="result2-3"></span>
             </div>
-        </div> -->
+        </div>
     </div>
     <hr>
+
     <div id="sample03" class="sample">
         <h2>03. 변수 : 데이터 저장 + 데이터 추가<span class="dot"></span></h2>
         <div class="code">
@@ -151,9 +148,13 @@
 }
 </code></pre>
         </div>
-        <div class="result">
-            <h3>결과보기</h3>
-            <div class="key"></div>
+        <div class="result show">
+            <h3><a href="#">결과보기</a></h3>
+            <div class="show">
+                <span class="result3-1"></span>
+                <span class="result3-2"></span>
+                <span class="result3-3"></span>
+            </div>
         </div>
     </div>
     <hr>
@@ -176,9 +177,13 @@
 }
 </code></pre>
         </div>
-        <div class="result">
-            <h3>결과보기</h3>
-            <div class="key"></div>
+        <div class="result show">
+            <h3><a href="#">결과보기</a></h3>
+            <div class="show">
+                <span class="result4-1"></span>
+                <span class="result4-2"></span>
+                <span class="result4-3"></span>
+            </div>
         </div>
     </div>
     <hr>
@@ -198,9 +203,13 @@
 }
 </code></pre>
         </div>
-        <div class="result">
-            <h3>결과보기</h3>
-            <div class="key"></div>
+        <div class="result show">
+            <h3><a href="#">결과보기</a></h3>
+            <div class="show">
+                <span class="result5-1"></span>
+                <span class="result5-2"></span>
+                <span class="result5-3"></span>
+            </div>
         </div>
     </div>
     <hr>
@@ -217,9 +226,13 @@
 }
 </code></pre>
         </div>
-        <div class="result">
-            <h3>결과보기</h3>
-            <div class="key"></div>
+        <div class="result show">
+            <h3><a href="#">결과보기</a></h3>
+            <div class="show">
+                <span class="result6-1"></span>
+                <span class="result6-2"></span>
+                <span class="result6-3"></span>
+            </div>
         </div>
     </div>
     <hr>
@@ -239,10 +252,10 @@
 }
 </code></pre>
         </div>
-        <div class="result">
+        <!-- <div class="result">
             <h3>결과보기</h3>
             <div class="key"></div>
-        </div>
+        </div> -->
     </div>
     <hr>
 
@@ -567,12 +580,12 @@
         //     document.querySelector(".result1 div").classList.toggle("show");
         // }); //노가다
 
-        // document.querySelectorAll(".result h3").forEach(el => {
-        //     el.addEventListener("click", function(e){
-        //         e.preventDefault();
-        //         this.parentNode.classList.toggle("show");
-        //     });
-        // })
+        document.querySelectorAll(".result h3").forEach(el => {
+            el.addEventListener("click", function(e){
+                e.preventDefault();
+                this.parentNode.classList.toggle("show");
+            });
+        })
         
         //sample1
         //01. 변수 : 데이터 저장소
@@ -581,15 +594,14 @@
             var y = 200; //변수 y에 숫자 200을 저장
             var z = "javascript"; //변수 z에 문자 javascript 저장
 
-            // document.write("*** 01. 변수 ***<br>");
-            // document.write(x, "<br>");
-            // document.write(y, "<br>");
-            // document.write(z, "<br><br>");
+            document.querySelector(".result1-1").innerHTML = x;
+            document.querySelector(".result1-2").innerHTML = y;
+            document.querySelector(".result1-3").innerHTML = z;
 
-            document.querySelector("#sample01 .result .key").innerHTML = `${x} ${y} ${z}`;
-            document.querySelector("#sample01 .result h3").addEventListener("click",function(){
-                document.querySelector("#sample01 .result .key").classList.toggle("open");
-            });
+            // document.querySelector("#sample01 .result .key").innerHTML = `${x} ${y} ${z}`;
+            // document.querySelector("#sample01 .result h3").addEventListener("click",function(){
+            //     document.querySelector("#sample01 .result .key").classList.toggle("open");
+            // });
         } 
         //sample2
         //02. 변수 : 데이터 저장 + 데이터 변경
@@ -601,15 +613,14 @@
             y = 400;
             z = "jquery";
 
-            // document.write("*** 02. 변수 ***<br>");
-            // document.write(x, "<br>");
-            // document.write(y, "<br>");
-            // document.write(z, "<br><br>");
+            document.querySelector(".result2-1").innerHTML = x;
+            document.querySelector(".result2-2").innerHTML = y;
+            document.querySelector(".result2-3").innerHTML = z;
 
-            document.querySelector("#sample02 .result .key").innerHTML = `${x} ${y} ${z}`;
-            document.querySelector("#sample02 .result h3").addEventListener("click",function(){
-                document.querySelector("#sample02 .result .key").classList.toggle("open");
-            });
+            // document.querySelector("#sample02 .result .key").innerHTML = `${x} ${y} ${z}`;
+            // document.querySelector("#sample02 .result h3").addEventListener("click",function(){
+            //     document.querySelector("#sample02 .result .key").classList.toggle("open");
+            // });
         }
 
         //sample3
@@ -622,15 +633,15 @@
             y += 400; //y = y + 400;
             z += "jquery"; //z = z + "jquery";
 
-            // document.write("*** 03. 변수 ***<br>");
-            // document.write(x, "<br>");
-            // document.write(y, "<br>");
-            // document.write(z, "<br><br>");
+    
+            document.querySelector(".result3-1").innerHTML = x;
+            document.querySelector(".result3-2").innerHTML = y;
+            document.querySelector(".result3-3").innerHTML = z;
 
-            document.querySelector("#sample03 .result .key").innerHTML = `${x} ${y} ${z}`;
-            document.querySelector("#sample03 .result h3").addEventListener("click",function(){
-                document.querySelector("#sample03 .result .key").classList.toggle("open");
-            });
+            // document.querySelector("#sample03 .result .key").innerHTML = `${x} ${y} ${z}`;
+            // document.querySelector("#sample03 .result h3").addEventListener("click",function(){
+            //     document.querySelector("#sample03 .result .key").classList.toggle("open");
+            // });
         }
 
         //sample4
@@ -644,16 +655,14 @@
             //z = "jquery";
             //Uncaught TypeError: Assignment to constant variable.
 
-
-            // document.write("*** 04. 상수 ***<br>");
-            // document.write(x, "<br>");
-            // document.write(y, "<br>");
-            // document.write(z, "<br><br>");
-
-            document.querySelector("#sample04 .result .key").innerHTML = `${x} ${y} ${z}`;
-            document.querySelector("#sample04 .result h3").addEventListener("click",function(){
-                document.querySelector("#sample04 .result .key").classList.toggle("open");
-            });
+            document.querySelector(".result4-1").innerHTML = x;
+            document.querySelector(".result4-2").innerHTML = y;
+            document.querySelector(".result4-3").innerHTML = z;
+            
+            // document.querySelector("#sample04 .result .key").innerHTML = `${x} ${y} ${z}`;
+            // document.querySelector("#sample04 .result h3").addEventListener("click",function(){
+            //     document.querySelector("#sample04 .result .key").classList.toggle("open");
+            // });
         }
 
         //sample5
@@ -664,15 +673,14 @@
             arr[1] = 200; //두번째 배열 저장소에 숫자 200을 저장
             arr[2] = "javascript"; //세번째 배열 저장소에 문자열 javascript를 저장
 
-            // document.write("*** 05. 배열 ***<br>");
-            // document.write(arr[0], "<br>");
-            // document.write(arr[1], "<br>");
-            // document.write(arr[2], "<br><br>");
+            document.querySelector(".result5-1").innerHTML = x;
+            document.querySelector(".result5-2").innerHTML = y;
+            document.querySelector(".result5-3").innerHTML = z;
 
-            document.querySelector("#sample05 .result .key").innerHTML = `${x} ${y} ${z}`;
-            document.querySelector("#sample05 .result h3").addEventListener("click",function(){
-                document.querySelector("#sample05 .result .key").classList.toggle("open");
-            });
+            // document.querySelector("#sample05 .result .key").innerHTML = `${x} ${y} ${z}`;
+            // document.querySelector("#sample05 .result h3").addEventListener("click",function(){
+            //     document.querySelector("#sample05 .result .key").classList.toggle("open");
+            // });
         }
 
         //sample6
@@ -680,15 +688,14 @@
         {
             const arr = new Array(100, 200, "javascript");
 
-            // document.write("*** 06. 배열 ***<br>");
-            // document.write(arr[0], "<br>");
-            // document.write(arr[1], "<br>");
-            // document.write(arr[2], "<br><br>");
+            document.querySelector(".result6-1").innerHTML = x;
+            document.querySelector(".result6-2").innerHTML = y;
+            document.querySelector(".result6-3").innerHTML = z;
 
-            document.querySelector("#sample06 .result .key").innerHTML = `${arr[0]} ${arr[1]} ${arr[2]}`;
-            document.querySelector("#sample06 .result h3").addEventListener("click",function(){
-                document.querySelector("#sample06 .result .key").classList.toggle("open");
-            });
+            // document.querySelector("#sample06 .result .key").innerHTML = `${arr[0]} ${arr[1]} ${arr[2]}`;
+            // document.querySelector("#sample06 .result h3").addEventListener("click",function(){
+            //     document.querySelector("#sample06 .result .key").classList.toggle("open");
+            // });
         }
 
         //sample7

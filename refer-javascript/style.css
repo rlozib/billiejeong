@@ -93,7 +93,7 @@ a {
     right: -15px;
     top: 0;
 }
-.sample .result {
+/* .sample .result {
     margin-top: 10px;
 }
 .sample .result h3 {
@@ -117,7 +117,7 @@ a {
 }
 .sample .result .key.open {
     display: block;
-}
+} */
 .sample .ex {
     padding: 20px;
 }
@@ -295,7 +295,7 @@ a {
     background: #000;
     color: #fff;
 }
-/* .result h3 a {
+.result h3 a {
     font-size: 16px;
     font-weight: normal;
     padding: 10px 15px;
@@ -317,7 +317,7 @@ a {
 }
 .result div span {
     display: block;
-} */
+}
 
 @media (max-width: 800px){
     body{

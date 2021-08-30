@@ -182,6 +182,10 @@ display: inline;
     color: #fff;
     border-style: solid;
 }
+.menu li.active a {
+    background: #000;
+    color: #fff;
+}
 .list li a {
     font-family: 'NEXON Lv1 Gothic OTF';
     font-size: 14px;

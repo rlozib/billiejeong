@@ -26,21 +26,19 @@ body {
 }
 
 /* float을 이용한 레이아웃 */
-/* .card-wrap {
+/* .cardType01 .card-wrap {
     overflow: hidden;
 }
-.card-wrap > div {
+.cardType01 .card-wrap > div {
     float: left;
     width: 387px;
     margin-right: 19px;
 }
-.card-wrap > div:last-child {
+.cardType01 .card-wrap > div:last-child {
     margin-right: 0;
 } */
 
-
 /* flex를 이용한 레이아웃 */
-
 .cardType01 .card-wrap {
     display: flex;
     justify-content: space-between;
@@ -73,6 +71,8 @@ body {
 }
 /* //cardType01 */
 
+
+
 /* cardType02 */
 .cardType02 {
     padding: 150px 0;
@@ -90,7 +90,28 @@ body {
     text-align: center;
     margin-bottom: 30px;
 }
+/* grid를 이용한 레이아웃 */
 .cardType02 .card-wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 285px);
+    gap: 20px;
+  }
+  
+  .cardType02 .card {
+    display: inline-block;
+    width: 285px;
+    height: 356px;
+    margin: 40px 20px 0 0;
+    padding: 15px 15px 16px 14px;
+    border-radius: 5px;
+    border: solid 1px #e6e6e6;
+    box-sizing: border-box;
+  }
+  
+  .cardType02 .card:last-child {
+    margin: 40px 0 0 0;
+  }
+/* .cardType02 .card-wrap {
     display: flex;
 }
 .cardType02 .card-wrap .card{
@@ -102,7 +123,7 @@ body {
     border-radius: 5px;
     border: solid 1px #e6e6e6;
     box-sizing: border-box;
-}
+} */
 .cardType02 .card-wrap .card .card-title {
     font-size: 24px;
     font-weight: 500;
@@ -128,6 +149,8 @@ body {
     padding : 4px 14px;
 }
 /* //cardType02 */
+
+
 
 /* cardType03 */
 .cardType03 {
@@ -215,6 +238,8 @@ body {
 
 /* //cardType03 */
 
+
+
 /* cardType04 */
 .cardType04 {
     font-family: 'NEXONLv2Gothic';
@@ -253,3 +278,144 @@ body {
     left: 45px; top: 92px;
 }
 /* //cardType04 */
+
+
+/* cardType05 */
+.cardType05 {
+    font-family: 'NanumSquare';
+    padding: 100px 0;
+  }
+  
+  .cardType05 .title {
+    width: 204px;
+    height: 50px;
+    display: block;
+    margin: 0 auto 10px auto;
+  }
+  
+  .cardType05 p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 80px;
+    text-align: center;
+  }
+  
+  .cardType05 .card-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .cardType05 .card-wrap .card {
+    width: 374px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  
+  .cardType05 .card-wrap .card .card-img {
+    height: 361px;
+  }
+  
+  .cardType05 .card-wrap .card .card-cont {
+    padding: 40px;
+    text-align: left;
+  }
+  
+  .cardType05 .card-wrap .card .card-cont .card-title {
+    width: 294px;
+    height: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .cardType05 .card-wrap .card .card-cont .card-title .card-name {
+    height: 22px;
+    display: inline-block;
+  }
+  
+  .cardType05 .card-wrap .card .card-cont .card-title .card-name.lamp {
+    background-position: -286px -4px;
+    background-repeat: no-repeat;
+    width: 143px;
+    height: 22px;
+  }
+  
+  .cardType05 .card-wrap .card .card-cont .card-title .card-name.clock {
+    background-position: -286px -59px;
+    background-repeat: no-repeat;
+    width: 136px;
+    height: 17px;
+  }
+  
+  .cardType05 .card-wrap .card .card-cont .card-title .card-name.friends {
+    background-position: -4px -231px;
+    background-repeat: no-repeat;
+    width: 153px;
+    height: 17px;
+  }
+  
+  .cardType05 .card-wrap .card .card-cont .card-title .card-name.wave {
+    background-position: -286px -34px;
+    background-repeat: no-repeat;
+    width: 139px;
+    height: 17px;
+  }
+  
+  .cardType05 .card-wrap .card .card-cont .card-title .card-name.mini {
+    background-position: -4px -129px;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 17px;
+  }
+  
+  .cardType05 .card-wrap .card .card-cont .card-title .card-name.doraemon {
+    background-position: -4px -102px;
+    background-repeat: no-repeat;
+    width: 201px;
+    height: 19px;
+  }
+  
+  .cardType05 .card-wrap .card .card-cont .card-title .tag {
+    display: inline-block;
+    background-color: #FA615B;
+    border-radius: 50px;
+    color: #fff;
+    padding: 0 7px;
+    margin-left: 4px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 700;
+    vertical-align: top;
+  }
+  
+  .cardType05 .card-wrap .card .card-cont .card-desc {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.8;
+    display: block;
+    margin-bottom: 15px;
+  }
+  
+  .cardType05 .card-wrap .card .card-cont .card-buy {
+    display: inline-block;
+    margin-right: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    color: #fff;
+    background-color: #05d686;
+    padding: 8px 17px;
+  }
+  
+  .cardType05 .card-wrap .card .card-cont .card-info {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.6);
+    border: 1px solid #e3e3e3;
+    padding: 8px 17px;
+  }
+/* //cardType05 */
