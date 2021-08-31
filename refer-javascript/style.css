@@ -93,31 +93,7 @@ a {
     right: -15px;
     top: 0;
 }
-/* .sample .result {
-    margin-top: 10px;
-}
-.sample .result h3 {
-    background-color: #f2f2f2;
-    padding: 10px;
-    display: inline-block;
-    border-radius: 5px 5px 0 0;
-    font-size: 15px;
-}
-.sample .result h3:hover {
-    cursor: pointer;
-}
-.sample .result .key {
-    display: none;
-    border-radius: 0 5px 5px 5px;
-    color: #fff;
-    background-color: #272822;
-    font-size: 14px;
-    padding: 16px;
-    line-height: 1.8;
-}
-.sample .result .key.open {
-    display: block;
-} */
+
 .sample .ex {
     padding: 20px;
 }
@@ -295,10 +271,11 @@ a {
     background: #000;
     color: #fff;
 }
+/* 쌤이랑 같이 */
 .result h3 a {
     font-size: 16px;
     font-weight: normal;
-    padding: 10px 15px;
+    /* padding: 10px 15px; */
     background-color: #f1f1f1;
     display: inline-block;
     border-radius: 4px;
@@ -319,6 +296,32 @@ a {
     display: block;
 }
 
+/* 내가 작성 */
+.sample .result {
+    margin-top: 10px;
+}
+.sample .result h3 {
+    background-color: #f2f2f2;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 5px 5px 0 0;
+    font-size: 15px;
+}
+.sample .result h3:hover {
+    cursor: pointer;
+}
+.sample .result .key {
+    display: none;
+    border-radius: 0 5px 5px 5px;
+    color: #fff;
+    background-color: #272822;
+    font-size: 14px;
+    padding: 16px;
+    line-height: 1.8;
+}
+.sample .result .key.open {
+    display: block;
+}
 @media (max-width: 800px){
     body{
         padding: 5%;

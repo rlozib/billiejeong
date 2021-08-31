@@ -11,6 +11,7 @@
         integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 <body>
     <h1><a href="index.html">데이터 저장하기</a></h1>
@@ -252,10 +253,10 @@
 }
 </code></pre>
         </div>
-        <!-- <div class="result">
+        <div class="result">
             <h3>결과보기</h3>
             <div class="key"></div>
-        </div> -->
+        </div>
     </div>
     <hr>
 
@@ -586,6 +587,9 @@
                 this.parentNode.classList.toggle("show");
             });
         })
+        //     $(".result h3").click(forEach(el => {
+        //         $(this).parents.toggleClass("show");
+        //    });
         
         //sample1
         //01. 변수 : 데이터 저장소
@@ -1004,6 +1008,7 @@
                 document.querySelector("#sample19 .result .key").classList.toggle("open");
             });
         }
+    
     </script>
 </body>
 </html>
