@@ -308,16 +308,11 @@ figcaption {
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    font-size: 10vw;
+    font-size: 15vw;
     white-space: nowrap;
-    font-family: "Six Caps", sans-serif;
-    font-weight: normal;
-    text-transform: uppercase;
     letter-spacing: 1vw;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#8200c9), to(#240038));
-    background-image: linear-gradient(to bottom, #8200c9, #240038);
   }
   #nav {
     position: absolute;
@@ -325,30 +320,22 @@ figcaption {
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    bottom: 10px;
-    top: auto;
+    left: 60%;
+    top: 70%;
   }
   #nav li {
     list-style: none;
-    display: inline;
   }
   #nav li a {
     color: #fff;
     text-decoration: none;
-    width: 100px;
-    height: 40px;
-    line-height: 40px;
-    border: 1px solid #fff;
+    width: 80px;
+    height: 20px;
+    line-height: 20px;
     display: inline-block;
-    border-radius: 50px;
-    font-size: 14px;
+    font-size: 12px;
     text-align: center;
     margin: 4px;
-    font-family: "NEXONLv1Gothic";
-    -webkit-box-shadow: inset 0 0 0 #fff;
-            box-shadow: inset 0 0 0 #fff;
-    -webkit-transition: all 0.4s;
-    transition: all 0.4s;
   }
   #nav li a:hover {
     -webkit-box-shadow: inset 0 -100px 0 #fff;
