@@ -76,6 +76,13 @@ figcaption {
   padding: 0;
 }
 
+.bg1 {
+  height: 100vh;
+  background-image: url(../img/bg01@2x.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
 #main {
   width: 100%;
   height: 100vh;
@@ -101,13 +108,13 @@ figcaption {
 }
 
 #main.parallax {
-  background: -webkit-gradient(linear, left top, left bottom, from(#abecd6), to(#fbed96));
-  background: linear-gradient(to bottom, #abecd6 0%, #fbed96 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#20E2D7), to(#F9FEA5));
+  background: linear-gradient(to bottom, #20E2D7 0%, #F9FEA5 100%);
 }
 
 #main.slider {
-  background: -webkit-gradient(linear, left top, left bottom, from(#abecd6), to(#fbed96));
-  background: linear-gradient(to bottom, #abecd6 0%, #fbed96 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#df89b5), to(#bfd9fe));
+  background: linear-gradient(to bottom, #df89b5 0%, #bfd9fe 100%);
 }
 
 #contents h1 {
