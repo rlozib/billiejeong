@@ -22,29 +22,42 @@
             <li><a href="#">2</a></li>
         </ul>
         <ul>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
         </ul>
     </div>
-    <div class="info-wrap">
-        <div class="info bottom">
-            <button>소스 보기</button>
-        </div>
+    <div class="info bottom">
+        <button>소스보기</button>
+    </div>
+    <!-- //info -->
+
+    <!-- button -->
+    <div class="btn-wrap">
+        <button>modal</button>
     </div>
     <div id="modal">
         <div class="modal-bg">
-          <div class="modal-cont">
-            <h2>레이어 팝업</h2>
-            <p></p>
+            <div class="modal-cont">
+                <h2>레이어 팝업</h2>
+                <p>
+                    코드입니다.
+                </p>
                 <button>닫기</button>
             </div>
         </div>
     </div>
-    
-    <!-- //info -->
+    <!-- //button -->
 
+    <!-- script -->
     <script>
+        $(".bottom button").click(function(){
+            $("#modal").removeClass().addClass("show")
+        });
 
+        $(".modal-cont button").click(function(){
+            $("#modal").addClass("hide")							  
+        });
     </script>
+    <!-- //script -->
 </body>
 </html>
