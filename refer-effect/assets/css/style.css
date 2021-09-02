@@ -565,29 +565,4 @@ figcaption {
     height: 400px;
     font-size: 10px;
   }
-
-  .tab-btn {
-    white-space: nowrap;
-  }
-
-  .tab-btn ul {
-    font-size: 15px;
-    padding: 0.5vh;
-  }
-
-  .tab-btn li a {
-    padding: 10px 10px 10px 10px;
-  }
-
-  .tab-cont {
-    padding: 20px;
-  }
-
-  .tab-cont > div h2 {
-    font-size: 18px;
-  }
-
-  .tab-cont > div p {
-    font-size: 14px;
-  }
 }
