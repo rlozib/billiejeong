@@ -546,12 +546,15 @@ $gradient6: linear-gradient(to bottom, #df89b5 0%, #bfd9fe 100%);
 	.info.bottom {
 		bottom: 90px;
 	}
+	.code-view {
+		width: 90vw;
+	}
 	.code-view .view-header .dot {
 		padding: 10px 8px 8px 13px;
 	}
 	.code-view .view-header .dot span {
-	width: 9px;
-	height: 9px;
+		width: 9px;
+		height: 9px;
 	}
 	.code-view .view-title {
 		padding: 0 9px;
@@ -562,7 +565,7 @@ $gradient6: linear-gradient(to bottom, #df89b5 0%, #bfd9fe 100%);
 		margin: 0 5px;
 	}
 	.code-view .view-cont {
-		height: 300px;
+		height: 400px;
 		font-size: 10px;
 	}
 	#tab-menu {
@@ -572,7 +575,7 @@ $gradient6: linear-gradient(to bottom, #df89b5 0%, #bfd9fe 100%);
 		white-space: nowrap;
 	}
 	.tab-btn ul {
-		font-size: 13px;
+		font-size: 14px;
 		padding: 0.5vh;
 	}
 	.tab-btn li a {
