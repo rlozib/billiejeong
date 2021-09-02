@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../assets/css/highlight.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-    <style>
+    <style> 
         #tab-menu {
             max-width: 600px;
             background: rgb(182, 182, 182);
@@ -103,20 +103,20 @@
 
     <!-- info -->
     <div class="info">
-        <h1>javascript Menu Effect01</h1>
+        <h1>jquery Menu Effect01</h1>
         <p>메뉴 이펙트 - 탭 메뉴</p>
     </div>
 
     <div class="info right">
         <ul>
-            <li class="active"><a href="javascriptME01.html">1</a></li>
+            <li><a href="javascriptME01.html">1</a></li>
             <li><a href="javascriptME02.html">2</a></li>
             <li><a href="javascriptME03.html">3</a></li>
             <li><a href="javascriptME04.html">4</a></li>
             <li><a href="javascriptME05.html">5</a></li>
         </ul>
         <ul>
-            <li><a href="jqueryME01.html">1</a></li>
+            <li class="active"><a href="jqueryME01.html">1</a></li>
             <li><a href="jqueryME02.html">2</a></li>
             <li><a href="jqueryME03.html">3</a></li>
             <li><a href="jqueryME04.html">4</a></li>
@@ -171,21 +171,18 @@
     <!-- //modal -->
 
     <!-- script -->
+    <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 
     <script>
-        //hljs.highlightAll(); //코드 하나
+        const tabBtn = $(".tab-btn ul li");     //5개의 버튼을 변수에 할당
+        const tabCont = $(".tab-cont > div");   //5개의 컨텐츠를 변수에 할당
 
-
-        // $(".info button").click(function(){
-        //     $("#modal").removeClass().addClass("show")
-        // });
-
-        // $(".modal-cont button").click(function(){
-        //     $("#modal").addClass("hide")							  
-        // });
+        tabBtn.click(function(){
+            alert("ddd")
+        });
     </script>
     <!-- //script -->
 </body>
