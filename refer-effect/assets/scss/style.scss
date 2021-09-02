@@ -234,10 +234,10 @@ $gradient6: linear-gradient(to bottom, #df89b5 0%, #bfd9fe 100%);
 	}
 
 	h1 {
-		font-weight: 300;
+		font-weight: 400;
 		font-size: 20px;
 		line-height: 1.6;
-		border-bottom: 1px dashed #fff;
+		border-bottom: 2px double #48bb78;
 		display: inline-block;
 		margin-bottom: 10px;
 	}
@@ -463,6 +463,18 @@ $gradient6: linear-gradient(to bottom, #df89b5 0%, #bfd9fe 100%);
 		}
 
 	}
+	.view-cont {
+		height: 70vh;
+		overflow-y: scroll;
+		background: #F8F8F9;
+
+		> div {
+			display: none;
+		}
+		> div:nth-child(1) {
+			display: block;
+		}
+	}
 }
 
 
@@ -510,5 +522,62 @@ $gradient6: linear-gradient(to bottom, #df89b5 0%, #bfd9fe 100%);
 	#modal .modal-cont p {
 		font-size: 12px;
 		margin-bottom: 10px;
+	}
+	.info h1 {
+		font-size: 15px;
+	}
+	.info p {
+		font-size: 12px;
+	}
+	.info li a {
+		width: 18px;
+		height: 18px;
+		line-height: 18px;
+		text-align: center;
+		font-size: 10px;
+	}
+	.info.bottom {
+		bottom: 50px;
+	}
+	.code-view .view-header .dot {
+		padding: 10px 8px 8px 13px;
+	}
+	.code-view .view-header .dot span {
+	width: 9px;
+	height: 9px;
+	}
+	.code-view .view-title {
+		padding: 0 9px;
+		font-size: 10px;
+	}
+	.code-view .view-title li a {
+		padding: 8px 8px 10px;
+		margin: 0 5px;
+	}
+	.code-view .view-cont {
+		height: 300px;
+		font-size: 10px;
+	}
+	#tab-menu {
+		width: 80vw;
+	}
+	.tab-btn {
+		white-space: nowrap;
+	}
+	.tab-btn ul {
+		font-size: 13px;
+		padding: 0.5vh;
+	}
+	.tab-btn li a {
+		padding: 13px 10px 10px 10px;
+	}
+	.tab-cont {
+		padding: 20px;
+	}
+	.tab-cont > div h2 {
+		font-size: 18px;
+	}
+	.tab-cont > div p {
+		font-size: 14px;
 	}
 }

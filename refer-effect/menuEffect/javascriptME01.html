@@ -13,7 +13,7 @@
     <style>
         #tab-menu {
             max-width: 600px;
-            background: rgb(182, 182, 182);
+            background: rgb(125, 207, 130);
             position: absolute;
             left: 50%;
             top: 50%;
@@ -38,7 +38,7 @@
             display: block;
         }
         .tab-btn li.active a {
-            border-bottom: 3px solid rgb(217, 241, 107);
+            border-bottom: 3px solid rgb(46, 133, 43);
             color: #000;
         }
         .tab-cont {
@@ -58,6 +58,12 @@
         .tab-cont > div p {
             line-height: 1.6;
         }
+        .view-cont > div {
+            display: none;
+        }
+        .view-cont > div:first-child {
+            display: block;
+        }
     </style>
 </head>
 <body class="bg bg1">
@@ -67,11 +73,11 @@
         <div id="tab-menu">
             <div class="tab-btn">
                 <ul>
-                    <li class="active"><a href="#">웹 표준1</a></li>
-                    <li><a href="#">웹 표준2</a></li>
-                    <li><a href="#">웹 표준3</a></li>
-                    <li><a href="#">웹 호환성1</a></li>
-                    <li><a href="#">웹 호환성2</a></li>
+                    <li class="active"><a href="#">웹표준1</a></li>
+                    <li><a href="#">웹표준2</a></li>
+                    <li><a href="#">웹표준3</a></li>
+                    <li><a href="#">웹표준4</a></li>
+                    <li><a href="#">웹표준5</a></li>
                 </ul>
             </div>
             <div class="tab-cont">
@@ -103,7 +109,7 @@
 
     <!-- info -->
     <div class="info">
-        <h1>javascript Menu Effect01</h1>
+        <h1>Javascript Menu Effect01</h1>
         <p>메뉴 이펙트 - 탭 메뉴</p>
     </div>
 
@@ -148,19 +154,139 @@
                     </ul>
                 </div>
                 <div class="view-cont">
-<pre><code class="language-html">&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot; /&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
-    &lt;link href=&quot;/path/to/tailwind.css&quot; rel=&quot;stylesheet&quot;&gt;
-    &lt;!-- ... --&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;!-- ... --&gt;
-&lt;/body&gt;
-&lt;/html
+                    <div class="html">
+<pre><code class="language-html">&lt;main&gt;
+    &lt;div id="tab-menu"&gt;
+        &lt;div class="tab-btn"&gt;
+            &lt;ul&gt;
+                &lt;li class="active"&gt;&lt;a href="#"&gt;웹 표준1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;웹 표준2&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;웹 표준3&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;웹 표준4&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;웹 표준5&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div class="tab-cont"&gt;
+            &lt;div&gt;
+                &lt;h2&gt;웹 표준&lt;/h2&gt;
+                &lt;p&gt;웹 표준이란 브라우저 종류 및 버전에 따른 기능 차이에 대하여 호환이 가능하도록 제시된 표준으로, 다른 기종 혹은 플랫폼에 따라 달리 구현되는 기술을 동일하게 구현함과 동시에 어느 한쪽에 최적화되어 치우치지 않도록 공통요소를 사용하여 웹 페이지를 제작하는 기법을 의미한다. &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;h2&gt;웹 표준 준수 이유&lt;/h2&gt;
+                &lt;p&gt;국내 웹의 현실은 특정 브라우저와 사용자 등의 이용환경과 비표준 페이지 및 과도한 플러그인 사용으로 장애인, 노약자를 포함한 모든 사용자들에게 운영체제 및 웹 브라우저 등의 정보 접근 제약이 있다. 따라서 브라우저의 종류나 버전에 상관없이 모든 사용자들이 동일한 웹사이트를 볼 수 있도록 웹 표준기술 작업이 필요하며 웹 표준 준수는 웹 접근성 준수를 위한 핵심이다.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;h2&gt;웹 표준 장점&lt;/h2&gt;
+                &lt;p&gt;1. 수정 및 운영관리 용이 2. 접근성 향상 3. 검색엔진 최적화(SEO) 4. File Size 축소, 서버 저장 공간 절약 5. 효율적인 마크업 6. 호환성 가능&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;h2&gt;웹 호환성(Cross Browsing) 정의&lt;/h2&gt;
+                &lt;p&gt;웹 호환성은 표준 웹 기술을 사용하여 운영체제, 브라우저 등 어느 한쪽으로 최적화되거나 종속되지 않도록 공통 요소를 사용하여 웹 페이지를 제작하는 기법으로 웹 사이트 사용 시 운영체제 및 브라우저 간 동일한 결과가 나오도록 의미하는 웹 상호운용성의 개념에 웹 표준의 준수를 포함하는 개념이다.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;h2&gt;웹 호환성 준수 이유&lt;/h2&gt;
+                &lt;p&gt;제공하는 서비스를 모든 웹 브라우저 환경에서 동일하게 이용하기 위해서는 웹 호환성을 준수한 웹사이트의 구축이 필요하다.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
 </code></pre>
+                    </div>
+                    <div class="css">
+<pre><code class="language-css">.code-view {
+	background: #fff;
+	width: 60vw;
+	border: 1px solid #f2f2f2;
+	border-radius: 10px;
+	overflow: hidden;
+
+	.view-header {
+		border-bottom: 1px solid #f2f2f2;
+
+		.dot {
+			padding: 13px 10px 10px 15px;
+
+
+			span {
+				width: 12px;
+				height: 12px;
+				display: inline-block;
+				border-radius: 50%;
+				margin: 0 2px;
+			}
+
+			span:nth-child(1) {
+				background-color: #f56565;
+			}
+
+			span:nth-child(2) {
+				background-color: #f6e05e;
+			}
+
+			span:nth-child(3) {
+				background-color: #48bb78;
+			}
+		}
+	}
+
+	.view-title {
+		border-bottom: 1px solid #f2f2f2;
+		padding: 0 11px;
+		font-family: 'NEXONLv2Gothic';
+
+		li {
+			display: inline;
+			list-style: none;
+
+			a {
+				text-decoration: none;
+				color: #ccc;
+				padding: 10px 10px 12px;
+				margin: 0 5px;
+				display: inline-block;
+			}
+
+			&.active a {
+				border-top: 2px solid #667EEA;
+				color: #4a5568;
+			}
+		}
+
+	}
+	.view-cont {
+		height: 500px;
+		overflow-y: scroll;
+
+		> div {
+			display: none;
+		}
+		> div:nth-child(1) {
+			display: block;
+		}
+	}
+}
+</code></pre>
+                    </div>
+                    <div class="javascript">
+<pre><code class="language-javascript">const viewTitle = document.querySelectorAll(".view-title ul li");
+    const viewCont = document.querySelectorAll(".view-cont > div");
+    
+    viewTitle.forEach((element, index) => {
+        element.addEventListener("click", function(){
+            
+            viewTitle.forEach( el => {
+                el.classList.remove("active");
+            });
+            element.classList.add("active");
+    
+            viewCont.forEach( el => {
+                el.style.display = "none";
+            })
+            viewCont[index].style.display = "block";
+        });
+    })
+</code></pre>   
+                    </div>
                 </div>
             </div>
 
@@ -173,19 +299,25 @@
     <!-- script -->
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
     <script>
-        //hljs.highlightAll(); //코드 하나
+        const tabBtn = document.querySelectorAll(".tab-btn ul li");
+        const tabCont = document.querySelectorAll(".tab-cont > div");
+    
+        tabBtn.forEach((element, index) => {
+            element.addEventListener("click", function(){
+                
+                tabBtn.forEach( el => {
+                    el.classList.remove("active");
+                });
+                element.classList.add("active");
 
+                tabCont.forEach( el => {
+                    el.style.display = "none";
+                })
+                tabCont[index].style.display = "block";
+            });
+        })
 
-        // $(".info button").click(function(){
-        //     $("#modal").removeClass().addClass("show")
-        // });
-
-        // $(".modal-cont button").click(function(){
-        //     $("#modal").addClass("hide")							  
-        // });
     </script>
     <!-- //script -->
 </body>
