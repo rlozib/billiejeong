@@ -466,18 +466,17 @@ figcaption {
 }
 
 @media (max-width: 800px) {
-  body {
-    overflow: hidden;
-  }
-
   #contents h1 {
     font-size: 18vw;
   }
 
+  #nav {
+    bottom: 50px;
+  }
+
   #nav ul {
-    display: grid;
-    grid-template-columns: repeat(5, 65px);
-    gap: 10px;
+    display: flex;
+    justify-content: center;
   }
 
   #nav ul li a {
