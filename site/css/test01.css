@@ -1,0 +1,75 @@
+
+body {
+    font-family: 'NanumSquare';
+    background-image: url(../img/naver-bg.png);
+    background-position: center;
+    width: 100%;
+    z-index: 1;
+}
+/* container */
+.container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    /*background-color: rgba(0,0,0,0.13);*/
+}
+.container-fluid{
+    width: 96%;
+    margin: 0 auto;
+}
+
+/* btn-style */
+.btn-style{
+    border:  1px solid #fff;
+    padding: 10px 20px;
+    color: #fff;
+}
+.btn-style.radius{
+    border-radius: 30px;
+}
+
+
+#header {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    color: #fff;
+}
+.headerOne {
+    text-align: center;
+}
+.headerOne h1 {
+    position: absolute;
+    font-size: 15px;
+    font-weight: 800;
+}
+.headerOne .menu li {
+    display: inline;
+}
+.headerOne .menu li a {
+    font-size: 18px;
+    padding: 25px;
+    color: #fff;
+    font-weight: 400;
+}.headerOne .menu li a:hover {
+    color: #19CF60;
+    font-weight: 700;
+}
+.headerOne .login {
+    position: absolute;
+    right: 2%; 
+    top: 0;
+}
+.wrap .inner-wrap .t1 {
+    color: #fff;
+    font-weight: 800;
+    font-size: 100px;
+    display: block;
+    margin: 0;
+}
+.wrap .inner-wrap .t2 {
+    color: #fff;
+    font-weight: 800;
+    font-size: 100px;
+}
