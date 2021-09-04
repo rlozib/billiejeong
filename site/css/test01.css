@@ -265,18 +265,25 @@ body {
     color: rgb(206, 206, 206);
     font-weight: 800;
     display: block;
+    padding: 30px;
 }
 .cardType01 .card-wrap .card .card-desc {
     color: #fff;
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 700;
     display: block;
+    padding: 0px 30px 0px ;
 }
 .cardType01 .card-wrap .card .card-word {
     color: #6D8BFF;
     display: inline-block;
+    padding: 30px 10px 10px 30px;
+    font-size: 15px;
+    font-weight: 400;
 }
-.cardType01 .card-wrap .card .card-img {}
+.cardType01 .card-wrap .card .card-img {
+    padding-bottom: 20px;
+}
 
 
 
