@@ -1,11 +1,33 @@
 
 body {
     font-family: 'NanumSquare';
+    /* background-color: #999999; */
     background-image: url(../img/naver-bg.png);
     background-position: center;
     width: 100%;
-    z-index: 1;
+    height: 100vh;
+    color: #fff;
 }
+
+/* btn-style */
+.btn-style{
+    border:  1px solid #fff;
+    padding: 10px 20px;
+    color: #fff;
+}
+.btn-style.radius{
+    border-radius: 30px;
+}
+
+/* 헤더 랩 영역 */
+.wrap {
+    min-width: 1440px;
+    padding: 0 24px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
 /* container */
 .container {
     max-width: 1000px;
@@ -19,57 +41,243 @@ body {
     margin: 0 auto;
 }
 
-/* btn-style */
-.btn-style{
-    border:  1px solid #fff;
-    padding: 10px 20px;
-    color: #fff;
-}
-.btn-style.radius{
-    border-radius: 30px;
-}
-
-
 #header {
     width: 100%;
     height: 100px;
     line-height: 100px;
     color: #fff;
+    position: fixed;
 }
-.headerOne {
+.header {
     text-align: center;
 }
-.headerOne h1 {
+.header h1 {
     position: absolute;
+    left: 2%; 
+    top: 0;
     font-size: 15px;
     font-weight: 800;
+    padding-left: 40px;
+    padding-top: 10px;
 }
-.headerOne .menu li {
+.header h1 .logo {
+    width: 30px;
+    display: inline-block;
+    
+}
+.header h1 .logo_name {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.header .menu li {
     display: inline;
 }
-.headerOne .menu li a {
+.header .menu li a {
     font-size: 18px;
-    padding: 25px;
+    padding: 0 25px;
     color: #fff;
     font-weight: 400;
-}.headerOne .menu li a:hover {
+   
+}
+.header .menu li a:hover {
     color: #19CF60;
     font-weight: 700;
 }
-.headerOne .login {
+.header .login {
     position: absolute;
-    right: 2%; 
+    right: 10%; 
     top: 0;
 }
-.wrap .inner-wrap .t1 {
+
+.cont1 {
+    position: relative;
     color: #fff;
-    font-weight: 800;
-    font-size: 100px;
+}
+.cont1 .title {
     display: block;
-    margin: 0;
+    position: absolute;
+    top: 265px;
 }
-.wrap .inner-wrap .t2 {
+.cont1 em {
+    position: absolute;
+    font-weight: 700;
+    font-size: 43px;
+    top: 480px;
+}
+.cont1 p {
+    position: absolute;
+    top: 550px;
+    font-size: 23px;
+    font-weight: 400;
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+/*section*/
+.sliderType01 {
+    border-radius: 30px;
+}
+.swiper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 30px;
+    }
+.swiper-wrapper {
+    position: absolute;
+    margin-top: 800px;
+}
+.swiper-wrapper .swiper-slide:nth-child(1) {
+    background-image: url(../img/slidetype01.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+.swiper-wrapper .swiper-slide:nth-child(2) {
+    background-image: url(../img/slidetype02.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+.swiper-wrapper .swiper-slide:nth-child(3) {
+    background-image: url(../img/slidetype03.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+.swiper-wrapper .swiper-slide:nth-child(4) {
+    background-image: url(../img/slidetype04.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+.swiper-wrapper .swiper-slide:nth-child(5) {
+    background-image: url(../img/slidetype05.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+.swiper-wrapper .swiper-slide:nth-child(6) {
+    background-image: url(../img/slidetype06.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+.swiper-slide .slide-inner {
+    width: 1000px;
+    height: 400px;
+    margin: 0 auto;
     color: #fff;
-    font-weight: 800;
-    font-size: 100px;
+    padding: 30px;
 }
+.swiper-slide .slide-inner em {
+    font-size: 18px;
+    font-weight: 800;
+    padding-top: 100px;
+    color: rgba(255, 255, 255, 0.733);
+    display: block;
+    margin-bottom: 20px;
+}
+.swiper-slide .slide-inner h3 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.7;
+    /* text-indent: -8px; */
+    
+}
+.swiper-slide .slide-inner p {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 30px;
+}
+.swiper-pagination {
+    position: absolute;
+    left: 0 !important;
+    bottom: 35px;
+    transform: translateX(-50%);
+}
+.swiper-pagination .swiper-pagination-bullet {
+    width: 10px; height: 10px;
+    border: 3px solid rgba(255, 255, 255, 0.507);
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 6px;
+    box-sizing: border-box;
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.507);
+}
+.swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #fff;
+}
+.swiper-button-prev {
+    width: 21px; height: 41px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    transform: translateY(-50%);
+    color: #fff;
+    margin-top: 500px;
+}
+.swiper-button-next {
+    width: 21px; height: 41px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+    color: #fff;
+}
+.cardType01 {
+    padding: 150px 0;
+}
+.cardType01 h2{
+    color: #6D8BFF;
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 80px;
+
+}
+.cardType01 .card-wrap {
+    
+}
+.cardType01 .card-wrap .card {
+    display: inline-block;
+    border-radius: 20px;
+    width: 500px;
+    height: 800px;
+    background-color: #333537;
+    box-sizing: border-box;
+    margin: 40px 20px 0 0;
+    padding: 20px;
+    
+}
+
+.cardType01 .card-wrap .card .card-title {
+    font-size: 18px;
+    color: rgb(206, 206, 206);
+    font-weight: 800;
+    display: block;
+}
+.cardType01 .card-wrap .card .card-desc {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    display: block;
+}
+.cardType01 .card-wrap .card .card-word {
+    color: #6D8BFF;
+    display: inline-block;
+}
+.cardType01 .card-wrap .card .card-img {}
+
+
+
+
