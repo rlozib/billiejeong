@@ -24,7 +24,6 @@ function agentCheck(){
     const agent = navigator.userAgent.toLowerCase();
 
     
-
     const browserList = {
         mac: agent.match(/macintosh/i),
         window: agent.match(/windows/i),

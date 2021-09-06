@@ -256,6 +256,15 @@ figcaption {
   right: 0;
 }
 
+.info.source {
+  position: fixed;
+  z-index: 1000;
+  top: auto;
+  left: auto;
+  bottom: 0;
+  right: 0;
+}
+
 .info h1 {
   font-weight: 400;
   font-size: 20px;

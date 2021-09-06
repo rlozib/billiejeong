@@ -243,6 +243,14 @@ $gradient6: linear-gradient(to bottom, #df89b5 0%, #bfd9fe 100%);
 		bottom: 0;
 		right: 0;
 	}
+	&.source {
+		position: fixed;
+		z-index: 1000;
+		top: auto;
+		left: auto;
+		bottom: 0;
+		right: 0;
+	}
 
 	h1 {
 		font-weight: 400;
