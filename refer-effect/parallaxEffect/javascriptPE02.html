@@ -576,14 +576,22 @@ modal();
 
             document.querySelector(".paraScroll span").innerText = parseInt(scrollTop) + "px";
 
-            
+            document.querySelectorAll('.paraDot ul li').forEach((li, index) => {
+                if (scrollTop > document.getElementById('section' + (index + 1)).offsetTop - 2) {
+                document.querySelectorAll('.paraDot ul li').forEach(el => {
+                    el.classList.remove('active');
+                });
+                document.querySelector('.paraDot ul li:nth-child(' + (index + 1) + ')').classList.add('active');
+                }
+            });
 
-            if( scrollTop > document.getElementById("section1").offsetTop ){
-                document.querySelectorAll(".paraDot ul li").forEach( (el)=> {
-                    el.classList.remove("active");
-                })
-                document.querySelector(".paraDot ul li:nth-child(1)").classList.add("active");
-            }
+            
+            // if( scrollTop > document.getElementById("section1").offsetTop ){
+            //     document.querySelectorAll(".paraDot ul li").forEach( (el)=> {
+            //         el.classList.remove("active");
+            //     })
+            //     document.querySelector(".paraDot ul li:nth-child(1)").classList.add("active");
+            // }
         })
 
         modal();
