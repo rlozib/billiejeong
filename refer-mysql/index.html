@@ -44,6 +44,11 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.../assets2/js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+        .bgs12 {
+        background-image: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
+        }
+    </style>
 </head>
 <body>
     <a class="sr-only" href="#content">Skip to main content</a>
@@ -68,7 +73,7 @@
             </nav>
         </div>
     </header>
-    <div class="bs-header bgs1" id="content">
+    <div class="bs-header bgs12" id="content">
         <div class="container">
             <h1>MySQL Reference v1.0 &lt;/doc&gt;</h1>
             <p><a href="https://rlozib.github.io/dothome21/index.html" target="_blank">rlozib.github.io</a></p>
@@ -332,7 +337,7 @@ INSERT INTO member(youEmail, youName, youPass, youBirth, regTime) VALUES('websto
                     
                     <h3 id="intro6-2" class="pt30">데이터 불러오기</h3>
                     <div class="bs-callout bs-callout-info">
-                        SELECT 필드명 FROM 테이블명 WHERE 조건;
+                        SELECT * 필드명 FROM 테이블명 WHERE 조건;
                     </div>
 
                     <h4 class="pt20">전체 데이터 불러오기</h4>
