@@ -1,5 +1,60 @@
 @charset "UTF-8";
 /*webfont*/
+/*에스코어 드림*/
+@font-face {
+  font-family: "S-CoreDream";
+  font-weight: 100;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-1Thin.woff") format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "S-CoreDream";
+  font-weight: 200;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff") format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "S-CoreDream";
+  font-weight: 300;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff") format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "S-CoreDream";
+  font-weight: 400;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff") format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "S-CoreDream";
+  font-weight: 500;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff") format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "S-CoreDream";
+  font-weight: 600;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff") format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "S-CoreDream";
+  font-weight: 700;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-7ExtraBold.woff") format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "S-CoreDream";
+  font-weight: 800;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff") format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "S-CoreDream";
+  font-weight: 900;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-9Black.woff") format("woff");
+  font-style: normal;
+}
 @font-face {
   font-family: "NEXONLv1Gothic";
   font-weight: 300;
@@ -92,8 +147,11 @@ figcaption {
   top: 0;
   width: 100%;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: -1;
+}
+.bg.blue::before {
+  background-color: rgba(15, 68, 138, 0.5);
 }
 
 .bg1 {
@@ -226,6 +284,11 @@ figcaption {
   bottom: 0;
   right: 0;
 }
+.info.left {
+  top: auto;
+  left: 0;
+  bottom: 0;
+}
 .info.source {
   position: fixed;
   z-index: 1000;
@@ -241,6 +304,10 @@ figcaption {
   border-bottom: 2px dashed #ffffff;
   display: inline-block;
   margin-bottom: 10px;
+}
+.info h1 a {
+  color: #fff;
+  text-decoration: none;
 }
 .info p {
   font-weight: 300;
@@ -266,6 +333,18 @@ figcaption {
 .info li.active a {
   background: #fff;
   color: #000;
+}
+.info.list {
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  padding: 20px;
+  font-size: 12px;
+  line-height: 1.8;
+  border-radius: 10px;
+  margin: 20px;
+}
+.info.list li {
+  display: block;
 }
 .info button {
   background: transparent;
