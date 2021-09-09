@@ -88,6 +88,11 @@
 			border-color: rgba(255, 237, 194, 0.4);
 			transform: rotateX(360deg) skew(45deg);
 		}
+		.cursor.style6 {
+			background-color: rgba(81, 214, 255, 0.52);
+			border-color: rgba(130, 251, 255, 0.4);
+			transform: rotateX(360deg) skew(45deg);
+		}
 	</style>
 </head>
 
@@ -99,7 +104,7 @@
 
 		<article class="mouseCont">
 			<p><span class="style1">Success</span> is <span class="style2">walking</span> from failure to failure with <span class="style3">no loss of enthusiasm.</span></p>
-			<h2><span class="style4">성공</span>이란 <span class="style3">열정을 잃지 않고</span> 실패에서 실패로 <span class="style5">걸어가는 것</span>이다. </h2>
+			<h2><span class="style4">성공</span>이란 <span class="style5">열정을 잃지 않고</span> 실패에서 실패로 <span class="style6">걸어가는 것</span>이다. </h2>
 		</article>
 	</main>
 
@@ -350,22 +355,30 @@
 			// });
 
 			//for문
-			// for(let i=1; i<=6; i++){	
-			// 	$(".mouseCont .sytle"+i).hover(function () {
-			// 		$(".cursor").addClass("sytle" + i);
-			// 	}, function () {
-			// 		$(".cursor").removeClass("sytle" + i);
-			// 	});
-			// }
+			for(let i=1; i<=6; i++){	
+				$(".mouseCont .style"+i).hover(function () {
+					$(".cursor").addClass("style" + i);
+				}, function () {
+					$(".cursor").removeClass("style" + i);
+				});
+			}
 
 			//each()
-			$(".mouseCont span").each((span, index) => {
-				$(".mouseCont .style").hover(function () {
-					$(".cursor").addClass("style" + index);
-				}, function () {
-					$(".cursor").removeClass("style" + index);
-				});
-			});
+			// $(".mouseCont span").each((index , element) => {
+			// 	$(element).hover(function(){
+			// 		$(".cursor").addClass("style"+ (index+1));
+			// 	}, function(){
+			// 		$(".cursor").removeClass("style"+ (index+1));
+			// 	})
+				
+			// });
+
+			//attr()
+			// $(".mouseCont span").hover(function(){
+			// 	$(".cursor").addClass($(this).attr("class"));
+			// }, function(){
+			// 	$(".cursor").removeClass($(this).attr("class"));
+			// });
 
 			// $(".mouseCont .style1").hover(function () {
 			// 	$(".cursor").addClass("style1");
