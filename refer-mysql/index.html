@@ -456,6 +456,137 @@ INSERT INTO member(youEmail, youName, youPass, youBirth, regTime) VALUES('websto
                 </div>
                 <!-- //Intro6 -->
 
+                <!-- Intro7 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro7" class="page-header">테이블 JOIN</h2>     
+                    
+<pre class="language-js"><code>create table myMember(
+    myMemberID int(10) unsigned auto_increment,
+    youID varchar(15) not null,
+    youName varchar(10) not null,
+    youPass varchar(30) not null,
+    youEmail varchar(30) not null,
+    regTime int(11) not null,
+    PRIMARY KEY (myMemberID)
+)   charset=utf8;
+
+create table myReview(
+    myReviewID int(10) unsigned auto_increment,
+    myMemberID int(10) unsigned,
+    youCont tinytext not null,
+    regTime int(11) not null,
+    PRIMARY KEY (myReviewID)
+)   charset=utf8;  
+
+mysql> show tables;
++------------------+
+| Tables_in_test01 |
++------------------+
+| mymember         |
+| myreview         |
++------------------+
+2 rows in set (0.00 sec)
+
+mysql> desc myMember;
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| myMemberID | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| youID      | varchar(15)      | NO   |     | NULL    |                |
+| youName    | varchar(10)      | NO   |     | NULL    |                |
+| youPass    | varchar(30)      | NO   |     | NULL    |                |
+| youEmail   | varchar(30)      | NO   |     | NULL    |                |
+| regTime    | int(30)          | NO   |     | NULL    |                |
++------------+------------------+------+-----+---------+----------------+
+6 rows in set (0.00 sec)
+
+mysql> desc myReview;
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| myReviewID | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| myMemberID | int(10) unsigned | YES  |     | NULL    |                |
+| youCont    | tinytext         | NO   |     | NULL    |                |
+| regTime    | int(30)          | NO   |     | NULL    |                |
++------------+------------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+INSERT INTO myMember(youID, youName, youPass, youEmail, regTime) VALUES('billie', '정은지', '1234', 'billie@naver.com', '1014');
+INSERT INTO myMember(youID, youName, youPass, youEmail, regTime) VALUES('summer08', '한여름', '6789', 'summer08@naver.com', '1014');
+INSERT INTO myMember(youID, youName, youPass, youEmail, regTime) VALUES('winter12', '장겨울', '1212', 'winter12@naver.com', '1014');
+INSERT INTO myMember(youID, youName, youPass, youEmail, regTime) VALUES('spring04', '이봄', '3456', 'spring04@naver.com', '1014');
+INSERT INTO myMember(youID, youName, youPass, youEmail, regTime) VALUES('autumn10', '추가을', '91011', 'autumn10@naver.com', '1014');
+
+INSERT INTO myReview(myMemberID, youCont, regTime) VALUES(1, '이거 사면 개이득', '1015');
+INSERT INTO myReview(myMemberID, youCont, regTime) VALUES(4, '이거 산거 후회 안해요', '1015');
+INSERT INTO myReview(myMemberID, youCont, regTime) VALUES(2, '쟁여 놓으세요', '1015');
+
+mysql> SELECT * FROM myMember;
++------------+----------+---------+---------+--------------------+---------+
+| myMemberID | youID    | youName | youPass | youEmail           | regTime |
++------------+----------+---------+---------+--------------------+---------+
+|          1 | billie   | 정은지  | 1234    | billie@naver.com   |    1014 |
+|          2 | summer08 | 한여름  | 6789    | summer08@naver.com |    1014 |
+|          3 | winter12 | 장겨울  | 1212    | winter12@naver.com |    1014 |
+|          4 | spring04 | 이봄    | 3456    | spring04@naver.com |    1014 |
+|          5 | autumn10 | 추가을  | 91011   | autumn10@naver.com |    1014 |
++------------+----------+---------+---------+--------------------+---------+
+5 rows in set (0.01 sec)
+
+mysql> SELECT * FROM myReview;
++------------+------------+-----------------------+---------------+
+| myReviewID | myMemberID | youCont                     | regTime |
++------------+------------+-----------------------+---------------+
+|          2 |          1 | 이거 사면 개이득             |    1015 |
+|          3 |          4 | 이거 산거 후회 안해요        |    1015 |
+|          5 |          2 | 쟁여 놓으세요                |    1015 |
++------------+------------+-----------------------+---------------+
+5 rows in set (0.00 sec)
+</code></pre>
+
+                <h3 id="intro7-1" class="pt30">JOIN문 사용하기</h3>
+                <div class="bs-callout bs-callout-info">
+                    SELECT 필드명 FROM 테이블명 앨리어스 JOIN 연결할 테이블명 앨리어스 ON(조건문)
+                </div>
+                <h4 class="pt20">두개의 테이블 JOIN하기</h4>
+<pre class="language-js"><code>SELECT m.youName, r.youCont, r.regTime FROM myMember m JOIN myReview r ON(m.myMemberID = r.myMemberID);
++---------+-----------------------+----------------------+
+| youName | youCont                            | regTime |
++---------+-----------------------+----------------------+
+| 정은지  | 이거 사면 개이득                     |    1015 |
+| 이봄    | 이거 산거 후회 안해요                |    1015 |
+| 한여름  | 쟁여 놓으세요                        |    1015 |
++---------+-----------------------+----------------------+
+5 rows in set (0.00 sec)
+</code></pre>
+                <h4 class="pt20">필드명을 변경하여 표시하는 방법</h4>
+<pre class="language-js"><code>SELECT m.youName, r.youCont, r.regTime AS reviewTime FROM myMember m JOIN myReview r ON (m.myMemberID = r.myMemberID);
++---------+-----------------------+----------------------+
+| youName | youCont                         | reviewTime |
++---------+-----------------------+----------------------+
+| 정은지  | 이거 사면 개이득                 |       1015  |
+| 이봄    | 이거 산거 후회 안해요            |       1015  |
+| 한여름  | 쟁여 놓으세요                    |       1015  |
++---------+-----------------------+----------------------+
+5 rows in set (0.01 sec)
+</code></pre>
+                <h4 class="pt20">필드 내용이 없는 경우 표시하는 방법</h4>
+<pre class="language-js"><code>SELECT m.youName, r.youCont, r.regTime FROM myMember m LEFT JOIN myReview r ON(m.myMemberID = r.myMemberID);
++---------+-----------------------+---------------------+
+| youName | youCont                           | regTime |
++---------+-----------------------+---------------------+
+| 정은지  | 이거 사면 개이득                   |    1015  |
+| 이봄    | 이거 산거 후회 안해요              |    1015  |
+| 한여름  | 쟁여 놓으세요                      |    1015  |
+| 장겨울  | NULL                              |    NULL  |
+| 추가을  | NULL                              |    NULL  |
++---------+-----------------------+---------------------+
+5 rows in set (0.01 sec)
+</code></pre>
+
+                </div>
+                <!-- //Intro7 -->
+
             </div>
             <!-- //col-md-9 -->
             <!-- //col-md-3 -->
@@ -493,6 +624,11 @@ INSERT INTO member(youEmail, youName, youPass, youBirth, regTime) VALUES('websto
                                 <li><a href="#intro6-2">데이터 불러오기</a></li>
                                 <li><a href="#intro6-3">데이터 수정하기</a></li>
                                 <li><a href="#intro6-4">데이터 삭제하기</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#intro7">테이블 JOIN</a>
+                            <ul class="nav bs-sidenav">
+                                <li><a href="#intro7-1">JOIN문 사용하기</a></li>
                             </ul>
                         </li>
                     </ul>
