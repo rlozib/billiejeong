@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test03</title>
+
+    <!-- CSS -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/reset.css">
+  
+  <!-- swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+  <!-- 나눔스퀘어 웹 폰트 -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+
+
+  <style>
+      * {
+          margin: 0;
+          padding: 0;
+      }
+      .container {
+          width: 1200px;
+          margin: 0 auto;
+      }
+      #wrap {
+          font-family: 'NanumSquare';
+          box-sizing: border-box;
+      }
+      #header {
+          height: 85px;
+      }
+      #banner {
+		  height: 390px;
+		  background: url('https://static-clova.pstatic.net/static/d15c0af/img/bridge/bridge_banner_02.png') no-repeat 50%;
+		  background-size: cover;
+      }
+      #contents {
+		  height: 900px;
+      }
+      #footer {
+          height: 100px;
+      }
+      .hInner {
+		  margin-left: 123px;
+		  margin:0 auto;
+		  width: 1200px;
+		  height: 86px;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  justify-content: space-between;
+      }
+      .hInner .logoImg {
+          background-position: -4px -62px;
+          background-repeat: no-repeat;
+          width: 145px;
+          height: 22px;
+          display: block;
+          background-size: 335px 311px;
+          background-image: linear-gradient(transparent,transparent),url(https://static-clova.pstatic.net/static/d15c0af/img/sprite/sp_svg_icon.svg);
+      }
+      .hInner ul li {
+          display: inline-block;
+      }
+      .hInner ul li a {
+          display: block;
+          height: 86px;
+          padding: 34px 36px;
+          color: rgba(0,0,0,.6);
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 16px;
+          box-sizing: border-box;
+      }
+      .hRight p {
+          margin-left: 6px;
+          padding: 6px 13px;
+          border: 1px solid #999;
+          border-radius: 3px;
+          display: inline-block;
+      }
+
+
+
+	/* cont1 */
+	.cardType01 {
+		font-family: 'NanumSquare';
+		padding: 100px 0;
+	}
+	
+	.cardType01 .title {
+		width: 204px;
+		height: 50px;
+		display: block;
+		margin: 0 auto 10px auto;
+	}
+	
+	.cardType01 p {
+		font-size: 16px;
+		font-weight: 400;
+		margin-bottom: 80px;
+		text-align: center;
+	}
+	
+	.cardType01 .card-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 30px;
+	}
+	
+	.cardType01 .card-wrap .card {
+		width: 374px;
+		border: 1px solid #eee;
+		border-radius: 10px;
+		overflow: hidden;
+		box-sizing: border-box;
+	}
+	
+	.cardType01 .card-wrap .card .card-img {
+		height: 361px;
+	}
+	
+	.cardType01 .card-wrap .card .card-cont {
+		padding: 40px;
+		text-align: left;
+	}
+	
+	.cardType01 .card-wrap .card .card-cont .card-title {
+		width: 294px;
+		height: 22px;
+		margin-bottom: 10px;
+	}
+	.cardType01 .card-wrap .card .card-cont .card-title h2 {
+		font-family: 'GmarketSans';
+        font-size: 20px;
+        letter-spacing: -10;
+        display: inline;
+	}
+	.cardType01 .card-wrap .card .card-cont .card-title .card-name {
+		height: 22px;
+		display: inline-block;
+	}
+	
+	.cardType01 .card-wrap .card .card-cont .card-title .card-name.lamp {
+		background-position: -286px -4px;
+		background-repeat: no-repeat;
+		width: 143px;
+		height: 22px;
+	}
+	
+	.cardType01 .card-wrap .card .card-cont .card-title .card-name.clock {
+		background-position: -286px -59px;
+		background-repeat: no-repeat;
+		width: 136px;
+		height: 17px;
+	}
+	
+	.cardType01 .card-wrap .card .card-cont .card-title .card-name.friends {
+		background-position: -4px -231px;
+		background-repeat: no-repeat;
+		width: 153px;
+		height: 17px;
+	}
+	
+	.cardType01 .card-wrap .card .card-cont .card-title .card-name.wave {
+		background-position: -286px -34px;
+		background-repeat: no-repeat;
+		width: 139px;
+		height: 17px;
+	}
+	
+	.cardType01 .card-wrap .card .card-cont .card-title .card-name.mini {
+		background-position: -4px -129px;
+		background-repeat: no-repeat;
+		width: 200px;
+		height: 17px;
+	}
+	
+	.cardType01 .card-wrap .card .card-cont .card-title .card-name.doraemon {
+		background-position: -4px -102px;
+		background-repeat: no-repeat;
+		width: 201px;
+		height: 19px;
+	}
+	
+	.cardType01 .card-wrap .card .card-cont .card-title .tag {
+		display: inline-block;
+		background-color: #FA615B;
+		border-radius: 50px;
+		color: #fff;
+		padding: 0 7px;
+		margin-left: 4px;
+		text-align: center;
+		font-size: 12px;
+		line-height: 18px;
+		font-weight: 700;
+		vertical-align: top;
+		text-transform: uppercase;
+	}
+	
+	.cardType01 .card-wrap .card .card-cont .card-desc {
+		font-size: 17px;
+		font-weight: 400;
+		line-height: 1.8;
+		display: block;
+		margin-bottom: 15px;
+	}
+	
+	.cardType01 .card-wrap .card .card-cont .card-buy {
+		display: inline-block;
+		margin-right: 6px;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 16px;
+		color: #fff;
+		background-color: #05d686;
+		padding: 8px 17px;
+	}
+	
+	.cardType01 .card-wrap .card .card-cont .card-info {
+		display: inline-block;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 16px;
+		color: rgba(0, 0, 0, 0.6);
+		border: 1px solid #e3e3e3;
+		padding: 8px 17px;
+	}
+	/* //cont1 */
+
+
+
+
+	/* cont2 */
+	.cardType02 {
+		font-family: 'NanumSquare';
+		padding: 100px 0;
+	}
+	
+	.cardType02 h3 {
+		text-align: center;
+		font-family: 'GmarketSans';
+        font-size: 35px;
+		display: block;
+		margin: 0 auto 10px auto;
+	}
+	
+	.cardType02 p {
+		font-size: 16px;
+		font-weight: 400;
+		margin-bottom: 80px;
+		text-align: center;
+	}
+	
+	.cardType02 .card-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 30px;
+	}
+	
+	.cardType02 .card-wrap .card {
+		width: 374px;
+		border: 1px solid #eee;
+		border-radius: 10px;
+		overflow: hidden;
+		box-sizing: border-box;
+	}
+	
+	.cardType02 .card-wrap .card .card-img {
+		height: 361px;
+	}
+	
+	.cardType02 .card-wrap .card .card-cont {
+		padding: 40px;
+		text-align: left;
+	}
+	.cardType02 .card-wrap .card .card-cont .card-title .tag {
+		display: inline-block;
+		font-size:11px;
+        background-color: #c20034;
+        display: block;
+        font-weight: 900;
+        line-height: 18px;
+        text-align: center;
+        border-radius: 9px;
+        text-align: center;
+        width: 69px;
+        color: #fff;
+		margin-bottom: 10px;
+	}
+	.cardType02 .card-wrap .card .card-cont .card-title h2 {
+		font-family: 'GmarketSans';
+        font-size: 20px;
+        letter-spacing: -10;
+        display: inline;
+		margin-bottom: 20px;
+	}
+	
+	.cardType02 .card-wrap .card .card-cont .card-desc {
+		font-size: 17px;
+		font-weight: 400;
+		line-height: 1.8;
+		display: block;
+		margin-bottom: 15px;
+	}
+	
+	.cardType02 .card-wrap .card .card-cont .card-info {
+		display: inline-block;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 16px;
+		color: rgba(0, 0, 0, 0.6);
+		border: 1px solid #e3e3e3;
+		padding: 8px 17px;
+	}
+	/* //cont2 */
+
+
+	/* cont3 */
+
+	.cont3 {
+		font-family: 'NanumSquare';
+        height: 195px;
+        padding: 75px 0 70px;
+        background: #f7f7f7;
+        border-top: 1px solid rgba(0,0,0,.1);
+        text-align: center;
+	}
+	.cont3 h2 {
+		font-size: 32px;
+        font-weight: bold;
+	}
+	.cont3 p {
+		font-size: 18px;
+		margin-top: 14px;
+		color: rgba(0,0,0,0.6);
+	}
+	.cont3 span {
+		font-size: 16px;
+        padding: 16px 30px;
+        background: #2284f5;
+        border-radius: 25px;
+        margin-top: 20px;
+        line-height: 2vh;
+        display: inline-block;
+        font-weight: bold;
+	}
+	.cont3 span a {
+		color: #fff;
+	}
+	/* //cont3 */
+
+	/* footer */
+	#footer {
+        width: 100%;
+        height: 52px;
+        padding: 40px 0;
+        background-color: #191919;
+        color: #666;
+		font-family: 'GmarketSans';
+    }
+    #footer .box1{
+        display: flex;
+        justify-content: space-between;
+    }
+    #footer .box1 .lef1{
+        display: inline-block;
+    }
+    #footer .box1 .right1{
+        display: inline-block;
+
+    }
+    #footer .box1 .left1 p{
+        font-size: 15px;
+        font-weight: bold;
+        display: inline;
+        
+    }
+    #footer .box1 .left1 span{
+        font-size: 25px;
+        font-weight: 700;
+    }
+    #footer .box2{
+        font-size: 13px;
+        display: flex;
+        justify-content: space-between;
+    }
+	/* //footer */
+  </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container">
+                <div class="hInner">
+                    <a href="#" class="logoImg"></a>
+                    <ul>
+                        <li><a href="#c">기술 · 솔루션</a></li>
+                        <li><a href="#c">제품</a></li>
+                        <li><a href="#c">플랫폼</a></li>
+                        <li><a href="#c">파트너</a></li>
+                        <li><a href="#c">리서치</a></li>
+                    </ul>
+                    <div class="hRight">
+                        <p><a href="#c">Biz Start</a></p>
+                        <p><a href="#c">비즈니스 문의</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<!-- header -->
+        <div id="banner">
+        </div>
+		<!-- banner -->
+
+        <section class="cont1">
+			<div class="container">
+				<div class="cardType01">
+					<img class="title" src="img/AI Devices.svg" alt="AI Devices">
+					<p>AI 기술이 집약된 제품으로 편리한 일상을 만나보세요.</p>
+					<div class="card-wrap">
+						<div class="card">
+							<img class="card-img" src="img/card-type04.png" alt="CLOVA Lamp">
+							<div class="card-cont">
+							<div class="card-title">
+								<img class="card-name lamp" src="img/CLOVA_Lamp.svg" alt="클로바램프">
+								<span class="tag">new</span>
+							</div>
+							<span class="card-desc">책을 읽어주는 아이 친구<br>프리미엄 기능의 스마트 램프</span>
+							<a class="card-buy" href="#">구매하기</a>
+							<a class="card-info" href="#">알아보기</a>
+							</div>
+						</div>
+						<div class="card">
+							<img class="card-img" src="img/card-type05.png" alt="CLOVA Clock">
+							<div class="card-cont">
+							<div class="card-title">
+								<img class="card-name clock" src="img/CLOVA_Clock.svg" alt="클로바클락">
+								<span class="tag">new</span>
+							</div>
+							<span class="card-desc">책을 읽어주는 아이 친구<br>프리미엄 기능의 스마트 램프</span>
+							<a class="card-info" href="#">알아보기</a>
+							</div>
+						</div>
+						<div class="card">
+							<img class="card-img" src="img/card-type06.png" alt="CLOVA Friends">
+							<div class="card-cont">
+							<div class="card-title">
+								<img class="card-name friends" src="img/CLOVA_Friends.svg" alt="클로바프렌즈">
+							</div>
+							<span class="card-desc">책을 읽어주는 아이 친구<br>프리미엄 기능의 스마트 램프</span>
+							<a class="card-info" href="#">알아보기</a>
+							</div>
+						</div>
+						<div class="card">
+							<img class="card-img" src="img/card-type07.png" alt="CLOVA WAVE">
+							<div class="card-cont">
+							<div class="card-title">
+								<img class="card-name wave" src="img/CLOVA_WAVE.svg" alt="클로바웨이브">
+							</div>
+							<span class="card-desc">책을 읽어주는 아이 친구<br>프리미엄 기능의 스마트 램프</span>
+							<a class="card-info" href="#">알아보기</a>
+							</div>
+						</div>
+						<div class="card">
+							<img class="card-img" src="img/card-type08.png" alt="CLOVA Friends mini">
+							<div class="card-cont">
+							<div class="card-title">
+								<img class="card-name mini" src="img/CLOVA_Friends_mini.svg" alt="클로바프렌즈미니">
+							</div>
+							<span class="card-desc">책을 읽어주는 아이 친구<br>프리미엄 기능의 스마트 램프</span>
+							<a class="card-info" href="#">알아보기</a>
+							</div>
+						</div>
+						<div class="card">
+							<img class="card-img" src="img/card-type09.png" alt="Doraemon edition">
+							<div class="card-cont">
+							<div class="card-title">
+								<img class="card-name doraemon" src="img/Doraemon_edition.svg" alt="도라에몽에디션">
+							</div>
+							<span class="card-desc">책을 읽어주는 아이 친구<br>프리미엄 기능의 스마트 램프</span>
+							<a class="card-info" href="#">알아보기</a>
+							</div>
+						</div>
+						<div class="card">
+							<img class="card-img" src="img/card-type10.png" alt="Minions edition">
+							<div class="card-cont">
+							<div class="card-title">
+								<h2>MINIONS  edition</h2> 
+							</div>
+							<span class="card-desc">귀여운 악동 미니언즈를<br>모티브로 한 스마트 스피커</span>
+							<a class="card-info" href="#">알아보기</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- cont1 -->
+
+		<section class="cont2">
+			<div class="container">
+				<div class="cardType02">
+					<h3>With Partners</h3>
+					<p>파트너사와 함께 만든 클로바 스마트 디바이스들을 만나보세요.</p>
+					<div class="card-wrap">
+						<div class="card">
+							<img class="card-img" src="img/card-type11.png" alt="클로바클락+2">
+							<div class="card-cont">
+							<div class="card-title">
+								<span class="tag">with LG U+</span>
+								<h2>CLOVA Clock+2</h2> 
+							</div>
+							<span class="card-desc">안을 확장하고 연결하는<br>우리 집 생활 필수품</span>
+							<a class="card-info" href="#">알아보기</a>
+							</div>
+						</div>
+						<div class="card">
+							<img class="card-img" src="img/card-type12.png" alt="클로바클락+">
+							<div class="card-cont">
+							<div class="card-title">
+								<span class="tag">with LG U+</span>
+								<h2>CLOVA Clock+</h2> 
+							</div>
+							<span class="card-desc">유플러스 전용 기능을<br>더한 스마트 스피커</span>
+							<a class="card-info" href="#">알아보기</a>
+							</div>
+						</div>
+						<div class="card">
+							<img class="card-img" src="img/card-type13.png" alt="클로바프렌즈+">
+							<div class="card-cont">
+							<div class="card-title">
+								<span class="tag">with LG U+</span>
+								<h2>CLOVA Friends+</h2> 
+							</div>
+							<span class="card-desc"> 미니멀 디자인의<br>컴팩트 스마트 스피커</span>
+							<a class="card-info" href="#">알아보기</a>
+							</div>
+						</div>
+						<div class="card">
+							<img class="card-img" src="img/card-type14.png" alt="클로바온+">
+							<div class="card-cont">
+							<div class="card-title">
+								<span class="tag">with LG U+</span>
+								<h2>CLOVA ON+</h2> 
+							</div>
+							<span class="card-desc"> 안을 확장하고 연결하는<br>우리 집 생활 필수품</span>
+							<a class="card-info" href="#">알아보기</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- cont2 -->
+
+		<section class="cont3">
+			<div class="container">
+				<h2>인공지능 플랫폼 클로바와 함께<br>당신의 일상이 더욱 편리해집니다.</h2>
+				<p>스마트 디바이스를 더욱 스마트하게 이용하는 명령어 가이드</p>
+                <span><a href="#c">클로바 명령어 가이드</a></span>
+			</div>
+		</section>
+		<!-- cont3 -->
+
+        <div id="footer">
+			<div class="container">
+				<div class="box1">
+                    <div class="left1">
+                        <p>NAVER</p>
+                        <span>CLOVA</span>
+                    </div>
+                    <div class="right1">
+                    </div>
+                </div>
+                <div class="box2">
+                    <div class="left2">
+                        <p>고객센터 1833-5387 | 09:00 ~ 18:00 (주말,공휴일 휴무)</p>
+                    </div>
+                    <div class="middle">
+                        <p>Powered by NAVER · LINE</p>
+                    </div>
+                    <div class="right2">
+                        <p>공지사항 | 이용약관 | CLOVA채용안내 | CLOVAJP</p>
+                    </div>
+
+                </div>
+			</div>
+		</div>
+    </div>
+</body>
+</html>
