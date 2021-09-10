@@ -891,4 +891,20 @@ $gradient6: linear-gradient(to bottom, #df89b5 0%, #bfd9fe 100%);
 		}
 	}
 }
+@media (max-width: 800px){
+	.paraInfo h1 {
+		font-size: 15px;
+	}
+	.paraInfo p {
+		font-size: 13px;
+	}
 
+	.paraNav li {
+		width: 30px;
+	}
+	.paraNav li a {
+		width: 20px; height: 20px;
+		font-size: 13px;
+		line-height: 20px;
+	}
+}

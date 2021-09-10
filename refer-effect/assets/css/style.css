@@ -896,3 +896,24 @@ figcaption {
   background: #fff;
   color: #000;
 }
+
+@media (max-width: 800px) {
+  .paraInfo h1 {
+    font-size: 15px;
+  }
+
+  .paraInfo p {
+    font-size: 13px;
+  }
+
+  .paraNav li {
+    width: 30px;
+  }
+
+  .paraNav li a {
+    width: 20px;
+    height: 20px;
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
