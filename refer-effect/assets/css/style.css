@@ -899,21 +899,21 @@ figcaption {
 
 @media (max-width: 800px) {
   .paraInfo h1 {
-    font-size: 15px;
+    font-size: 13px;
   }
 
   .paraInfo p {
-    font-size: 13px;
+    font-size: 11px;
   }
 
-  .paraNav li {
-    width: 30px;
+  .paraNav {
+    padding: 10px 15px;
   }
 
   .paraNav li a {
-    width: 20px;
-    height: 20px;
-    font-size: 13px;
-    line-height: 20px;
+    font-size: 10px;
+    width: 10px;
+    height: 10px;
+    line-height: 10px;
   }
 }
