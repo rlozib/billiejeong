@@ -527,8 +527,6 @@ modal();
     <!-- //modal -->
 
     <!-- script -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
@@ -538,30 +536,31 @@ modal();
                 document.querySelector(el.getAttribute("href")).scrollIntoView({
                     behavior: "smooth"
                 })
-            })
-        })
+            });
+        });
 
-        $(window).scroll(function(){
-            let scrollTop = $(document).scrollTop();
+        window.addEventListener("scroll", function(){
+            let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
 
-            //숨김메뉴
-            if( scrollTop > 10 ){
-                $(".paraNav").addClass("show");
+            //메뉴
+            if( scrollTop > 0 ){
+                document.querySelector(".paraNav").classList.add("show");
             } else {
-                $(".paraNav").removeClass("show");
+                document.querySelector(".paraNav").classList.remove("show");
             }
 
-            
-
-            //버튼용
-            $(".content-item").each(function(index){
-                if( scrollTop >= $(this).offset().top -2 ){
-                    $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+            //버튼
+            document.querySelectorAll(".content-item").forEach((item, index) => {
+                if( scrollTop >= item.offsetTop ){
+                    document.querySelectorAll(".paraNav ul li").forEach( li => {
+                        li.classList.remove("active");
+                    });
+                    document.querySelector(".paraNav ul li:nth-child("+(index+1)+")").classList.add("active");
                 }
-            });
+            })
 
             //출력용
-            $(".paraScroll span").text(scrollTop);
+            document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
         });
 
         modal();
