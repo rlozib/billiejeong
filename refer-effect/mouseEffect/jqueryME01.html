@@ -173,131 +173,163 @@
 					<div class="view-cont">
 						<div>
 							<pre><code class="language-html">&lt;main&gt;
-    &lt;div id="tab-menu"&gt;
-        &lt;div class="tab-btn"&gt;
-            &lt;ul&gt;
-                &lt;li class="active"&gt;&lt;a href="#"&gt;웹 표준1&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#"&gt;웹 표준2&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#"&gt;웹 표준3&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#"&gt;웹 표준4&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#"&gt;웹 표준5&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-        &lt;div class="tab-cont"&gt;
-            &lt;div&gt;
-                &lt;h2&gt;웹 표준&lt;/h2&gt;
-                &lt;p&gt;웹 표준이란 브라우저 종류 및 버전에 따른 기능 차이에 대하여 호환이 가능하도록 제시된 표준으로, 다른 기종 혹은 플랫폼에 따라 달리 구현되는 기술을 동일하게 구현함과 동시에 어느 한쪽에 최적화되어 치우치지 않도록 공통요소를 사용하여 웹 페이지를 제작하는 기법을 의미한다. &lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div&gt;
-                &lt;h2&gt;웹 표준 준수 이유&lt;/h2&gt;
-                &lt;p&gt;국내 웹의 현실은 특정 브라우저와 사용자 등의 이용환경과 비표준 페이지 및 과도한 플러그인 사용으로 장애인, 노약자를 포함한 모든 사용자들에게 운영체제 및 웹 브라우저 등의 정보 접근 제약이 있다. 따라서 브라우저의 종류나 버전에 상관없이 모든 사용자들이 동일한 웹사이트를 볼 수 있도록 웹 표준기술 작업이 필요하며 웹 표준 준수는 웹 접근성 준수를 위한 핵심이다.&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div&gt;
-                &lt;h2&gt;웹 표준 장점&lt;/h2&gt;
-                &lt;p&gt;1. 수정 및 운영관리 용이 2. 접근성 향상 3. 검색엔진 최적화(SEO) 4. File Size 축소, 서버 저장 공간 절약 5. 효율적인 마크업 6. 호환성 가능&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div&gt;
-                &lt;h2&gt;웹 호환성(Cross Browsing) 정의&lt;/h2&gt;
-                &lt;p&gt;웹 호환성은 표준 웹 기술을 사용하여 운영체제, 브라우저 등 어느 한쪽으로 최적화되거나 종속되지 않도록 공통 요소를 사용하여 웹 페이지를 제작하는 기법으로 웹 사이트 사용 시 운영체제 및 브라우저 간 동일한 결과가 나오도록 의미하는 웹 상호운용성의 개념에 웹 표준의 준수를 포함하는 개념이다.&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div&gt;
-                &lt;h2&gt;웹 호환성 준수 이유&lt;/h2&gt;
-                &lt;p&gt;제공하는 서비스를 모든 웹 브라우저 환경에서 동일하게 이용하기 위해서는 웹 호환성을 준수한 웹사이트의 구축이 필요하다.&lt;/p&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
+	&lt;div class="cursor"&gt;&lt;/div&gt;
+
+	&lt;article class="mouseCont"&gt;
+		&lt;p&gt;&lt;span class="style1"&gt;Success&lt;/span&gt; is &lt;span class="style2"&gt;walking&lt;/span&gt; from failure to failure with &lt;span class="style3"&gt;no loss of enthusiasm.&lt;/span&gt;&lt;/p&gt;
+		&lt;h2&gt;&lt;span class="style4"&gt;성공&lt;/span&gt;이란 &lt;span class="style5"&gt;열정을 잃지 않고&lt;/span&gt; 실패에서 실패로 &lt;span class="style6"&gt;걸어가는 것&lt;/span&gt;이다. &lt;/h2&gt;
+	&lt;/article&gt;
 &lt;/main&gt;
 </code></pre>
 						</div>
 						<div>
-							<pre><code class="language-css">.code-view {
-	background: #fff;
-	width: 60vw;
-	border: 1px solid #f2f2f2;
-	border-radius: 10px;
+							<pre><code class="language-css">/*mouseCont*/
+.mouseCont {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	color: #fff;
+	width: 100%;
+	height: 100vh;
 	overflow: hidden;
+	font-family: 'NEXONLv1Gothic';
+	cursor: none;
+}
 
-	.view-header {
-		border-bottom: 1px solid #f2f2f2;
+.mouseCont p {
+	font-size: 2.5vw;
+	line-height: 2.3;
+	font-weight: 300;
+}
 
-		.dot {
-			padding: 13px 10px 10px 15px;
+.mouseCont h2 {
+	font-size: 3vw;
+	font-weight: normal;
+}
 
+.mouseCont span {
+	font-style: normal;
+	border-bottom: 0.2vw dashed #fff;
+}
 
-			span {
-				width: 12px;
-				height: 12px;
-				display: inline-block;
-				border-radius: 50%;
-				margin: 0 2px;
-			}
-
-			span:nth-child(1) {
-				background-color: #f56565;
-			}
-
-			span:nth-child(2) {
-				background-color: #f6e05e;
-			}
-
-			span:nth-child(3) {
-				background-color: #48bb78;
-			}
-		}
-	}
-
-	.view-title {
-		border-bottom: 1px solid #f2f2f2;
-		padding: 0 11px;
-		font-family: 'NEXONLv2Gothic';
-
-		li {
-			display: inline;
-			list-style: none;
-
-			a {
-				text-decoration: none;
-				color: #ccc;
-				padding: 10px 10px 12px;
-				margin: 0 5px;
-				display: inline-block;
-			}
-
-			&.active a {
-				border-top: 2px solid #667EEA;
-				color: #4a5568;
-			}
-		}
-
-	}
-	.view-cont {
-		height: 500px;
-		overflow-y: scroll;
-
-		> div {
-			display: none;
-		}
-		> div:nth-child(1) {
-			display: block;
-		}
-	}
+.cursor {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 3px solid #fff;
+	z-index: 9999;
+	background-color: rgba(255, 255, 255, 0.1);
+	user-select: none;
+	pointer-events: none;
+	transition: 
+		background-color 0.2s,
+		border-color 0.2s,
+		border-radius 0.2s,
+		transform 0.6s;
+		
+}
+.cursor.style1 {
+	background-color: rgba(255, 184, 52, 0.602);
+	border-color: rgba(255, 200, 98, 0.4);
+}
+.cursor.style2 {
+	background-color: rgba(175, 125, 255, 0.602);
+	border-color: rgba(173, 84, 255, 0.4);
+	transform: rotateY(720deg) scale(2);
+}
+.cursor.style3 {
+	background-color: rgba(83, 255, 121, 0.602);
+	border-color: rgba(87, 255, 123, 0.4);
+	transform: rotate3d(0,1,1,360deg) scale(1.5, 1.5);
+}
+.cursor.style4 {
+	border-color: rgba(52, 248, 255, 0.246);
+	transform: rotate(45deg) scale(1, 1);
+	width: 100px; height: 100px;
+	background-position: center;
+	background-size: cover;
+	background-image: url(https://rlozib.github.io/dothome21/class/img/img01.jpg);
+}
+.cursor.style5 {
+	background-color: rgba(255, 233, 187, 0.52);
+	border-color: rgba(255, 237, 194, 0.4);
+	transform: rotateX(360deg) skew(45deg);
+}
+.cursor.style6 {
+	background-color: rgba(81, 214, 255, 0.52);
+	border-color: rgba(130, 251, 255, 0.4);
+	transform: rotateX(360deg) skew(45deg);
 }
 </code></pre>
 						</div>
 						<div>
-							<pre><code class="language-javascript">const viewTitle = $(".view-title ul li");     
-    const viewCont = $(".view-cont > div"); 
-    
-    
-    viewTitle.click(function(){
-        let target = $(this);
-        viewTitle.removeClass("active");
-        target.addClass("active");
-    
-        let index = target.index();
-        viewCont.css("display","none");
-        viewCont.eq(index).css("display","block");
-    });
+							<pre><code class="language-javascript">//출력문
+$(window).mousemove(function (e) {
+	$(".clientX").text(e.clientX + "px"); //브라우저 X좌표 기준
+	$(".clientY").text(e.clientY + "px"); //브라우저 Y좌표 기준
+	$(".offsetX").text(e.offsetX + "px"); //요소 X좌표 기준
+	$(".offsetY").text(e.offsetY + "px"); //요소 Y좌표 기준
+	$(".pageX").text(e.pageX + "px"); //페이지 X좌표 기준
+	$(".pageY").text(e.pageY + "px"); //페이지 Y좌표 기준
+	$(".screenX").text(e.screenX + "px"); //디바이스 X좌표 기준
+	$(".screenY").text(e.screenY + "px"); //디바이스 Y좌표 기준
+});
+
+//마우스 움직이기
+$(window).mousemove(function (e) {
+	//$(".cursor").css("left", "100px");
+	//$(".cursor").css("top":"100px");
+	//$(".cursor").css({"left":"100px", "top":"100px"});
+	//$(".cursor").css({left:"100px", top:"100px"});
+	//$(".cursor").css({left:100, "background-color":100});
+	//$(".cursor").css({left:100, backgroundColor:100});
+
+	$(".cursor").css({left:e.clientX - 25, top:e.clientY - 25});
+
+	// $(".mouseCont em").mouseover(function () {
+	// 	$(".cursor").addClass("active");
+	// });
+	// $(".mouseCont em").mouseout(function () {
+	// 	$(".cursor").removeClass("active");
+	// });
+
+	// $(".mouseCont em").mouseenter(function () {
+	// 	$(".cursor").addClass("active");
+	// });
+	// $(".mouseCont em").mouseleave(function () {
+	// 	$(".cursor").removeClass("active");
+	// });
+
+	//for문
+	for(let i=1; i&lt;=6; i++){	
+		$(".mouseCont .style"+i).hover(function () {
+			$(".cursor").addClass("style" + i);
+		}, function () {
+			$(".cursor").removeClass("style" + i);
+		});
+	}
+
+	//each()
+	// $(".mouseCont span").each((index , element) => {
+	// 	$(element).hover(function(){
+	// 		$(".cursor").addClass("style"+ (index+1));
+	// 	}, function(){
+	// 		$(".cursor").removeClass("style"+ (index+1));
+	// 	})
+	// });
+
+	//attr()
+	// $(".mouseCont span").hover(function(){
+	// 	$(".cursor").addClass($(this).attr("class"));
+	// }, function(){
+	// 	$(".cursor").removeClass($(this).attr("class"));
+	// });
+
+});
 </code></pre>
 						</div>
 					</div>

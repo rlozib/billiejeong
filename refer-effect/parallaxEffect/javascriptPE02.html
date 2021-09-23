@@ -507,44 +507,37 @@
 </code></pre>
                     </div>
                     <div class="javascript">
-<pre><code class="language-javascript">$(".paraNav ul li").click(function(e){
-    e.preventDefault();
-    let target = $(this);
-    let index = target.index();
-    let section = $(".paraCont > section").eq(index)
-    let offset = section.offset().top;
-    $("html, body").animate({ scrollTop : offset }, 600);
-});
-
-$(window).scroll(function(){
-    let scrollTop = $(window).scrollTop();
-    for(let i=1; i&lt;10; i++){
-        $(".offset"+i).text(parseInt($("#section"+i).offset().top) + "px");
-    }
-});
-//for문
-for(let i=0; i&lt;9; i++ ){
-        if( scrollTop >= $(".content-item").eq(i).offset().top -2 ){
-        $(".paraNav ul li").eq(i).addClass("active").siblings().removeClass("active");
-    }
-}
-
-//each()
-$(".content-item").each(function(index){
-    if( scrollTop >= $(this).offset().top -2 ){
-        $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
-    }
+<pre><code class="language-javascript">document.querySelectorAll(".paraDot ul li a").forEach((element) => {
+    element.addEventListener("click", (e) => {
+        e.preventDefault();
+        document.querySelector(element.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+        })
+    })
 })
 
-//info
-$(".paraScroll span").text(parseInt(scrollTop));
+window.addEventListener("scroll", () => {
+    let scrollTop = document.documentElement.scrollTop || window.screenY || window.pageYOffset;
 
-for(let i=1; i&lt;10; i++){
-    $(".offset"+i).text(parseInt($("#section"+i).offset().top) + "px");
-}
+    document.querySelector(".paraScroll span").innerText = parseInt(scrollTop) + "px";
 
-});
-modal();
+    document.querySelectorAll('.paraDot ul li').forEach((li, index) => {
+        if (scrollTop > document.getElementById('section' + (index + 1)).offsetTop - 2) {
+        document.querySelectorAll('.paraDot ul li').forEach(el => {
+            el.classList.remove('active');
+        });
+        document.querySelector('.paraDot ul li:nth-child(' + (index + 1) + ')').classList.add('active');
+        }
+    });
+
+    
+    // if( scrollTop > document.getElementById("section1").offsetTop ){
+    //     document.querySelectorAll(".paraDot ul li").forEach( (el)=> {
+    //         el.classList.remove("active");
+    //     })
+    //     document.querySelector(".paraDot ul li:nth-child(1)").classList.add("active");
+    // }
+})
 
 </code></pre>   
                     </div>
