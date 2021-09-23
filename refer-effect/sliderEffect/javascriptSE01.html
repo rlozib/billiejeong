@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Slider Effect</title>
+
+	<link rel="stylesheet" href="../assets/css/style.css">
+	<link rel="stylesheet" href="../assets/css/highlight.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<style>
+		/* slider */
+		.slider-wrap {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+		.slider-img {
+			position: relative;
+			width: 800px;
+			height: 480px;
+		}
+		.slider-img img {
+			width: 100%;
+		}
+		.slider {
+			position: absolute;
+			left: 0; top: 0;
+            transition: all 0.3s;
+		}
+		.slider::before {
+			position: absolute;
+			left: 5px; top: 5px;
+			background: rgba(0,0,0,.4);
+			color: #fff;
+			padding: 5px 10px 3px;
+			font-family: "NEXONLv1Gothic";
+		}
+		.slider::before {content: attr(data-name);}
+		.slider:nth-child(1) {z-index: 5;}
+		.slider:nth-child(2) {z-index: 4;}
+		.slider:nth-child(3) {z-index: 3;}
+		.slider:nth-child(4) {z-index: 2;}
+		.slider:nth-child(5) {z-index: 1;}
+		
+	</style>
+</head>
+
+<body class="bg bg20 brown">
+
+	<!-- contents -->
+	<main>
+		<div class="slider-wrap">
+			<div class="slider-img">
+				<div class="slider" data-name="이미지1"><img src="../assets/img/bg16.jpg" alt="이미지1"></div>
+				<div class="slider" data-name="이미지2"><img src="../assets/img/bg15.jpg" alt="이미지2"></div>
+				<div class="slider" data-name="이미지3"><img src="../assets/img/bg14.jpg" alt="이미지3"></div>
+				<div class="slider" data-name="이미지4"><img src="../assets/img/bg13.jpg" alt="이미지4"></div>
+				<div class="slider" data-name="이미지5"><img src="../assets/img/bg12.jpg" alt="이미지5"></div>
+			</div>
+		</div>
+	</main>
+
+	<!-- //contents -->
+
+	<!-- info -->
+	<div class="info">
+		<h1><a href="index.html">Slider Effect01 - Javascript</a></h1>
+		<p>이미지 슬라이드 - 페이드 효과</p>
+	</div>
+
+	<div class="info right">
+		<ul>
+			<li class="active"><a href="javascriptSE01.html">1</a></li>
+			<li><a href="javascriptSE02.html">2</a></li>
+			<li><a href="javascriptSE03.html">3</a></li>
+			<li><a href="javascriptSE04.html">4</a></li>
+			<li><a href="javascriptSE05.html">5</a></li>
+		</ul>
+		<ul>
+			<li><a href="jquerySE01.html">1</a></li>
+			<li><a href="jquerySE02.html">2</a></li>
+			<li><a href="jquerySE03.html">3</a></li>
+			<li><a href="jquerySE04.html">4</a></li>
+			<li><a href="jquerySE05.html">5</a></li>
+		</ul>
+	</div>
+
+
+	<div class="info bottom">
+		<button>소스보기</button>
+	</div>
+	<!-- //info -->
+
+	<!-- modal -->
+	<div id="modal">
+		<div class="modal-bg">
+			<div class="modal-cont">
+				<div class="code-view">
+					<div class="view-header">
+						<div class="dot" aria-hidden="true">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</div>
+					<div class="view-title">
+						<ul>
+							<li class="active"><a href="#">Html</a></li>
+							<li><a href="#">CSS</a></li>
+							<li><a href="#">Javascript</a></li>
+						</ul>
+					</div>
+					<div class="view-cont">
+						<div>
+							<pre><code class="language-html">&lt;main&gt;
+    &lt;div id="tab-menu"&gt;
+        &lt;div class="tab-btn"&gt;
+            &lt;ul&gt;
+                &lt;li class="active"&gt;&lt;a href="#"&gt;웹 표준1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;웹 표준2&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;웹 표준3&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;웹 표준4&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;웹 표준5&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div class="tab-cont"&gt;
+            &lt;div&gt;
+                &lt;h2&gt;웹 표준&lt;/h2&gt;
+                &lt;p&gt;웹 표준이란 브라우저 종류 및 버전에 따른 기능 차이에 대하여 호환이 가능하도록 제시된 표준으로, 다른 기종 혹은 플랫폼에 따라 달리 구현되는 기술을 동일하게 구현함과 동시에 어느 한쪽에 최적화되어 치우치지 않도록 공통요소를 사용하여 웹 페이지를 제작하는 기법을 의미한다. &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;h2&gt;웹 표준 준수 이유&lt;/h2&gt;
+                &lt;p&gt;국내 웹의 현실은 특정 브라우저와 사용자 등의 이용환경과 비표준 페이지 및 과도한 플러그인 사용으로 장애인, 노약자를 포함한 모든 사용자들에게 운영체제 및 웹 브라우저 등의 정보 접근 제약이 있다. 따라서 브라우저의 종류나 버전에 상관없이 모든 사용자들이 동일한 웹사이트를 볼 수 있도록 웹 표준기술 작업이 필요하며 웹 표준 준수는 웹 접근성 준수를 위한 핵심이다.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;h2&gt;웹 표준 장점&lt;/h2&gt;
+                &lt;p&gt;1. 수정 및 운영관리 용이 2. 접근성 향상 3. 검색엔진 최적화(SEO) 4. File Size 축소, 서버 저장 공간 절약 5. 효율적인 마크업 6. 호환성 가능&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;h2&gt;웹 호환성(Cross Browsing) 정의&lt;/h2&gt;
+                &lt;p&gt;웹 호환성은 표준 웹 기술을 사용하여 운영체제, 브라우저 등 어느 한쪽으로 최적화되거나 종속되지 않도록 공통 요소를 사용하여 웹 페이지를 제작하는 기법으로 웹 사이트 사용 시 운영체제 및 브라우저 간 동일한 결과가 나오도록 의미하는 웹 상호운용성의 개념에 웹 표준의 준수를 포함하는 개념이다.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;h2&gt;웹 호환성 준수 이유&lt;/h2&gt;
+                &lt;p&gt;제공하는 서비스를 모든 웹 브라우저 환경에서 동일하게 이용하기 위해서는 웹 호환성을 준수한 웹사이트의 구축이 필요하다.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+</code></pre>
+						</div>
+						<div>
+							<pre><code class="language-css">.code-view {
+	background: #fff;
+	width: 60vw;
+	border: 1px solid #f2f2f2;
+	border-radius: 10px;
+	overflow: hidden;
+
+	.view-header {
+		border-bottom: 1px solid #f2f2f2;
+
+		.dot {
+			padding: 13px 10px 10px 15px;
+
+
+			span {
+				width: 12px;
+				height: 12px;
+				display: inline-block;
+				border-radius: 50%;
+				margin: 0 2px;
+			}
+
+			span:nth-child(1) {
+				background-color: #f56565;
+			}
+
+			span:nth-child(2) {
+				background-color: #f6e05e;
+			}
+
+			span:nth-child(3) {
+				background-color: #48bb78;
+			}
+		}
+	}
+
+	.view-title {
+		border-bottom: 1px solid #f2f2f2;
+		padding: 0 11px;
+		font-family: 'NEXONLv2Gothic';
+
+		li {
+			display: inline;
+			list-style: none;
+
+			a {
+				text-decoration: none;
+				color: #ccc;
+				padding: 10px 10px 12px;
+				margin: 0 5px;
+				display: inline-block;
+			}
+
+			&.active a {
+				border-top: 2px solid #667EEA;
+				color: #4a5568;
+			}
+		}
+
+	}
+	.view-cont {
+		height: 500px;
+		overflow-y: scroll;
+
+		> div {
+			display: none;
+		}
+		> div:nth-child(1) {
+			display: block;
+		}
+	}
+}
+</code></pre>
+						</div>
+						<div>
+							<pre><code class="language-javascript">const viewTitle = $(".view-title ul li");     
+    const viewCont = $(".view-cont > div"); 
+    
+    
+    viewTitle.click(function(){
+        let target = $(this);
+        viewTitle.removeClass("active");
+        target.addClass("active");
+    
+        let index = target.index();
+        viewCont.css("display","none");
+        viewCont.eq(index).css("display","block");
+    });
+</code></pre>
+						</div>
+					</div>
+				</div>
+
+				<button>닫기</button>
+			</div>
+		</div>
+	</div>
+	<!-- //modal -->
+
+	<!-- script -->
+	<script src="../assets/js/custom.js"></script>
+	<script src="../assets/js/highlight.min.js"></script>
+
+	<script>
+        const sliderWrap = document.querySelector(".slider-wrap");
+		const sliderImg = document.querySelector(".slider-img");
+		const slider = document.querySelectorAll(".slider");
+
+        let currentIndex = 0;
+        let sliderCount = slider.length;
+        
+        setInterval(() => {
+            let nextIndex = (currentIndex + 1) % sliderCount;   //0 1 2 3 4 0 1 2 3 4...
+            
+            // slider[currentIndex].style.display = "none";
+            // slider[nextIndex].style.display = "block";
+
+            slider[currentIndex].style.opacity = "0";
+            slider[nextIndex].style.opacity = "1";
+
+            currentIndex = nextIndex;
+        }, 2000);
+
+		modal();
+	</script>
+	<!-- //script -->
+</body>
+
+</html>
