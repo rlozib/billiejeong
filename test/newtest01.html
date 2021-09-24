@@ -9,6 +9,18 @@
 <body>
     <script>
         {
+            function func(){
+                let i=10, j=10, k=30;
+                i/=j;
+                j-=i;
+                k%=j;
+                document.write(i);
+                document.write(j);
+                document.write(k);
+            }
+            func();
+        }
+        {
             document.write("<br>문제3<br>");
             function func5(){
                 for( i=1; i<=7; i++ ){
