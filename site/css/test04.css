@@ -1,119 +1,124 @@
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
 body {
-    width: 100%;
-    font-family: -apple-system,Apple SD Gothic Neo,BlinkMacSystemFont,Roboto,nanumsquare,sans-serif;
+    font-family: 'NanumSquare'
 }
-#banner {
-    height: 500px;
-}
-strong {
-    font-weight: bold !important;
-}
-.mr20 {
-    margin-right: 20px !important;
-}
+
 .container {
-    width: 1700px;
+    max-width: 1280px;
     margin: 0 auto;
-}
-.container2 {
-    width: 1200px;
-    margin: 0 auto;
-}
-#contents {}
-#cont1 {
-    background: #ECEDF1;
-    height: 600px;
-}
-#cont2 {
-    background: #fff;
-    height: 600px;
-}
-#cont3 {
-    background: #ECEDF1;
-    height: 600px;
-}
-#cont4 {
-    background: #fff;
-    height: 600px;
-}
-#cont5 {
-    background: #ECEDF1;
-    height: 600px;
-}
-#cont6 {
-    background: #fff;
-    height: 600px;
+    width: 100%;
+    height: 670px;
 }
 
-/* header */
-header {
-    height: 70px;
-}
-header .headerWrap {
-    display: flex;
-    align-items: center;
-    justify-content:space-between;
-    padding: 20px;
+#header {
+    position: fixed;
+    z-index: 90;
+    top: 0;
+    width: 100%;
+    height: 90px;
+    background-color: #fff;
+    box-shadow: 0px 5px 10px 2px rgb(0 0 0 / 10%);
 }
 
-header .logo img {
+.header-inner {
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 23px;
+    left: 6%;
+    width: 200px;
+    height: 40px;
+    z-index: 5;
+}
+
+.logo a {
+    background: url(https://whale.naver.com/_resource/img/main/logo_whale.svg);
+    background-repeat: no-repeat;
+    text-align: center;
+    line-height: 40px;
+    text-indent: -9999em;
+    display: block;
     width: 200px;
     height: 40px;
 }
 
-header .menu ul li {
+.menu-wrap {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.menu {
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    border: 0;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: inherit;
+}
+
+.menu ul {
+    text-align: center;
+    overflow: hidden;
+}
+
+.menu li {
     display: inline-block;
-    margin: 0 11px;
-    padding: 15px;
-    position: relative;
+    width: 12%;
+    text-align: center;
 }
 
-header .menu ul li a {
-    color: rgba(0, 0, 0, 0.835);
-    white-space: nowrap;
+.menu li a {
+    line-height: 120%;
+    color: #2d1d1d;
+    font-size: 18px;
     font-weight: 800;
+    line-height: 90px;
+}
+
+.menu li a:hover {
+    color: #05c3a7;
+}
+
+.download {
+    position: absolute;
+    top: 20px;
+    right: 4%;
+    width: 125px;
+    height: 50px;
+    color: #15c5aa;
     font-size: 18px;
-    line-height: 20px;
-}
-
-header .menu ul li a:hover {
-    color: #05C3A7;
-}
-
-header .subMenu {
-    display: block;
-
-}
-
-header .rBtn a {
-    color: #05C3A7;
-    padding: 15px 25px;
-    border: 1px solid #05C3A7;
+    font-weight: 800;
+    text-align: center;
+    line-height: 50px;
+    border: 1px solid #15c5aa;
     border-radius: 5px;
-    vertical-align: top;
-    font-weight: 700;
-    font-size: 18px;
-
+    transition: all .5s;
 }
 
-/* aside */
-#aside {
-    height: 70px;
-    margin-top: 20px;
-    background: #333;
+.download:hover {
+    background-color: #15c5aa;
+    color: #fff;
 }
-#aside .tabMenu {
-    
+
+
+/* main */
+#main {
+    margin-top: 90px;
+    width: 100%;
 }
-#aside .tabMenu{
-    
+
+#tab {
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    text-align: center;
 }
-#aside .tabMenu li {
+
+.tab-contents {
     display: inline-block;
     width: 32%;
     text-align: center;
@@ -121,50 +126,71 @@ header .rBtn a {
     height: 70px;
     line-height: 70px;
 }
-#aside .tabMenu li a.active {
-    font-size: 18px;
-    padding: 20px 30px;
-    color: #05C3A7;
-    font-weight: 400;
-}
-#aside .tabMenu li a {
-    font-size: 18px;
-    padding: 20px 30px;
-    color: #838383;
-    font-weight: 400;
+
+.tab2 {
+    border-right: 1px solid #838383;
+    border-left: 1px solid #838383;
 }
 
-/* banner */
-#banner {
-    height: 700px;
-    background: url(../img/top_tasking_bg.jpg) no-repeat;
-    background-size: cover;
-    word-break: keep-all;
+.tab1 .tab-content {
+    background: url(https://whale.naver.com/_resource/img/whywhale/top_check.png);
+    background-position: top 23px left;
+    background-repeat: no-repeat;
+    color: #05d6b4;
 }
-#banner .title {
-    padding-top: 100px;
+
+.tab2 .tab-content {
+    background-image: url(https://whale.naver.com/_resource/img/whywhale/top_check_2.png);
+    background-repeat: no-repeat;
+}
+
+.tab3 .tab-content {
+    background-image: url(https://whale.naver.com/_resource/img/whywhale/top_check_3.png);
+    background-repeat: no-repeat;
+}
+
+.tab-content {
+    background-position: bottom 24px left;
+    background-size: 20px auto;
+    background-repeat: no-repeat;
     display: inline-block;
-    margin-top: 50px;
+    color: #838383;
+    font-size: 18px;
+    line-height: 18px;
     font-weight: 700;
-    margin-bottom: 20px;
+    padding: 20px 30px;
+    cursor: pointer;
+}
+
+/* content1 */
+#content1 {
+    display: block;
+    background: url(https://whale.naver.com/_resource/img/whywhale/top_tasking_bg.jpg) no-repeat top center/ cover;
+    width: 100%;
+    height: 670px;
+    text-align: left;
+}
+
+#content1 .container {
+    display: table;
+    width: 100%;
+    padding-top: 180px;
+}
+
+#content1 h3 {
     font-size: 50px;
+    line-height: 120%;
     color: #fff;
-    line-height: 1.2em;
+    font-weight: bold;
 }
-#banner .desc {
+
+#content1 p {
     font-size: 30px;
-    padding: 30px 0 50px;
-    font-weight: 700;
     color: #fff;
+    padding: 30px 0 50px;
 }
-#banner .Dbtn {
-    margin-top: 18px;
-    font-size: 22px;
-    line-height: 36px;
-    letter-spacing: -.18px;
-    color: hsla(0,0%,100%,.8);
-}
-#banner .Dbtn a {
+
+.download-btn a {
     display: inline-block;
     width: 250px;
     text-align: center;
@@ -175,301 +201,174 @@ header .rBtn a {
     line-height: 77px;
     position: relative;
     background: #05d6b4;
-    
-}
-#banner .Dbtn a::after {
-    background: url(../img/icon_btn_arrow.png) 50% 50% no-repeat;
 }
 
-/* cont1 */
-.cont1 {
-    overflow: hidden;
-    padding: 100px 0;
-    
+.download-btn a::after {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 77px;
+    background: url(https://whale.naver.com/_resource/img/main/icon_btn_arrow.png) 50% 50% no-repeat;
+    background-size: 100%;
+    margin-left: 18px;
+    vertical-align: top;
 }
-.cont1 .box1 {
-    float: left;
-    width: 50%;
+
+/* content2 */
+#content2 .textarea h3::before {
+    background: url(https://whale.naver.com/_resource/img/whywhale/icon_why_tab1_05.png) no-repeat top center;
 }
-.con1 .box1 .logo1 {
-    background: url(../img/icon_why_tab1_05.png);
+
+#content3 .textarea h3::before {
+    background: url(https://whale.naver.com/_resource/img/whywhale/icon_why_tab1_01.png) no-repeat top center;
+}
+
+#content4 .textarea h3::before {
+    background: url(https://whale.naver.com/_resource/img/whywhale/icon_why_tab1_02.png) no-repeat top center;
+}
+
+#content5 .textarea h3::before {
+    background: url(https://whale.naver.com/_resource/img/whywhale/icon_why_tab1_03.png) no-repeat top center;
+}
+
+#content6 .textarea h3::before {
+    background: url(https://whale.naver.com/_resource/img/whywhale/icon_why_tab1_04.png) no-repeat top center;
+}
+
+#main section:nth-child(odd) {
+    background-color: #ecedf1;
+}
+#main section:nth-child(even) {
+    background-color: #fff;
+}
+
+#main section:nth-child(even) .textarea {
+    padding-left: 5%;
+}
+.textarea {
+    display: table-cell;
+    vertical-align: middle;
+    height: 670px;
+}
+
+.textarea h3 {
+    color: #000;
+    position: relative;
+    padding-left: 80px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.textarea h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    clear: both;
     width: 70px;
     height: 70px;
-    display: inline-block;
+    background-size: 100%;
 }
-.cont1 .box1 h2 {
-    font-size: 50px;
-    line-height: 50px;
-    font-weight: 700;
-    letter-spacing: -.5px;
-    color: #222;
-}
-.cont1 .box1 h4 {
+
+.textarea p {
     color: #333130;
     font-size: 26px;
-    line-height: 30px;
-    font-weight: 500;
     margin: 30px 0 50px;
 }
-.cont1 .box1 .icon {
-    background-image: url(../img/icon_function_detailgo.png);
-}
-.cont1 .box1 a {
-    font-size: 20px;
-    font-weight: 400;
-    color: #2d68d2;
-    text-decoration: none;
-}
 
-.cont1 .box2 {
-    float: right;
-    width: 50%;
-}
-.cont1 .box2 img {
-    width: 100%;
-}
-.cont1 .box3 {
-    float: left;
+.textarea ul {
     width: 100%;
 }
 
-
-/* cont2 */
-.cont2 {
-    overflow: hidden;
-    padding: 100px 0;
-    
-}
-.cont2 .box1 {
-    float: left;
-    width: 50%;
-}
-.cont2 .box1 img {
+.textarea li {
     width: 100%;
-}
-.cont2 .box2 {
-    float: right;
-    width: 45%;
-}
-.cont2 .box2 h2 {
-    font-size: 50px;
-    line-height: 50px;
-    font-weight: 700;
-    letter-spacing: -.5px;
-    color: #222;
-}
-.cont2 .box2 h4 {
-    color: #333130;
-    font-size: 26px;
-    line-height: 30px;
-    font-weight: 500;
-    margin: 30px 0 50px;
-}
-.cont2 .box2 a {
-    display: block;
-    font-size: 20px;
-    font-weight: 400;
-    color: #2d68d2;
-    text-decoration: none;
-}
-
-
-
-/* cont3 */
-.cont3 {
-    overflow: hidden;
-    padding: 100px 0;
-    
-}
-.cont3 .box1 {
-    float: left;
-    width: 50%;
-}
-.cont3 .box1 h2 {
-    font-size: 50px;
-    line-height: 50px;
-    font-weight: 700;
-    letter-spacing: -.5px;
-    color: #222;
-}
-.cont3 .box1 h4 {
-    color: #333130;
-    font-size: 26px;
-    line-height: 30px;
-    font-weight: 500;
-    margin: 30px 0 50px;
-}
-.cont3 .box1 a {
-    display: block;
-    font-size: 20px;
-    font-weight: 400;
-    color: #2d68d2;
-    text-decoration: none;
-}
-
-.cont3 .box2 {
-    float: right;
-    width: 50%;
-}
-.cont3 .box2 img {
-    width: 100%;
-}
-
-/* cont4 */
-.cont4 {
-    overflow: hidden;
-    padding: 100px 0;
-    
-}
-.cont4 .box1 {
-    float: left;
-    width: 50%;
-}
-.cont4 .box1 img {
-    width: 100%;
-}
-.cont4 .box2 {
-    float: right;
-    width: 45%;
-}
-.cont4 .box2 h2 {
-    font-size: 50px;
-    line-height: 50px;
-    font-weight: 700;
-    letter-spacing: -.5px;
-    color: #222;
-}
-.cont4 .box2 h4 {
-    color: #333130;
-    font-size: 26px;
-    line-height: 30px;
-    font-weight: 500;
-    margin: 30px 0 50px;
-}
-.cont4 .box2 a {
-    display: block;
-    font-size: 20px;
-    font-weight: 400;
-    color: #2d68d2;
-    text-decoration: none;
-}
-
-
-
-/* cont5 */
-.cont5 {
-    overflow: hidden;
-    padding: 100px 0;
-    
-}
-.cont5 .box1 {
-    float: left;
-    width: 50%;
-}
-.cont5 .box1 h2 {
-    font-size: 50px;
-    line-height: 50px;
-    font-weight: 700;
-    letter-spacing: -.5px;
-    color: #222;
-}
-.cont5 .box1 h4 {
-    color: #333130;
-    font-size: 26px;
-    line-height: 30px;
-    font-weight: 500;
-    margin: 30px 0 50px;
-}
-.cont5 .box1 a {
-    display: block;
-    font-size: 20px;
-    font-weight: 400;
-    color: #2d68d2;
-    text-decoration: none;
-}
-
-.cont5 .box2 {
-    float: right;
-    width: 50%;
-}
-.cont5 .box2 img {
-    width: 100%;
-}
-
-/* cont6 */
-.cont6 {
-    overflow: hidden;
-    padding: 100px 0;
-}
-.cont6 .box1 {
-    margin: 0 auto;
-    display: flex;
-}
-.cont6 .box1 img {
-    width: 560px;
-}
-.cont6 .box2 {
-}
-.cont6 .box2 .Dbtn {
-    margin-top: 18px;
-    font-size: 22px;
-    line-height: 36px;
-    letter-spacing: -.18px;
-    color: hsla(0,0%,100%,.8);
-}
-.cont6 .box2 .Dbtn a {
-    display: block;
-    width: 250px;
-    text-align: center;
-    font-size: 30px;
-    color: #fff;
-    border-radius: 45px;
-    height: 77px;
-    line-height: 77px;
+    padding-left: 30px;
     position: relative;
-    background: #05d6b4;
+    margin-bottom: 20px;
 }
 
+.textarea li a {
+    display: inline-block;
+    color: #2d68d2;
+    line-height: 20px;
+    font-size: 18px;
+}
+
+.textarea li a::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    content: "";
+    clear: both;
+    width: 20px;
+    height: 20px;
+    background: url(https://whale.naver.com/_resource/img/whywhale/icon_function_detailgo.png) no-repeat top center;
+    background-size: 100%;
+}
+
+.textarea .btn .pcBtn{
+    display: inline-block;
+    background: url(https://whale.naver.com/_resource/img/whywhale/icon_pc.png) no-repeat bottom center;
+    background-size: 100%;
+    width: 118px;
+    height: 76px;
+}
+.textarea .btn .mBtn{
+    display: inline-block;
+    background: url(https://whale.naver.com/_resource/img/whywhale/icon_m.png) no-repeat bottom center;
+    background-size: 100%;
+    width: 118px;
+    height: 76px;
+}
+
+.imgarea {
+    display: table-cell;
+    width: 50%;
+    height: 670px;
+    vertical-align: middle;
+}
+
+.imgarea img {
+    display: block;
+    width: 100%;
+    border-style: none;
+}
+
+#content7 {
+    width: 100%;
+    background-color: #fff;
+    padding: 10% 0;
+    text-align: center;
+}
+
+#content7 .container {
+    height: auto;
+}
+
+#content7 img{
+    display: inline-block;
+    margin-bottom: 3%;
+    max-width: 560px;
+}
 
 /* footer */
-
 #footer {
-    background-color: #F9F9F9;
-    height: 250px;
-    color: #c0c0c0;
-    padding-bottom: 60px;
-}
-#footer .logo_g {
+    padding: 50px 0;
+    width: 100%;
     text-align: center;
+    background-color: #f9f9f9;
 }
-
-#footer .logo_g img{
-    padding-top: 30px;
-    width: 140px;
-    display: block; margin: auto;
-}
-#footer .top a {
-    color: rgb(177, 177, 177);
-}
-#footer .betaDownload {
-    
-}
-#footer .betaDownload a {
+#footer h2 {
     display: inline-block;
-    position: absolute;
-    text-align: center;
-    border: 1px solid #c0c0c0;
+    margin: 0 0 20px;
+    max-width: 141px;
 }
-#footer .copyright {
-    display: inline-block;
-}
-#footer span {
-    font-family: 'GmarketSans';
-    font-weight: 900;
-    color: #ffffff80;
-    font-size: 15px;
-}
-
-@media (max-width: 800px){
-
+#footer h2 a {}
+#footer h2 a img {
+    display: block;
+    width: 100%;
 }
