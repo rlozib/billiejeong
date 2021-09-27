@@ -23,7 +23,7 @@ body {
     box-shadow: 0px 5px 10px 2px rgb(0 0 0 / 10%);
 }
 
-.header-inner {
+.header-wrap {
     max-width: 1920px;
     margin: 0 auto;
     position: relative;
@@ -377,7 +377,7 @@ body {
     margin-top: 30px;
 }
 
-.textarea .btn2 .tx {
+.textarea .btn2 .st {
     position: absolute;
     line-height: 1em;
     font-size: 16px;
@@ -590,7 +590,7 @@ body {
         padding-top: 0;
     }
 
-    #content1 .toptxArea {
+    #content1 .bannerTitle {
         display: block;
         padding: 0 5%;
         height: 100%;
@@ -691,7 +691,7 @@ body {
         height: 56px;
     }
 
-    .textarea .btn2 .tx {
+    .textarea .btn2 .st {
         font-size: 12px;
         top: -18px;
     }
