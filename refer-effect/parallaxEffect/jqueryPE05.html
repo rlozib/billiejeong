@@ -83,12 +83,6 @@
             .paraCont .content-item .desc {
                 font-size: 30px;
             }
-            .paraInfo h1 {
-                font-size: 13px;
-            }
-            .paraInfo p {
-                font-size: 11px;
-            }
             .paraNav {
                 padding: 5px 10px;
             }
@@ -667,8 +661,10 @@ modal();
                 if( scrollTop > $(this).offset().top -2 ){
                     $(this).addClass("show");
                     $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+                } else {
+                    $(this).removeClass("show");
                 }
-            })
+            });
 
 
             //출력
