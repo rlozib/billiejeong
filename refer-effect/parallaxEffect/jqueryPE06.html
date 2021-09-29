@@ -27,62 +27,8 @@
             border-radius: 30px;
         }
         
-        /* 한번에 나타나기 */
-        /* .content-item {
-            opacity: 0;
-            transform: translateY(100px);
-            transition: all 1s;
-        }
-        .content-item.show {
-            transform: translateY(0);
-            opacity: 1;
-        } */
-
-        /* 개별적으로 나타나기 */
-        .content-item .num {
-            opacity: 0 !important;
-            transform: translateY(200px);
-            transition: all 1s 0.1s cubic-bezier(0, 0.66, 0.38, 1.01);
-        }
-        .content-item .title {
-            opacity: 0;
-            transform: translateX(-100px);
-            transition: all 1s 0.3s cubic-bezier(0, 0.66, 0.38, 1.01);
-        }
-        .content-item .img-Wrap {
-            perspective: 500px;
-            opacity: 0;
-            transform: translateY(200px) rotateY(30deg) skew(20deg);
-            transition: all 1s 0.6s cubic-bezier(0, 0.66, 0.38, 1.01);
-        }
-        .content-item .desc {
-            opacity: 0;
-            transform: translateX(-200px);
-            transition: all 1s 0.9s cubic-bezier(0, 0.66, 0.38, 1.01);
-        }
-        .content-item.show .num {
-            opacity: 0.07 !important;
-            transform: translateY(0);
-        }
-        .content-item.show .title {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        .content-item.show .img-Wrap {
-            opacity: 1;
-            transform: translateY(0) rotate(0) skew(0);
-        }
-        .content-item.show .desc {
-            opacity: 1;
-            transform: translateX(0);
-        }
+        
         @media (max-width: 800px){
-            .paraCont .content-item {
-                width: 50%;
-            }
-            .paraCont .content-item .desc {
-                font-size: 30px;
-            }
             .paraInfo h1 {
                 font-size: 13px;
             }
@@ -105,8 +51,8 @@
 
     <!-- header -->
     <header class="paraInfo">
-        <h1><a href="index.html">Parallax Effect05 - jQuery</a></h1>
-        <p>패럴랙스 스크롤링 효과 - 나타나기</p>
+        <h1><a href="index.html">Parallax Effect06 - jQuery</a></h1>
+        <p>패럴랙스 스크롤링 효과 - 이질감</p>
     </header>
     <!-- //header -->
 
@@ -247,8 +193,8 @@
                 <li><a href="jqueryPE02.html">2</a></li>
                 <li><a href="jqueryPE03.html">3</a></li>
                 <li><a href="jqueryPE04.html">4</a></li>
-                <li class="active"><a href="jqueryPE05.html">5</a></li>
-                <li><a href="jqueryPE06.html">6</a></li>
+                <li><a href="jqueryPE05.html">5</a></li>
+                <li class="active"><a href="jqueryPE06.html">6</a></li>
                 <li><a href="jqueryPE07.html">7</a></li>
                 <li><a href="jqueryPE08.html">8</a></li>
             </ul>
@@ -411,146 +357,39 @@
                     </div>
                     <div class="css">
 <pre><code class="language-css">&lt;style&gt;
-    .parallax {
-        background: #222;
-        color: #fff;
-        font-family: 'NEXONLv1Gothic';
-    }
-    .paraScroll {
-        background: rgba(0,0,0,.4);
-        position: fixed;
-        left: 20px; bottom: 20px;
-        background: (0,0,0,.4);
-        color: #fff;
-        height: 40px;
-        line-height: 40px;
-        border-radius: 50px;
-        font-size: 12px;
-        z-index: 1000;
-        padding: 0px 20px;
-    }
-    .paraInfo2 {
-        background: rgba(0,0,0,.4);
-        z-index: 1000;
-        position: fixed;
-        left: 20px; bottom: 70px;
-        background: (0,0,0,.4);
-        color: #fff;
-        padding: 20px;
-        font-size: 12px;
-        line-height: 1.8;
-        border-radius: 10px;
-        li {
-            list-style: none;
-        }
-    }
     .paraNav {
-        position: fixed;
-        right: 20px; top: 20px;
-        z-index: 1000;
-        background: rgba(0,0,0,.4);
-        padding: 15px 20px;
-        border-radius: 50px;
-        li {
-            display: inline-block;
-            list-style: none;
-            a {
-                color: #fff;
-                text-decoration: none;
-                display: inline-block;
-                padding: 5px;
-                width: 30px; height: 30px;
-                text-align: center;
-                line-height: 30px;
-            }
-            &.active a {
-                background: #fff;
-                color: #000;
-                border-radius: 50%;
-            }
-        }
+        top: 20px;
+        transition: top 0.4 ease;
+    }
+    .paraNav.hide {
+        top: -200px;
+    }
+    .paraNav li a {
+        width: auto;
+        padding: 5px;
+        width: 30px; height: 30px;
+    }
+    .paraNav li.active a {
+        border-radius: 30px;
     }
     
-    .paraInfo {
-        padding: 20px;
-        h1 {
-            display: inline-block;
-            font-size: 20px;
-            border-bottom: 1px dashed #fff;
-            margin-bottom: 8px;
-            font-weight: 400;
-            a {
-                color: #fff;
-                text-decoration: none;
-            }
+    
+    @media (max-width: 800px){
+        .paraInfo h1 {
+            font-size: 13px;
         }
-        p {
-            font-size: 14px;
-            line-height: 1.8;
+        .paraInfo p {
+            font-size: 11px;
         }
-    }
-    .paraCont {
-        .content-item {
-            width: 1000px;
-            max-width: 70vw;
-            // background: rgba(255,255,255,0.3);
-            margin: 30vw 0;
-            padding-top: 10vw;
-            text-align: right;
-            position: relative;
-            .num {
-                font-family: 'Lato';
-                font-weight: 100;
-                font-size: 25vw;
-                opacity: 0.07;
-                position: absolute;
-                right: -5vw; top: -10vw;
-            }
-            .title {
-                padding-bottom: 10px;
-                font-weight: 700;
-            }
-            .img-Wrap {
-                width: 100%;
-                padding-bottom: 56%;
-                background: #000;
-                position: relative;
-                .img {
-                    position: absolute;
-                    left: 0; top: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    fill: saturate(0%);
-                    filter: saturate(0%);
-                    transition: all 0.5s;
-                    }
-                    .img:hover {
-                        filter: saturate(100%);
-                    }
-            }
-            .desc {
-                font-size: 6vw;
-                line-height: 1.4;
-                margin-top: -6vw;
-                margin-right: -3vw;
-                position: relative;
-                z-index: 100;
-            }
-            &:nth-child(even){
-                margin-left: auto;
-                text-align: left;
-                .num {
-                    right: auto;
-                    left: -5vw;
-                }
-                .desc {
-                    margin-right: auto;
-                    margin-left: -3vw;
-                }
-            }
+        .paraNav {
+            padding: 5px 10px;
         }
+        .paraNav li a {
+            font-size: 10px;
+            width: 10px;
+            height: 10px;
+            line-height: 10px;
+        }	
     }
 &lt;/style&gt;
 </code></pre>
@@ -560,39 +399,58 @@
     e.preventDefault();
     let target = $(this);
     let index = target.index();
-    let section = $(".paraCont > section").eq(index)
+    let section = $(".content-item").eq(index);
     let offset = section.offset().top;
-    $("html, body").animate({ scrollTop : offset }, 600);
+    $("html, body").animate({ scrollTop : offset }, 600)
 });
 
 $(window).scroll(function(){
     let scrollTop = $(window).scrollTop();
-    for(let i=1; i&lt;10; i++){
-        $(".offset"+i).text(parseInt($("#section"+i).offset().top) + "px");
-    }
+
+    // let offset1 = scrollTop - $("#section1").offset().top;
+    // let offset2 = scrollTop - $("#section2").offset().top;
+    // let offset3 = scrollTop - $("#section3").offset().top;
+    // let offset4 = scrollTop - $("#section4").offset().top;
+    // let offset5 = scrollTop - $("#section5").offset().top;
+    // let offset6 = scrollTop - $("#section6").offset().top;
+    // let offset7 = scrollTop - $("#section7").offset().top;
+    // let offset8 = scrollTop - $("#section8").offset().top;
+    // let offset9 = scrollTop - $("#section9").offset().top;
+    
+
+    // $("#section1").css({transform: "translateX("+offset1+"px)"});
+    // $("#section2").css({transform: "translateX("+offset2+"px)"});
+    // $("#section3").css({transform: "translateX("+offset3+"px)"});
+    // $("#section4").css({transform: "translateX("+offset4+"px)"});
+    // $("#section5").css({transform: "translateX("+offset5+"px)"});
+    // $("#section6").css({transform: "translateX("+offset6+"px)"});
+    // $("#section7").css({transform: "translateX("+offset7+"px)"});
+    // $("#section8").css({transform: "translateX("+offset8+"px)"});
+    // $("#section9").css({transform: "translateX("+offset9+"px)"});
+
+    //for문
+    // for(let i=1; i&lt;=9; i++ ){
+    //     let offset = scrollTop - $("#section" + i).offset().top;
+    //     $("#section"+i+ " .desc").css({transform: "translateX("+offset+"px)"});
+    // }
+
+    //each()
+    $(".content-item").each(function(index){
+        let offset1 = (scrollTop - $(this).offset().top) * 0.1;
+        let offset2 = (scrollTop - $(this).offset().top) * 0.2;
+        $(this).find(".img").css({transform: "translateY("+ offset2 +"px)"});
+        $(this).find(".desc").css({transform: "translateY("+ offset1 +"px)"});
+
+        //메뉴
+        if( scrollTop > $(this).offset().top - 2 ){
+            $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+        }
+    });
+
+    //출력
+    $(".paraScroll span").text(parseInt(scrollTop));
 });
-//for문
-for(let i=0; i&lt;9; i++ ){
-        if( scrollTop >= $(".content-item").eq(i).offset().top -2 ){
-        $(".paraNav ul li").eq(i).addClass("active").siblings().removeClass("active");
-    }
-}
 
-//each()
-$(".content-item").each(function(index){
-    if( scrollTop >= $(this).offset().top -2 ){
-        $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
-    }
-})
-
-//info
-$(".paraScroll span").text(parseInt(scrollTop));
-
-for(let i=1; i&lt;10; i++){
-    $(".offset"+i).text(parseInt($("#section"+i).offset().top) + "px");
-}
-
-});
 modal();
 
 </code></pre>   
@@ -622,54 +480,47 @@ modal();
         });
 
         $(window).scroll(function(){
-            let scrollTop = $(window).scrollTop() + $(window).height()/2;
+            let scrollTop = $(window).scrollTop();
 
-            // if( scrollTop >= $("#section1").offset().top ){
-            //     $("#section1").addClass("show");
-            // }
-            // if( scrollTop >= $("#section2").offset().top ){
-            //     $("#section2").addClass("show");
-            // }
-            // if( scrollTop >= $("#section3").offset().top ){
-            //     $("#section3").addClass("show");
-            // }
-            // if( scrollTop >= $("#section4").offset().top ){
-            //     $("#section4").addClass("show");
-            // }
-            // if( scrollTop >= $("#section5").offset().top ){
-            //     $("#section5").addClass("show");
-            // }
-            // if( scrollTop >= $("#section6").offset().top ){
-            //     $("#section6").addClass("show");
-            // }
-            // if( scrollTop >= $("#section7").offset().top ){
-            //     $("#section7").addClass("show");
-            // }
-            // if( scrollTop >= $("#section8").offset().top ){
-            //     $("#section8").addClass("show");
-            // }
-            // if( scrollTop >= $("#section9").offset().top ){
-            //     $("#section9").addClass("show");
-            // }
+            // let offset1 = scrollTop - $("#section1").offset().top;
+            // let offset2 = scrollTop - $("#section2").offset().top;
+            // let offset3 = scrollTop - $("#section3").offset().top;
+            // let offset4 = scrollTop - $("#section4").offset().top;
+            // let offset5 = scrollTop - $("#section5").offset().top;
+            // let offset6 = scrollTop - $("#section6").offset().top;
+            // let offset7 = scrollTop - $("#section7").offset().top;
+            // let offset8 = scrollTop - $("#section8").offset().top;
+            // let offset9 = scrollTop - $("#section9").offset().top;
+            
 
+            // $("#section1").css({transform: "translateX("+offset1+"px)"});
+            // $("#section2").css({transform: "translateX("+offset2+"px)"});
+            // $("#section3").css({transform: "translateX("+offset3+"px)"});
+            // $("#section4").css({transform: "translateX("+offset4+"px)"});
+            // $("#section5").css({transform: "translateX("+offset5+"px)"});
+            // $("#section6").css({transform: "translateX("+offset6+"px)"});
+            // $("#section7").css({transform: "translateX("+offset7+"px)"});
+            // $("#section8").css({transform: "translateX("+offset8+"px)"});
+            // $("#section9").css({transform: "translateX("+offset9+"px)"});
 
             //for문
-            // for(let i=1; i<10; i++ ){
-            //     if( scrollTop >= $("#section" + i).offset().top - 2 ){
-            //         $("#section" + i).addClass("show");
-            //     } else {
-            //         $("#section" + i).removeClass("show");
-            //     }
+            // for(let i=1; i<=9; i++ ){
+            //     let offset = scrollTop - $("#section" + i).offset().top;
+            //     $("#section"+i+ " .desc").css({transform: "translateX("+offset+"px)"});
             // }
 
             //each()
-            $(".content-item").each(function(index, element){
-                if( scrollTop > $(this).offset().top -2 ){
-                    $(this).addClass("show");
+            $(".content-item").each(function(index){
+                let offset1 = (scrollTop - $(this).offset().top) * 0.1;
+                let offset2 = (scrollTop - $(this).offset().top) * 0.2;
+                $(this).find(".img").css({transform: "translateY("+ offset2 +"px)"});
+                $(this).find(".desc").css({transform: "translateY("+ offset1 +"px)"});
+
+                //메뉴
+                if( scrollTop > $(this).offset().top - 2 ){
                     $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
                 }
-            })
-
+            });
 
             //출력
             $(".paraScroll span").text(parseInt(scrollTop));
