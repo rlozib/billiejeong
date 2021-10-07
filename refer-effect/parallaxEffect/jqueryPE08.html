@@ -601,10 +601,13 @@ modal();
                         $(this).addClass('show');
                     });
                 }
+                $(".content-item").each(function(index, element){   
+                    if( scrollTop > $(this).offset().top -2){
+                        $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+                    }
+                });
             });
         });
-        //메뉴
-        $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
 
         modal();
     </script>
