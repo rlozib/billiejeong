@@ -577,6 +577,7 @@ modal();
             let offset = section.offset().top;
             $("html, body").animate({ scrollTop : offset }, 600)
         });
+        
 
         // $(window).scroll(function(){
         //     let scrollTop = $(this).scrollTop();
@@ -590,6 +591,10 @@ modal();
 
         $(window).scroll(function(){
             let scrollTop = $(this).scrollTop();
+
+            //출력
+            $(".paraScroll span").text(parseInt(scrollTop));
+
             $('.reveal').each(function(){
                 if(scrollTop + $(window).height() >= $(this).offset().top){
                     $(this).delay($(this).data('delay')).queue(function(){
@@ -597,13 +602,9 @@ modal();
                     });
                 }
             });
-            //메뉴
-            $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
-
-             //출력
-             $(".paraScroll span").text(parseInt(scrollTop));
         });
-      
+        //메뉴
+        $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
 
         modal();
     </script>

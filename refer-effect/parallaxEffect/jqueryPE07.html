@@ -536,6 +536,9 @@ modal();
         });
 
         $(window).scroll(function(){
+            let scrollTop = $(window).scrollTop();
+            //출력
+            $(".paraScroll span").text(parseInt(scrollTop));
             // if( $(window).scrollTop() > $("#section1").offset().top ){
             //     $("#section1 .desc").addClass("show");
             // } else {
@@ -607,13 +610,11 @@ modal();
                         ease: "power2.out",
                         rotation: 0
                     });
-                     //메뉴
+                    //메뉴
                     $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
                 }
-            });        
+            });
         });
-
-     
 
         modal();
     </script>
