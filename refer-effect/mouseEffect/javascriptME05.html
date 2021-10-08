@@ -246,26 +246,35 @@ $(".standardY").text(standardY);
     <script src="../assets/js/custom.js"></script>
 	<script src="../assets/js/highlight.min.js"></script>
 	<script>
-         function mouseMove(e){
-            let pageX = e.pageX,
-                pageY = e.pageY;
+        let moveImage = document.querySelector('.moveImage');
 
-                standardX = window.innerWidth/2 - pageX;
-                standardY = window.innerHeight/2 - pageY;
+        function mouseMove(e){
+            //커서
+            gsap.to('.cursor',{duration: .2, left: e.pageX - 10, top: e.pageY - 10});
 
-            gsap.to(".cursor" , {duration : .2, left: e.pageX -10 , top : e.pageY -10})
+            //1. 좌표값을 가운데로 정렬
+            let pageX = e.pageX;
+            let pageY = e.pageY;
 
-            const move = document.querySelector(".mImg img");
-            move.style.transform = "translate("+standardX/20+"px, "+standardY/20 + "px)";
+            let standardX = window.innerWidth / 2 - pageX;
+            let standardY = window.innerHeight / 2 - pageY;
 
-            document.querySelector(".pageX").textContent = pageX;
-            document.querySelector(".pageY").textContent = pageY;
+            //2. img x축 -> 마우스 값/20, y축 -> 마우스 값/20
+            let x = standardX/20;
+            let y = standardY/20;
+
+            let img = document.querySelector('.moveImage img');
+
+            img.style.transform = 'translate('+ x +'px,' + y +'px)';
+
+            //출력
+            document.querySelector('.pageX').textContent = pageX;
+            document.querySelector('.pageY').textContent = pageY;
             document.querySelector(".standardX").textContent = standardX;
             document.querySelector(".standardY").textContent = standardY;
         }
 
-
-        document.addEventListener("mousemove" , mouseMove);
+        moveImage.addEventListener('mousemove', mouseMove);
       
 	
 		modal();
