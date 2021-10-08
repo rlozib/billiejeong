@@ -7,13 +7,110 @@
     &lt;title&gt;Document&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
-&lt;main&gt;
-    &lt;div class="cursor"&gt;&lt;/div&gt;
+$(".paraNav ul li").click(function(e){
+    e.preventDefault();
+    let target = $(this);
+    let index = target.index();
+    let section = $(".content-item").eq(index);
+    let offset = section.offset().top;
+    $("html, body").animate({ scrollTop : offset }, 600)
+});
 
-    &lt;article class="mouseCont"&gt;
-        &lt;p&gt;The way to &lt;em&gt;get started&lt;/em&gt; is to quit talking and begin doing.&lt;/p&gt;
-        &lt;h2&gt;무언가를 시작하려면 말은 멈추고 &lt;em&gt;행동&lt;/em&gt;해야 한다.&lt;/h2&gt;
-    &lt;/article&gt;
-&lt;/main&gt;
+//글씨 쪼개기(한개)
+// let text = $("#section1 .desc").text();
+// let split = text.split('').join("&lt;/span&gt;&lt;span&gt;");
+// split = "&lt;span&gt;" + split + "&lt;/span&gt;";
+// $("#section1 .desc").html(split);
+
+//글씨 쪼개기(여러개) each()
+$(".content-item .desc").each(function(){
+    let text = $(this).text();
+    let split = text.split('').join("&lt;/span&gt;&lt;span aria-hidden='true'&gt;");
+    split = "&lt;span aria-hidden='true'&gt;" + split + "&lt;/span&gt;";
+    $(this).html(split).attr("aria-label", text);
+});
+
+$(window).scroll(function(){
+    let scrollTop = $(window).scrollTop();
+    //출력
+    $(".paraScroll span").text(parseInt(scrollTop));
+    // if( $(window).scrollTop() &gt; $("#section1").offset().top ){
+    //     $("#section1 .desc").addClass("show");
+    // } else {
+    //     $("#section1 .desc").removeClass("show");
+    // }
+    // if( $(window).scrollTop() &gt; $("#section2").offset().top ){
+    //     $("#section2 .desc").addClass("show");
+    // } else {
+    //     $("#section2 .desc").removeClass("show");
+    // }.....
+
+    //each()
+    // $(".content-item .desc").each(function(){
+    //     if( $(window).scrollTop() &gt;= $(this).offset().top - $(window).height()/2 ){
+    //         $(this).addClass("show");
+    //     } else {
+    //         $(this).removeClass("show");
+    //     }
+    // });
+
+    //한 글자씩 나타나기
+    // if( $(window).scrollTop() &gt;= $("#section1").offset().top ){
+    //     $("#section1 .desc span").each(i =&gt; {
+    //         setTimeout(() =&gt; {
+    //             $("#section1 .desc span").eq(i).addClass("show");
+    //         }, 50 * i)
+    //     })
+    // }
+
+    //for문
+    // for(let i=1; i&lt;=$('.content-item').length;i++){
+    //     if($(window).scrollTop() &gt; $('#section'+ i).offset().top){
+    //         $('#section'+ i+' .desc span').each(idx =&gt; {
+    //             setTimeout(() =&gt; {
+    //                 $('#section'+ i+' .desc span').eq(idx).addClass('show');
+    //             }, 50 * idx);
+    //         });
+    //     }
+    // }
+
+    //each()
+    // $(".content-item .desc span").each(function(i){
+    //     if( $(window).scrollTop() &gt;= $(this).offset().top - $(window).height()/2  ){
+    //         $(this).each(i =&gt; {
+    //             setTimeout(() =&gt; {
+    //                 $(this).eq(i).addClass("show");
+    //             }, 50 * i)
+    //         })
+    //     }
+    // }); 위에 내가
+    // $('.content-item').each(function(index){
+    //     if($(window).scrollTop() &gt;= $(this).offset().top - $(window).height()/2){
+    //         $(this).find('.desc span').each(i =&gt; {
+    //             setTimeout(()=&gt;{
+    //                 $(this).find('.desc span').eq(i).addClass('show');
+    //             },50*i);
+    //         });
+    //     };
+    // });
+
+    //gsap
+    $(".content-item").each(function(index){
+        if( $(window).scrollTop() &gt;= $(this).offset().top -2 ){
+            gsap.to( $(this).find(".desc span"), {
+                duratin: .5,
+                opacity: 1,
+                stagger: .05,
+                y:0,
+                ease: "power2.out",
+                rotation: 0
+            });
+            //메뉴
+            $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+        }
+    });
+});
+
+modal();
 &lt;/body&gt;
 &lt;/html&gt;
