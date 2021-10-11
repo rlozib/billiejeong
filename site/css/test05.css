@@ -9,84 +9,230 @@ a {
     color: #222;
     text-decoration: none;
 }
-body {
-    font-family: 'NanumSquare'
-}
 .container {
     max-width: 960px;
     margin: 0 auto;
-    width: 100%;
-    /* background: rgba(0,0,0,0.4); */
+    /* background: rgba(0,0,0,0.3); */
 }
+
 header {
     width: 100%;
     height: 100px;
-    /* background: #888; */
-}
-.headerWrap {
     overflow: hidden;
 }
-.logo {
+header .logo {
     float: left;
-    left: 0;
 }
-.logo img {
-    width: 130px;
+header .logo img {
+    width: 100px;
+    margin-top: 10px;
 }
-.menu {
-    position: relative;
-    font-weight: 700;
-}
-.menu ul {
-    position: absolute;
+header .nav {
     float: right;
-    right: 0;
-    top: 20px;
-    line-height: 3;
 }
-.menu ul li {
-    display: inline-block;
-    padding-right: 60px;
+header .nav ul {
+    overflow: hidden;
 }
-.menu ul li a {}
-/* //header */
+header .nav ul li {
+    float: left;
+    margin-top: 40px;
+}
+header .nav ul li a {
+    margin-right: 25px;
+}
 
-
-banner {
-    position: relative;   
+.banner {}
+.banner img {
+    width: 100%;
+    margin-bottom: 20px;
 }
-banner .container {
+
+section {
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+}
+section .box-left {
+    width: 460px;
+    float: left;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    padding: 20px 20px 16px;
+}
+section .box-left .tab {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+section .box-left .tab .tabHead {
+    float: left;
+    position: relative;
+}
+section .box-left .tab .tabHead ul {
+    overflow: hidden;
+}
+section .box-left .tab .tabHead ul li {
+    float: left;
+}
+section .box-left .tab .tabHead ul li::after {
+    content: '';
+    width: 2px;
+    height: 20px;
+    position: absolute;
+    left: 137px; top: 4px;
+    background: #333;
+}
+section .box-left .tab .tabHead ul li a {
+    font-size: 18px;
+    margin-right: 35px;
+}
+section .box-left .tab .tabMore {
+    float: right;
+}
+section .box-left .tab .tabMore a {
+    margin-right: 20px;
+}
+section .box-left .tab .tabMore a::after {
+    content: '';
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    right: 0; top: 4px;
+    background: url(../img/LW_plus.jpg) no-repeat;
+    background-size: cover;
+}
+section .box-left .tabCont {
+    overflow: hidden;
+}
+section .box-left .tabCont .contTitle {
+    float: left;
+}
+section .box-left .tabCont .contTitle ul {}
+section .box-left .tabCont .contTitle ul li {
+    margin-bottom: 10px;
+}
+section .box-left .tabCont .contTitle ul li a {
+    font-size: 15px;
+}
+section .box-left .tabCont .contDate {
+    float: right;
+}
+section .box-left .tabCont .contDate ul {}
+section .box-left .tabCont .contDate ul li {
+    margin-bottom: 10px;
+    color: #8a8a8a;
+}
+section .box-right {
+    width: 460px;
+    float: right;
+}
+section .box-right img {
     width: 100%;
 }
-banner .container img {
-    position: absolute;
-    width: 960px;
-    display: block;
-}
-.contents {
-    display: block;
-}
-.contents .cont1 {
-    overflow: hidden;
-    position: relative;
-    float: left;
-    width: 50%;
-}
-.contents .cont1 .notice {
-    display: block;
-    position: absolute;
-    width: 690px;
+
+article {
+    width: 100%;
     height: 300px;
+    margin-top: 40px;
 }
-.contents .cont1 .notice ul {}
-.contents .cont1 .notice ul li {}
-.contents .cont1 .notice ul li a {}
-.contents .cont1 .event {
+article h2 {
+    margin-bottom: 20px;
+}
+article .box-wrap {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+article .box-wrap .box1 {
+    width: 230px;
+    height: 230px;
+    float: left;
+}
+article .box-wrap .box2 {
+    width: 230px;
+    height: 230px;
+    float: left;
+}
+article .box-wrap .box3 {
+    width: 230px;
+    height: 230px;
+    float: left;
+}
+article .box-wrap .box4 {
+    width: 230px;
+    height: 230px;
+    float: left;
+}
+article .box-wrap .boxes {
+    margin-right: 13px;
+}
+article .box-wrap .boxes:last-child {
+    margin-right: 0;
+}
+article .box-wrap .boxes img {
+    width: 100%;
+}
+article .box-wrap .boxes span {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+footer {
+    width: 100%;
+    margin-top: 100px;
+    border-top: 1px solid #575757;
+}
+footer .line1 {
+    margin-top: 30px;
+    position: relative;
+}
+footer .line1 ul {
+    overflow: hidden;
+}
+footer .line1 ul li {
+    float: left;
+    margin-right: 20px;
+}
+footer .line1 ul li::after {
+    content: '';
+    width: 2px;
+    height: 15px;
     position: absolute;
+    left: 45%; top: 4px;
+    background: #ddd;
 }
-.contents .cont1 .event img {
-    display: block;
+footer .line2 {
+    margin-top: 5px;
+    position: relative;
 }
-
-
-
+footer .line2 ul {
+    overflow: hidden;
+}
+footer .line2 ul li {
+    float: left;
+    margin-right: 20px;
+}
+footer .line2 ul li:first-child::after {
+    content: '';
+    width: 2px;
+    height: 15px;
+    position: absolute;
+    left: 27%; top: 4px;
+    background: #ddd;
+}
+footer .line2 ul li:nth-child(2)::after {
+    content: '';
+    width: 2px;
+    height: 15px;
+    position: absolute;
+    left: 58.5%; top: 4px;
+    background: #ddd;
+}
+footer span {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #575757;
+}
