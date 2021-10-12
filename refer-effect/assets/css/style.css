@@ -151,7 +151,7 @@ figcaption {
   z-index: -1;
 }
 .bg.blue::before {
-  background-color: rgba(15, 68, 138, 0.5);
+  background-color: rgba(12, 58, 119, 0.5);
 }
 .bgbrown::before {
   background-color: rgba(22, 16, 6, 0.9);
@@ -235,6 +235,46 @@ figcaption {
 
 .bg20 {
   background-image: url(../img/bg20@2x.jpg);
+}
+
+.bg21 {
+  background-image: url(../img/bg21@2x.jpg);
+}
+
+.bg22 {
+  background-image: url(../img/bg22@2x.jpg);
+}
+
+.bg23 {
+  background-image: url(../img/bg23@2x.jpg);
+}
+
+.bg24 {
+  background-image: url(../img/bg24@2x.jpg);
+}
+
+.bg25 {
+  background-image: url(../img/bg25@2x.jpg);
+}
+
+.bg26 {
+  background-image: url(../img/bg26@2x.jpg);
+}
+
+.bg27 {
+  background-image: url(../img/bg27@2x.jpg);
+}
+
+.bg28 {
+  background-image: url(../img/bg28@2x.jpg);
+}
+
+.bg29 {
+  background-image: url(../img/bg29@2x.jpg);
+}
+
+.bg30 {
+  background-image: url(../img/bg30@2x.jpg);
 }
 
 #main {

@@ -12,73 +12,57 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 	<style>
-        .moveWrap {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%; height: 100vh;
-        }
-        .moveImage {
-            position: relative;
-        }
-        .moveImage .mImg {
-            width: 50vw;
-            height: 60vh;
-            overflow: hidden;
-            position: relative;
-            transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
-        }
-        .moveImage:hover .mImg {
-            transform: scale(1.025);
-        }
-        .moveImage .mImg img {
-            width: 100%;
-            position: absolute;
-            left: -5%; top: -5%;
-            width: 110%;
-            height: 110%;
-            object-fit: cover;
-            transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
-        }
-        .moveImage .mText {
-            position: absolute;
-            left: 50%; top: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            font-size: 1.3vw;
-            white-space: nowrap;
-            color: #fff;
-            background: rgba(0,0,0,0.4);
-            padding: 1vw;
-            line-height: 1.6;
-            font-family: "NEXONLv1Gothic";
+        body {
+            font-family: 'NEXONLv2Gothic';
         }
         .cursor {
             position: absolute;
-            width: 20px; height: 20px;
-            background: #fff;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
-            z-index: 10000;
-            user-select: none;
-            pointer-events: none;
+            background: url(../assets/img/bg17@2x.jpg) center center;
+            background-attachment: fixed;
+            background-size: cover;
+            border: 5px solid #fff;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .contents {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .contents p {
+            max-width: 70vw;
+            font-size: 3vw;
+            text-align: justify;
+            color: #fff;
+        }
+        .contents p:first-child {
+            font-size: 2vw;
+            line-height: 2;
+        }
+        .contents p em {
+            color: orange;
+            border-bottom: 2px dashed orange;
+            font-style: normal;
         }
 	</style>
 </head>
 
-<body class="bg bg20 blue">
+<body class="bg bg17 blue">
 
 	<!-- contents -->
 	<main>
 		<div class="cursor"></div>
-
-        <div class="moveWrap">
-            <article class="moveImage">
-                <div class="mImg"><img src="../assets/img/bg20.jpg" alt="이미지"></div>
-                <div class="mText">
-                    <p>I never dream about success, I acted for the dream.</p>
-                    <p>나는 결코 성공에 대해 꿈꾸지 않았다, 나는 꿈을 위해 행동했다.</p>
-                </div>
-            </article>
+        
+        <div class="contents">
+            <p>I dream my painting and I paint my dream</p>
+            <p>나는 나의 그림을 <em>꿈</em> 꾸고, 내 <em>꿈</em>을 그린다.</p>
         </div>
 	</main>
 	<!-- //contents -->
@@ -86,8 +70,8 @@
 
 	<!-- info -->
 	<div class="info">
-		<h1><a href="index.html">Mouse Effect05 - jQuery</a></h1>
-		<p>마우스 이펙트 - 마우스 방향에 따라 움직이기</p>
+		<h1><a href="index.html">Mouse Effect06 - jQuery</a></h1>
+		<p>마우스 이펙트 - 조명 효과</p>
 	</div>
 
 	<div class="info right">
@@ -97,28 +81,26 @@
 			<li><a href="javascriptME03.html">3</a></li>
 			<li><a href="javascriptME04.html">4</a></li>
 			<li><a href="javascriptME05.html">5</a></li>
-            <li><a href="javascriptME06.html">6</a></li>
+			<li><a href="javascriptME06.html">6</a></li>
 			<li><a href="javascriptME07.html">7</a></li>
 			<li><a href="javascriptME08.html">8</a></li>
-        </ul>
+		</ul>
 		<ul>
 			<li><a href="jqueryME01.html">1</a></li>
 			<li><a href="jqueryME02.html">2</a></li>
 			<li><a href="jqueryME03.html">3</a></li>
 			<li><a href="jqueryME04.html">4</a></li>
-			<li class="active"><a href="jqueryME05.html">5</a></li>
-            <li><a href="jqueryME06.html">6</a></li>
+			<li><a href="jqueryME05.html">5</a></li>
+			<li class="active"><a href="jqueryME06.html">6</a></li>
 			<li><a href="jqueryME07.html">7</a></li>
 			<li><a href="jqueryME08.html">8</a></li>
-        </ul>
+		</ul>
 	</div>
 
 	<div class="info left list">
 		<ul>
 			<li>pageX : <span class="pageX">0</span></li>
-			<li>pageY : <span class="pageY">0</span></li>
-            <li>standardX : <span class="standardX">0</span></li>	
-			<li>standardY : <span class="standardY">0</span></li>		
+			<li>pageY : <span class="pageY">0</span></li>	
 		</ul>
 	</div>
 
@@ -254,46 +236,23 @@ $(".standardY").text(standardY);
     <script src="../assets/js/custom.js"></script>
 	<script src="../assets/js/highlight.min.js"></script>
 	<script>
-        // $(".moveImage").mousemove(function(e){
-        //     let pageX = e.pageX,
-        //         pageY = e.pageY;
-        //     gsap.to(".cursor" , {duration : .2, left: e.pageX -10 , top : e.pageY -10})
+        const width = $(".cursor").width() / 2;
+        const height = $(".cursor").height() / 2;
 
-        //     //기준점 가운데로 변경
-        //     let standardX = $(window).width()/2 -pageX;
-        //     let standardY = $(window).height()/2  -pageY;
-
-        //     //이미지 움직임
-        //     $(".mImg img").attr({"style": "transform : translate("+standardX/20+"px, "+standardY/20 + "px)"});
-
+        $(window).mousemove(function(e){
+            gsap.to(".cursor", {duration: 0.5, left: e.pageX - width, top: e.pageY - height});
         
-        //     //출력
-        //     $(".pageX").text(pageX);
-        //     $(".pageY").text(pageY);
-        //     $(".standardX").text(standardX);
-        //     $(".standardY").text(standardY);
-        // })
 
-        $(".moveImage").mousemove(function(e){
-            gsap.to(".cursor", {duration: .2, left: e.pageX -10, top: e.pageY -10});
-
-            let pageX = e.pageX;
+			let pageX = e.pageX;
             let pageY = e.pageY;
-
-            //기준점 가운데로 변경
-            let standardX = $(window).width()/2 - pageX;
-            let standardY = $(window).height()/2 - pageY;
-
-            //이미지 움직임
-            $(".mImg img").attr({"style": "transform : translate("+standardX/20+"px, "+standardY/20 + "px)"});
-
-            //출력
+			
+			//출력
             $(".pageX").text(pageX);
             $(".pageY").text(pageY);
-            $(".standardX").text(standardX);
-            $(".standardY").text(standardY);
-        });
       
+		});
+
+		
 	
 		modal();
 	</script>

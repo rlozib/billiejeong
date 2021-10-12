@@ -192,7 +192,7 @@ $gradient6: linear-gradient(to bottom, #df89b5 0%, #bfd9fe 100%);
 	}
 	&.blue {
 		&::before {
-			background-color: rgba(15, 68, 138, 0.5);
+			background-color: rgba(12, 58, 119, 0.5);
 		}
 	}
 	&brown {
@@ -204,7 +204,7 @@ $gradient6: linear-gradient(to bottom, #df89b5 0%, #bfd9fe 100%);
 
 
 
-@for $i from 1 through 20 {
+@for $i from 1 through 30 {
 	.bg#{$i} {
 		background-image: url(../img/bg#{$i}@2x.jpg);
 	}
