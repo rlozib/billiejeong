@@ -290,7 +290,7 @@ setInterval(function(){
             sliderInner.animate({left: sliderWidth}, 400, function(){   //콜백함수 실행
                 $(".slider:last-child").prependTo(sliderInner);
                 sliderInner.css("left","");
-            });
+            }); 
         }
         function moveNext(){
             sliderInner.animate({left: -sliderWidth}, 400, function(){
