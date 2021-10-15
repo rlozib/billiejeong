@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COOKIT</title>
+    <link rel="stylesheet" href="css/cookit.css">
+
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1><a href="#"><img src="img/cookit_logo.jpg" alt="로고"></a></h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">COOKIT 소개</a></li>
+                    <li><a href="#">COOKIT 메뉴</a></li>
+                    <li><a href="#">리뷰</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">MY쿡킷</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- //header-->
+        <section id="banner">
+            <div class="sliderWrap">
+                <div class="sliderImg">
+                    <div class="slider" data-name="이미지1"><img src="img/cookit_slide.jpg" alt="이미지 슬라이드"></div>
+                </div>
+                <div class="sliderImg">
+                    <div class="slider" data-name="이미지2"><img src="img/cookit_slide.jpg" alt="이미지 슬라이드"></div>
+                </div> 
+                <div class="sliderImg">
+                    <div class="slider" data-name="이미지3"><img src="img/cookit_slide.jpg" alt="이미지 슬라이드"></div>
+                </div>    
+            </div>
+        </section>
+        <section id="content1">
+            <div class="box_left">
+                <h2 class="box_title">우리집도 COOKIT 배송이 되나요?</h2>
+                <p class="box_desc">배송이 가능한지 알려드려요.</p>
+                <div class="box_icon"><img src="img/cookit_icon1.jpg" alt="위치아이콘"></div>
+                <div class="box_btn"><a href="#">배송지 검색</a></div>
+                <div class="box_img"><img src="img/cookit_svg1.jpg" alt="배송지검색"></div>
+            </div>
+            <div class="box_right">
+                <h2 class="box_title">7월 30일(화)에 받을 수 있어요</h2>
+                <p class="box_desc">오전 7시까지 주문하시면 다음날 배송됩니다.</p>
+                <div class="box_icon"><img src="img/cookit_icon2.jpg" alt="시계아이콘"></div>
+                <div class="box_btn"><a href="#">63:28:32 <em>남은 시간</em></a></div>
+                <div class="box_img"><img src="img/cookit_svg2.jpg" alt="남은시간"></div>
+            </div>
+        </section>
+        <section id="content2">
+            <h1>실시간 베스트 | <em>생생한 리뷰</em></h1>
+            <div class="boxWrap">
+                <div class="box1">
+                    <img src="img/cookit_box1.jpg" alt="어복쟁반">
+                    <div class="box_desc">
+                        <p class="box_title">평양식 어복쟁반</p>
+                        <span class="price">33,800 <em>/ 3인분</em></span>
+                        <div class="cart_icon"><img src="img/cookit_icon3.jpg" alt=""></div>
+                    </div>
+                </div>
+                <div class="box2">
+                     <img src="img/cookit_box2.jpg" alt="어복쟁반">
+                    <div class="box_desc">
+                        <p class="box_title">새우쭈꾸미삼겹살</p>
+                        <span class="price">29,800 <em>/ 3인분</em></span>
+                        <div class="cart_icon"><img src="img/cookit_icon3.jpg" alt=""></div>
+                    </div>
+                </div>
+                <div class="box3">
+                     <img src="img/cookit_box3.jpg" alt="어복쟁반">
+                    <div class="box_desc">
+                        <p class="box_title">방풍나물 아귀찜</p>
+                        <span class="price ">32,800 <em>/ 3인분</em></span>
+                        <div class="cart_icon"><img src="img/cookit_icon3.jpg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--//wrap-->
+    <footer id="footer">
+        <div id="wrap">
+            <h1><a href="#"><img src="img/cookit_logoB.jpg" alt="흑백로고"></a></h1>
+            <div class="foot">
+                <ul>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보처리 방침</a></li>
+                    <li><a href="#">법적고지</a></li>
+                    <li><a href="#">사업자정보 확인</a></li>
+                </ul>
+            </div>
+            <div class="address">
+                <p>씨제이제일제당주(주) | 대표자 : 신현재<br>
+                주소: 서울시 중구 동호로 330 CJ제일제당 센터(우) 04560 | 사업자등록번호 : 104-86-09535<br>
+                통신판매업신고 중구 07767호 | 개인정보취급방침
+                </div>
+        </div>
+    </footer>
+
+
+
+    <!-- script -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+	<script>
+		const sliderWrap = $(".slider-wrap");
+		const sliderImg = $(".slider-img");
+		const slider = $(".slider");
+
+		let currentIndex = 0;				//현재 보이는 이미지(첫 번째 이미지)
+		let sliderCount = slider.length;	//이미지 갯수
+
+		setInterval(function(){
+			let nextIndex = (currentIndex + 1) % sliderCount;
+			
+			slider.eq(currentIndex).fadeOut()			//현재 이미지를 사라지게
+			slider.eq(nextIndex).fadeIn()				//다음 이미지를 나타나게
+
+			currentIndex = nextIndex;
+
+			console.log("currentIndex" + currentIndex);
+			console.log("nextIndex" + nextIndex);
+			
+			//0 1 2 3 4 0 1 2 3 4
+		}, 2000);2
+
+	</script>
+	<!-- //script -->
+</body>
+</html>
