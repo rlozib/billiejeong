@@ -60,7 +60,7 @@
             viewport.height = $( window ).height();
 
             frame.width = viewport.width;
-            frame.height = frame.width / 1.6; // 16 : 10
+            frame.height = frame.width;
 
             modal.top = ( ( viewport.height - frame.height ) / 2 ) + "px";
             modal.left = "0px";
