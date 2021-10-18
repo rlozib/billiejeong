@@ -477,14 +477,6 @@
   font-display: swap;
 }
 
-:root {
-  --font-main: 'saol';
-  --font-logo: 'Playfair Display';
-  --font-sub: 'Rajdhani';
-  --font-kor1: 'Chosunilbo_myungjo';
-  --font-kor2: 'SCoreDream';
-}
-
 *,
 *:before,
 *:after {
@@ -834,7 +826,7 @@ table {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-family: var(--font-sub);
+  font-family: "Rajdhani";
   border-bottom: 1px solid #2e2e30;
   border-top: 1px solid #2e2e30;
 }
@@ -860,7 +852,7 @@ table {
 
 #header .header__logo a {
   font-size: 30px;
-  font-family: var(--font-logo);
+  font-family: "Playfair Display";
   font-weight: bold;
   padding: 7px 7px 9px;
   margin: 10px;
@@ -888,6 +880,56 @@ table {
   margin: 1px;
 }
 
+#header .header__ham {
+  position: absolute;
+  left: 14px;
+  top: 18px;
+  width: 40px;
+  height: 40px;
+  display: none;
+}
+
+#header .header__ham::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  -webkit-box-shadow: 0 14px 0 #fff;
+          box-shadow: 0 14px 0 #fff;
+}
+
+#header .header__ham::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  -webkit-box-shadow: 0 -14px 0 #fff;
+          box-shadow: 0 -14px 0 #fff;
+}
+
+@media (max-width: 1100px) {
+  #header .header__menu {
+    display: none;
+  }
+  #header .header__port {
+    display: none;
+  }
+  #header .header__logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+  #header .header__ham {
+    display: block;
+  }
+}
+
 #footer {
   position: fixed;
   left: 0;
@@ -904,7 +946,7 @@ table {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-family: var(--font-sub);
+  font-family: "Rajdhani";
   border-top: 1px solid #2e2e30;
 }
 
@@ -952,11 +994,25 @@ table {
           flex: 0 0 50%;
 }
 
+@media (max-width: 1100px) {
+  #footer div:nth-child(1) {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+  #footer div:nth-child(2) {
+    display: none;
+  }
+  #footer div:nth-child(3) {
+    display: none;
+  }
+}
+
 #mainCont {
   background-color: #000;
   height: 100vh;
   color: #fff;
-  font-family: var(--font-main);
+  font-family: "saol";
   font-size: 9vw;
   line-height: .91;
   text-transform: uppercase;
