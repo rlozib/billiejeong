@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="../assets/css/var.css">
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 <body>
     
@@ -32,57 +35,58 @@
             <h2 class="ir_so">선수 정보</h2>
             <article class="content-article">
                 <div class="position_btn">
-                    <span><a href="#c">ALL</a></span>
+                    <span class="active"><a href="#c">ALL</a></span>
                     <span><a href="#c">GK</a></span>
                     <span><a href="#c">DF</a></span>
                     <span><a href="#c">MF</a></span>
                     <span><a href="#c">FW</a></span>
                 </div>
                 <section id="playerWrap">
-                    <h2 class="position">GOALKEEPERS</h2>
-                    <div class="GK_Wrap">
-                        <div class="playerBox">
-                            <img class="player_photo" src="https://www.arsenal.com/sites/default/files/styles/player_listing_image_400x252/public/images/Leno_1100x693.jpg?itok=9EhBLt-a" alt="레노">
-                            <div class="player_info">
-                                <div class="palyer_lname">Bernd</div>
-                                <div class="palyer_fname">Leno</div>
-                                <div class="player_num">01</div>
-                                <div class="country">
-                                    <img src="https://www.arsenal.com/sites/default/files/styles/flag/public/2017-06/Germany.png?itok=KbB8KGZO" alt="독일">
-                                    <span class="cname">Germany</span>
+                    <div class="GK_Wrap role">
+                        <h2 class="position">GOALKEEPERS</h2>
+                            <div class="playerBox">
+                                <img class="player_photo" src="https://www.arsenal.com/sites/default/files/styles/player_listing_image_400x252/public/images/Leno_1100x693.jpg?itok=9EhBLt-a" alt="레노">
+                                <div class="player_info">
+                                    <div class="palyer_lname">Bernd</div>
+                                    <div class="palyer_fname">Leno</div>
+                                    <div class="player_num">01</div>
+                                    <div class="country">
+                                        <img src="https://www.arsenal.com/sites/default/files/styles/flag/public/2017-06/Germany.png?itok=KbB8KGZO" alt="독일">
+                                        <span class="cname">Germany</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!--playerBox-->
-                        <div class="playerBox">
-                            <img class="player_photo" src="https://www.arsenal.com/sites/default/files/styles/player_listing_image_400x252/public/images/Ramsdale_1100x693.jpg?itok=dsj5wyD4" alt="화이램스달트">
-                            <div class="player_info">
-                                <div class="palyer_lname">Aaron</div>
-                                <div class="palyer_fname">Ramsdale</div>
-                                <div class="player_num">32</div>
-                                <div class="country">
-                                    <img src="https://www.arsenal.com/sites/default/files/styles/flag/public/2017-06/England.png?itok=JCX540nD" alt="영국">
-                                    <span class="cname">England</span>
+                            <!--playerBox-->
+                            <div class="playerBox">
+                                <img class="player_photo" src="https://www.arsenal.com/sites/default/files/styles/player_listing_image_400x252/public/images/Ramsdale_1100x693.jpg?itok=dsj5wyD4" alt="화이램스달트">
+                                <div class="player_info">
+                                    <div class="palyer_lname">Aaron</div>
+                                    <div class="palyer_fname">Ramsdale</div>
+                                    <div class="player_num">32</div>
+                                    <div class="country">
+                                        <img src="https://www.arsenal.com/sites/default/files/styles/flag/public/2017-06/England.png?itok=JCX540nD" alt="영국">
+                                        <span class="cname">England</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!--playerBox-->
-                        <div class="playerBox">
-                            <img class="player_photo" src="https://www.arsenal.com/sites/default/files/styles/player_listing_image_400x252/public/images/Okonkwo_1100x693.jpg?itok=DfwVzL4c" alt="오콘코">
-                            <div class="player_info">
-                                <div class="palyer_lname">Arthur</div>
-                                <div class="palyer_fname">Okonkwo</div>
-                                <div class="player_num">33</div>
-                                <div class="country">
-                                    <img src="https://www.arsenal.com/sites/default/files/styles/flag/public/2017-06/England.png?itok=JCX540nD" alt="영국">
-                                    <span class="cname">England</span>
+                            <!--playerBox-->
+                            <div class="playerBox">
+                                <img class="player_photo" src="https://www.arsenal.com/sites/default/files/styles/player_listing_image_400x252/public/images/Okonkwo_1100x693.jpg?itok=DfwVzL4c" alt="오콘코">
+                                <div class="player_info">
+                                    <div class="palyer_lname">Arthur</div>
+                                    <div class="palyer_fname">Okonkwo</div>
+                                    <div class="player_num">33</div>
+                                    <div class="country">
+                                        <img src="https://www.arsenal.com/sites/default/files/styles/flag/public/2017-06/England.png?itok=JCX540nD" alt="영국">
+                                        <span class="cname">England</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!--playerBox-->
+                            <!--playerBox-->
                     </div>
+                    
+                    <div class="DF_Wrap role">
                     <h2 class="position">DEFENDERS</h2>
-                    <div class="DF_Wrap">
                         <div class="playerBox">
                             <img class="player_photo" src="https://www.arsenal.com/sites/default/files/styles/player_listing_image_400x252/public/images/Tierney_1100x693.jpg?itok=4Ygm52zS" alt="티어니">
                             <div class="player_info">
@@ -214,8 +218,9 @@
                         </div>
                         <!--playerBox-->
                     </div>
+                    
+                    <div class="MF_Wrap role">
                     <h2 class="position">MIDFIELDERS</h2>
-                    <div class="MF_Wrap">
                         <div class="playerBox">
                             <img class="player_photo" src="https://www.arsenal.com/sites/default/files/styles/player_listing_image_400x252/public/images/Thomas_1100x693.jpg?itok=taMSepWV" alt="토마스">
                             <div class="player_info">
@@ -321,8 +326,9 @@
                         </div>
                         <!--playerBox-->
                     </div>
+                    
+                    <div class="FW_Wrap role">
                     <h2 class="position">FORWARDS</h2>
-                    <div class="FW_Wrap">
                         <div class="playerBox">
                             <img class="player_photo" src="https://www.arsenal.com/sites/default/files/styles/player_listing_image_400x252/public/images/Lacazette_1100x693.jpg?itok=3f6isZ8r" alt="라카제트">
                             <div class="player_info">
@@ -402,6 +408,11 @@
                         </div>
                     </div>
                 </section>
+                <!--모달-->
+                <?php
+                    include "playerModal.php"
+                ?>
+                <!--//모달-->
             </article>
         </section>
     </main>
@@ -413,8 +424,35 @@
         ?>
     </footer>
     <!-- //footer -->
-    <script>
-        
+
+    <!-- script -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>    
+        const tabBtn = $(".position_btn span");     
+        const tabCont = $("#playerWrap .role");   
+
+        tabBtn.click(function(){
+            let target = $(this);
+            tabBtn.removeClass("active");
+            target.addClass("active");
+
+            let index = target.index() == 0 ? -1 : target.index()-1 ;
+            //console.log(index)
+            if(index == -1){
+                console.log(index);
+                tabCont.css("display","none");
+                tabCont.css("display","flex");
+            } else {
+                tabCont.css("display","none");
+                console.log();
+                tabCont.eq(index).css("display","flex");
+            }
+            // tabCont.css("display","none");
+            // tabCont.eq(index).css("display","block");
+        });
     </script>
+    <!-- //script -->
 </body>
 </html>

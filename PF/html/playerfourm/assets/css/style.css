@@ -3,6 +3,7 @@ body {
     color: #fff;
     position: relative;
     height: 100%;
+    font-family: 'S-CoreDream';
 }
 /* 헤더영역 by은지 */
 #header {
@@ -1212,6 +1213,9 @@ footer .footer-inner .copyright {
     /* border: solid 1px #fff; */
     margin: 30px 20px 30px 0px;
 }
+.position_btn span.active {
+    background: rgb(148, 139, 139);
+}
 .position_btn span a {
     color: #fff;
     font-size: 18px;
@@ -1220,21 +1224,29 @@ footer .footer-inner .copyright {
 
 #playerWrap {
     color: #fff;
-    font-family: 'NanumSquare';
+    font-family: 'S-CoreDream';
     position: relative;
 }
-#playerWrap .position {
+/* #playerWrap .position {
     position: absolute;
     display: block;
     border-bottom: 2px solid #fff;
     font-weight: 700;
-}
+} */
 .GK_Wrap {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
     padding-top: 60px;
     margin-bottom: 70px;
+    position: relative;
+}
+.GK_Wrap .position {
+    position: absolute;
+    display: block;
+    border-bottom: 2px solid #fff;
+    font-weight: 700;
+    margin-top: -50px;
 }
 .DF_Wrap {
     display: flex;
@@ -1243,6 +1255,14 @@ footer .footer-inner .copyright {
     margin-bottom: 70px;
     padding-top: 60px;
     /*justify-content: space-between;*/
+    position: relative;
+}
+.DF_Wrap .position {
+    position: absolute;
+    display: block;
+    border-bottom: 2px solid #fff;
+    font-weight: 700;
+    margin-top: -50px;
 }
 .MF_Wrap {
     display: flex;
@@ -1250,6 +1270,14 @@ footer .footer-inner .copyright {
     gap: 30px;
     margin-bottom: 70px;
     padding-top: 60px;
+    position: relative;
+}
+.MF_Wrap .position {
+    position: absolute;
+    display: block;
+    border-bottom: 2px solid #fff;
+    font-weight: 700;
+    margin-top: -50px;
 }
 .FW_Wrap {
     display: flex;
@@ -1257,7 +1285,16 @@ footer .footer-inner .copyright {
     gap: 30px;
     margin-bottom: 70px;
     padding-top: 60px;
+    position: relative;
 }
+.FW_Wrap .position {
+    position: absolute;
+    display: block;
+    border-bottom: 2px solid #fff;
+    font-weight: 700;
+    margin-top: -50px;
+}
+
 .playerBox {
     width: 260px;
     box-sizing: border-box;
@@ -1266,6 +1303,10 @@ footer .footer-inner .copyright {
 .playerBox .player_photo {
     width: 260px;
     height: 170px;
+}
+.playerBox .player_photo:hover {
+    cursor: pointer;
+    background: rgba(2, 2, 2, 0.7);
 }
 .playerBox .player_info {
     position: relative;
@@ -1276,7 +1317,7 @@ footer .footer-inner .copyright {
 .playerBox .player_info .palyer_lname {
     width: 230px;
     display: inline-block;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 700;
     color: rgba(122, 122, 122, 0.678);
     text-transform: uppercase;
@@ -1284,8 +1325,8 @@ footer .footer-inner .copyright {
 .playerBox .player_info .palyer_fname {
     width: 230px;
     display: inline-block;
-    font-size: 25px;
-    font-weight: 700;
+    font-size: 22px;
+    font-weight: 500;
 }
 .playerBox .player_info .player_num {
     position: absolute;
@@ -1311,7 +1352,269 @@ footer .footer-inner .copyright {
     top: 8px;
     font-size: 12px;
 }
+
+
 /* ---------------------------------------------------- 선수 페이지 ---------------------------------------------------- */
+/* ---------------------------------------------------- 모달 페이지 ---------------------------------------------------- */
+/* .info {
+    color: #fff;
+    font-family: "NEXONLv1Gothic";
+    padding: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.info {
+    top: auto;
+    left: auto;
+    bottom: 0;
+    right: 0;
+}
+.info button {
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 5px 20px;
+    color: #fff;
+    border-radius: 50px;
+    box-shadow: 0 0 0 #fff inset;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+.info button:hover {
+    box-shadow: 0 -50px #fff inset;
+    color: #000;
+}
+#modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    transform: scale(0);
+}
+#modal .modal-bg {
+    background: rgba(0, 0, 0, 0.6);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#modal .modal-bg .modal-cont h2 {
+    font-weight: 400;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+#modal .modal-bg .modal-cont p {
+    font-weight: 300;
+    line-height: 1.6;
+}
+#modal .modal-bg .modal-cont button {
+    float: right;
+    border: 1px solid #000;
+    background: #000;
+    border-radius: 20px;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: "NEXONLv2Gothic";
+    margin-top: 20px;
+}
+  
+#modal.show {
+    -webkit-animation: unfoldIn 1s ease forwards;
+            animation: unfoldIn 1s ease forwards;
+}
+  
+@-webkit-keyframes unfoldIn {
+    0% {
+      transform: scaley(0.005) scalex(0);
+    }
+    50% {
+      transform: scaley(0.005) scalex(1);
+    }
+    100% {
+      transform: scaley(1) scalex(1);
+    }
+}
+  
+@keyframes unfoldIn {
+    0% {
+      transform: scaley(0.005) scalex(0);
+    }
+    50% {
+      transform: scaley(0.005) scalex(1);
+    }
+    100% {
+      transform: scaley(1) scalex(1);
+    }
+}
+#modal.show.hide {
+    -webkit-animation: unfoldOut 1s ease forwards;
+            animation: unfoldOut 1s ease forwards;
+}
+  
+@-webkit-keyframes unfoldOut {
+    0% {
+      transform: scaley(1) scalex(1);
+    }
+    50% {
+      transform: scaley(0.005) scalex(1);
+    }
+    100% {
+      transform: scaley(0.005) scalex(0);
+    }
+}
+  
+@keyframes unfoldOut {
+    0% {
+      transform: scaley(1) scalex(1);
+    }
+    50% {
+      transform: scaley(0.005) scalex(1);
+    }
+    100% {
+      transform: scaley(0.005) scalex(0);
+    }
+}
+#modal.show .modal-bg .modal-cont {
+    transform: scale(0);
+    -webkit-animation: zoomIn 0.5s 0.8s ease forwards;
+            animation: zoomIn 0.5s 0.8s ease forwards;
+}
+  
+#modal.show.hide .modal-bg .modal-cont {
+    transform: scale(0);
+    -webkit-animation: zoomOut 0.5s ease forwards;
+            animation: zoomOut 0.5s ease forwards;
+}
+  
+@-webkit-keyframes zoomIn {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+  
+@keyframes zoomIn {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+@-webkit-keyframes zoomOut {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+}
+@keyframes zoomOut {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+}
+.profile-view {
+    background: #fff;
+    width: 60vw;
+    border: 1px solid #f2f2f2;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.profile-view .view-header {
+    border-bottom: 1px solid #f2f2f2;
+}
+.profile-view .view-header .dot {
+    padding: 13px 10px 10px 15px;
+}
+.profile-view .view-header .dot span {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 2px;
+}
+.profile-view .view-header .dot span:nth-child(1) {
+    background-color: #f56565;
+}
+.profile-view .view-header .dot span:nth-child(2) {
+    background-color: #f6e05e;
+}
+.profile-view .view-header .dot span:nth-child(3) {
+    background-color: #48bb78;
+}
+.profile-view .view-title {
+    border-bottom: 1px solid #f2f2f2;
+    padding: 0 11px;
+    font-family: "NEXONLv2Gothic";
+}
+.profile-view .view-title li {
+    display: inline;
+    list-style: none;
+}
+.profile-view .view-title li a {
+    text-decoration: none;
+    color: #ccc;
+    padding: 10px 10px 12px;
+    margin: 0 5px;
+    display: inline-block;
+}
+.profile-view .view-title li.active a {
+    border-top: 2px solid #667EEA;
+    color: #4a5568;
+}
+.profile-view .view-cont {
+    height: 70vh;
+    overflow-y: scroll;
+    background: #F8F8F9;
+}
+.profile-view .view-cont > div {
+    display: none;
+}
+.profile-view .view-cont > div:nth-child(1) {
+    display: block;
+} */
+
+/* profile view */
+/* .profile-view {
+    background: #fff;
+	width: 60vw;
+	border: 1px solid #f2f2f2;
+	border-radius: 10px;
+	overflow: hidden;
+}
+.profile-view .view-header {
+    border-bottom: 1px solid #f2f2f2;
+}
+.profile-view .view-title {
+    border-bottom: 1px solid #f2f2f2;
+    padding: 0 11px;
+}
+.profile-view .view-title li {
+    display: inline;
+    list-style: none;
+}
+.profile-view .view-title a {
+    text-decoration: none;
+    color: #ccc;
+    padding: 10px 10px 12px;
+    margin: 0 5px;
+    display: inline-block;
+}
+.profile-view .view-cont {
+    height: 70vh;
+    overflow-y: scroll;
+    background: #F8F8F9;
+} */
+/* ---------------------------------------------------- 모달 ---------------------------------------------------- */
 /* ---------------------------------------------------- 랭킹 ---------------------------------------------------- */
 .rankingWrap {
     font-family: 'NanumSquare';
