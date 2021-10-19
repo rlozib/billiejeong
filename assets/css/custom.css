@@ -487,8 +487,8 @@ background: url('../img/AjaxLoader.gif') no-repeat center center #aebab6;
 	}
 
 	td:nth-of-type(2):before { content: "" ;font-weight: bold;}
-    
-   
+	}   
+	}
 }
 
 
