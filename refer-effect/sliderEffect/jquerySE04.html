@@ -219,12 +219,12 @@ setInterval(function(){
     // currentIndex++;
     // currentIndex = currentIndex % 5;
 
-    // if( currentIndex < 4 ){
+    // if( currentIndex &lt; 4 ){
     //     currentIndex++;
     // } else {
     //     currentIndex = 0;
     // }
-    ( currentIndex < sliderCount -1 ) ? currentIndex++ : currentIndex = 0 
+    ( currentIndex &lt; sliderCount -1 ) ? currentIndex++ : currentIndex = 0 
     
     let sliderPosition = currentIndex * -sliderWidth;
     sliderInner.animate({ left: sliderPosition }, sliderDuration, sliderEasing);

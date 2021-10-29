@@ -1,0 +1,237 @@
+* {
+    margin: 0; padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+li {
+    list-style: none;
+}
+
+
+#wrap {
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 50px;
+    font-family: 'S-CoreDream';
+}
+#aside {
+    float: left;
+    width: 250px;
+}
+#contents {
+    float: right;
+    width: 700px;
+}
+#footer {
+    float: left;
+}
+
+
+
+/* aside */
+#aside h1 {
+    margin-bottom: 20px;
+}
+#aside h1 img {
+    width: 150px;
+}
+#aside .nav {}
+#aside .nav ul {  
+}
+#aside .nav li {
+    position: relative;
+    padding: 10px;
+    padding-bottom: 10px;
+    
+}
+#aside .nav li a {
+    font-size: 18px;
+    font-weight: 500;
+}
+#aside .nav li.active a {
+    /*color: #2d66bb;*/
+} 
+#aside .subMenu {
+    width: 150px;
+    right: -140px; top: 0;
+    display: none;
+}
+#aside .subMenu li {}
+#aside .subMenu li a {
+    display: block; 
+    font-size: 15px; 
+    color: #333; 
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+#aside .subMenu li a:hover {}
+
+/* banner */
+.banner {}
+.slider-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider-img img {
+    width: 100%;
+}
+.slider-img {
+    width: 700;
+    height: 360px;
+    overflow: hidden;
+    margin: 10px;
+}
+.slider-inner {
+    position: relative;
+    overflow: hidden;
+    width: 700;
+    height: 1080;
+}
+.slider-inner .slider {
+    float: left;
+    width: 700;
+    height: 360px;
+    position: relative;
+}
+.slider-inner .slider::before {
+    position: absolute;
+    left: 5px; top: 5px;
+    background: rgba(0,0,0,.4);
+    color: #fff;
+    padding: 5px 10px 3px;
+}
+.slider-inner .slider img {
+    width: 700px;
+}
+.slider-inner .slider::before {content: attr(data-name);}
+.slider-inner .slider:nth-child(1) {z-index: 5;}
+.slider-inner .slider:nth-child(2) {z-index: 4;}
+.slider-inner .slider:nth-child(3) {z-index: 3;}
+
+
+/*tab*/
+.tab {
+    padding: 40px 0;
+    height: 200px;
+    position: relative;
+    width: 100%;
+}
+.tab img {
+    width: 100px;
+}
+.tab ul {
+    text-align: center;
+}
+.tab ul li {
+    display: inline;
+    padding: 5px;
+}
+.tab ul li a {
+    font-size: 20px;
+    color: #ccc;
+}
+.tab ul li ul {
+    position: absolute;
+    left: 0; top: 100px; width: 100%;
+    overflow: hidden;
+}
+.tab ul li ul li {
+    width: 20%; 
+    float: left;
+    box-sizing: border-box;
+}
+.tab ul li ul li a {
+    font: 13px;
+    color: 000;
+}
+.tab ul li ul li a span {
+    display: block;
+    font-size: 15px;
+
+}
+.tab ul li.active a {
+    color: #000;
+}
+
+
+/*board*/
+.board-wrap {
+    width: 95%;
+    height: 310px;
+    background: #f7f7f7;
+    padding: 15px;
+}
+.board {
+    position: relative;
+    float: left;
+    width: 32%;
+    padding: 6% 3%;
+    text-align: center;
+    margin-right: 2%;
+    background: #fff;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+}
+.board:last-child {
+    margin-right: 0;
+}
+.board h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+.board img {
+    width: 100px;
+    padding: 20px 0;
+}
+.board ul {}
+.board ul li {
+    font-size: 13px;
+    color: #444;
+    text-align: left;
+    padding-bottom: 5px;
+    overflow: hidden;
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+}
+.board .more {
+    width: 30px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+/*footer*/
+#footer {
+    width: 100%;
+    height: 120px;
+    background: #EDF2F8;
+    padding: 10px; 
+    box-sizing: border-box; 
+    margin-top: 20px;}
+#footer h2 {
+    float: left;
+}
+#footer h2 img {
+    width: 80px;
+}
+#footer address {
+    float: left; 
+    font-style: normal; 
+    font-size: 15px;
+    padding: 20px 0 0 20px;
+}
+#footer .sns {
+    float: right; 
+    margin-top: 20px;
+}
+#footer .sns ul {
+    overflow: hidden;
+    padding-top: 10px;
+}
+#footer .sns li {}
+#footer .sns li img {
+    width: 180px;
+}
