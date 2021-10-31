@@ -1,0 +1,29 @@
+* {
+    margin: 0; padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+li {
+    list-style: none;
+}
+
+#wrap {
+    font-family: 'Nanum Gothic';
+}
+#header {
+    width: 1200px;
+    background: #888;
+    margin: 0 auto;
+    height: 100px;
+    font-weight: 800;
+}
+#header h1 {
+    width: 200px;
+} 
+#header img {}
+#header .nav {} 
+#header .nav ul {} 
+#header .nav ul li {} 
+#header .nav ul li a {} 
