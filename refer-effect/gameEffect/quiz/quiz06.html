@@ -309,6 +309,44 @@
             border-radius: 100px;
             cursor: pointer;
         }
+        .question__result {
+            position: absolute;
+            left: 0; top: 0; 
+            text-align: center;
+            width: 100%; height: 100%;
+            background: #ccc;
+            padding: 30px; 
+            display: none;
+        }
+        .question__result.show {
+            display: block;
+        }
+        .question__result .title {
+            font-size: 30px;
+            line-height: 1.4;
+        }
+        .question__result .socre {
+            margin: 20px;
+            padding: 10px 0;
+        }
+        .question__result .socre span {
+            color: red;
+        }
+        .question__result button {
+            width: 100px; height: 40px;
+            margin-top: 20px;
+            box-shadow: inset 0 0 0 1px #000;
+            padding: 5px 10px;
+            font-family: 'DungGeunMo';
+        }
+        .question__ex {
+            text-align: center;
+            border: 6px groove #fff;
+            padding: 13px 20px;
+            font-size: 17px;
+            text-shadow: 1px 1px 1px #fff;
+        }
+
 
         @media (max-width:1200px){
             .ham {display: block;}
@@ -352,9 +390,10 @@
             <ul>
                 <li><a href="quiz01.html">주관식 한 문제</a></li>
                 <li><a href="quiz02.html">주관식 여러 문제</a></li>
-                <li class="active"><a href="quiz03.html">객관식 한 문제</a></li>
+                <li><a href="quiz03.html">객관식 한 문제</a></li>
                 <li><a href="quiz04.html">객관식 여러 문제</a></li>
-                <li><a href="quiz05.html">객관식 여러 문제 : 이미지 슬라이드</a></li>
+                <li class="active"><a href="quiz06.html">객관식 여러 문제 : 타이머</a></li>
+                <li><a href="web20110731.html">웹디자인 기능사 기출 문제</a></li>
             </ul>
         </nav>
         <div class="ham">
@@ -399,9 +438,20 @@
                 <button class="question__answer__next">다음 문제</button>
                 <!-- <div class="question__answer__view"></div>
                 <div class="question__answer__ex"></div> -->
+
+                <div class="question__ex"></div>
             </div>
         </div>
         <div class="question__start active"><span>start</span></div>
+        <div class="question__result">
+            <div class="title">퀴즈를 다 푸셨습니다.<br> 축하합니다!!!╰(*°▽°*)╯</div>
+            <div class="score">
+                <!-- 축하합니다. 당신을 <span>몇</span> 문제 중에 <span>몇</span> 개를 맞췄습니다. ✨✨✨ -->
+            </div>
+            <div class="buttons">
+                <button class="question__restart">재도전</button>
+            </div>
+        </div>
     </div>
  
     <script>
@@ -456,11 +506,16 @@
         const questionLength = quizWrap.querySelector(".question__answer__count");
         const questionTimer = quizWrap.querySelector(".question__timer__sec");
         const questionTimerLine = quizWrap.querySelector(".question__timer__line");
+        const questionResult = quizWrap.querySelector(".question__result");
+        const questionResultScore = quizWrap.querySelector(".question__result .score");
+        const questionRestart = quizWrap.querySelector(".question__restart");
+        const questionEx = quizWrap.querySelector(".question__ex");
 
         let quizCount = 0;
         let quizNum = 1;
         let counter;
         let counterLine;
+        let userScore = 0;
 
 
         
@@ -473,6 +528,19 @@
             startTimer(15);
             startTimerLine(0);
         }
+        //다시 시작 버튼 클릭
+        questionRestart.onclick = () => {
+            questionResult.classList.remove("show");
+            quizCount = 0;
+            quizNum = 1;
+            userScore = 0;
+
+            showQuestion(0);
+            questionCount(1);
+            startTimer(15);
+            startTimerLine(0);
+        }
+
         // showQuestion(0);
 
         //문제 출력하기
@@ -500,6 +568,10 @@
 
             questionTitle.innerHTML =  questionsTag;
             questionSelect.innerHTML = choiceTag;
+            questionEx.innerHTML = quizInfo[index].quizEx;
+            questionEx.style.display = "none";
+
+
 
             let choice = questionSelect.querySelectorAll(".choice");
 
@@ -515,21 +587,29 @@
             let userAnswer = answer.textContent.trim();     //혹시 모를 문제 공백 없애기
             let currentAnswer = quizInfo[quizCount].quizAnswer;
             let allChoices = questionSelect.children.length;
+            let iconYes = '<i class="fa fa-check-circle" aria-hidden="true"></i>';
+            let iconNo = '<i class="fa fa-times-circle" aria-hidden="true"></i>';
 
             if( userAnswer == currentAnswer ){
                 answer.parentNode.classList.add("correct");
+                answer.insertAdjacentHTML("beforeend", iconYes);
+                userScore++;
                 
             } else {
                 answer.parentNode.classList.add("incorrect");
+                answer.insertAdjacentHTML("beforeend", iconNo);
+                questionEx.style.display = "block";
 
 
                 //틀렸을 떄 정답 알려주기
                 for( let i=0; i<allChoices; i++ ){
                     if(questionSelect.children[i].querySelector(".choice").textContent == currentAnswer){
-                        questionSelect.children[i].classList.add("correct");                
+                        questionSelect.children[i].classList.add("correct"); 
+                        questionSelect.children[i].querySelector(".choice").insertAdjacentHTML("beforeend", iconYes);        
                     }
                 }
             }
+            //시간 정지 * 버튼 정지
             clearInterval(counter);
             clearInterval(counterLine);
             questionNext.classList.add("show");
@@ -544,10 +624,22 @@
 
         //다음 문제 클릭시
         questionNext.onclick = () => {
-            quizCount++;
-            quizNum++;
-            showQuestion(quizCount);
-            questionCount(quizNum);
+            if( quizCount < quizInfo.length -1 ){
+                quizCount++;
+                quizNum++;
+                showQuestion(quizCount);
+                questionCount(quizNum);
+
+                questionNext.classList.remove("show");
+                clearInterval(counter);
+                clearInterval(counterLine);
+                startTimer(15);
+                startTimerLine(0);
+            } else {
+                clearInterval(counter);
+                clearInterval(counterLine);
+                showResult();
+            }
         }
 
         //문제 카운팅
@@ -604,6 +696,14 @@
                 }
             },10);
             
+        }
+
+        //결과 보여주기
+        function showResult(){
+            questionResult.classList.add("show");
+
+            const socreTag = `당신은 <span>${quizInfo.length}</span> 문제 중에 <span>${userScore}</span> 개를 맞췄습니다. ✨✨✨`;
+            questionResultScore.innerHTML = socreTag;
         }
 
 
