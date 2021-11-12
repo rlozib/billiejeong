@@ -8,6 +8,18 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <style>
+       @font-face {
+            font-family: 'CookieRunOTF-Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/CookieRunOTF-Bold00.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'CookieRun-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
         @font-face {
             font-family: 'Cafe24Ssurround';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
@@ -31,7 +43,7 @@
         a {text-decoration: none;}
 
         body {
-            background: #c7e2c9;
+            background: #0F8258;
         }
 
         /* title */
@@ -40,13 +52,15 @@
             left: 20px; top: 20px;
         }
         .title h1 {
-            font-family: 'Cafe24Ssurround';
+            font-family: 'CookieRunOTF-Bold';
             margin-bottom: 20px;
             font-size: 50px;
+            color: #fff;
         }
         .score {
-            font-family: 'Cafe24SsurroundAir';
+            font-family: 'CookieRun-Regular';
             font-size: 30px;
+            color: #fff;
         }
         .score p {
             margin-bottom: 5px;
@@ -120,10 +134,10 @@
             left: 50%; top: 50%;
             transform: translate(-50%, -50%);
             perspective:  600px;
-            border: 6px solid #000;
+            border: 6px solid f3eed4(87, 87, 87);
             border-radius: 1vw;
             padding: 1vw;
-            background-color: #f5f5f5;
+            background-color: #f3eed4;
         }
         .cardWrap.is-disabled {
             pointer-events: none;
@@ -134,6 +148,8 @@
             transform-style: preserve-3d;
             transition: all 0.6s;
             cursor: pointer;
+            border-radius: 4%;
+            border: 5px solid rgb(228, 219, 189);
         }
         /* .cardWrap .card:hover {
             transform: rotateY(-180deg);
@@ -172,34 +188,34 @@
 
         /* card img */
         .cardWrap .card .front {
-            background-image: url(../assets/img/clubs.png);
+            background-image: url(../assets/img/paper.png);
         }
         .card[data-type=img1] .back {
-            background-image: url(../assets/img/coin.png);
+            background-image: url(../assets/img/bird.png);
         }
         .card[data-type=img2] .back {
-            background-image: url(../assets/img/rook.png);
+            background-image: url(../assets/img/crab.png);
         }
         .card[data-type=img3] .back {
-            background-image: url(../assets/img/axe.png);
+            background-image: url(../assets/img/dog.png);
         }
         .card[data-type=img4] .back {
-            background-image: url(../assets/img/mushroom.png);
+            background-image: url(../assets/img/elephant.png);
         }
         .card[data-type=img5] .back {
-            background-image: url(../assets/img/queen.png);
+            background-image: url(../assets/img/fish.png);
         }
         .card[data-type=img6] .back {
-            background-image: url(../assets/img/diamond.png);
+            background-image: url(../assets/img/fox.png);
         }
         .card[data-type=img7] .back {
-            background-image: url(../assets/img/dices.png);
+            background-image: url(../assets/img/frog.png);
         }
         .card[data-type=img8] .back {
-            background-image: url(../assets/img/hearts.png);
+            background-image: url(../assets/img/penguin.png);
         }
         .card[data-type=img9] .back {
-            background-image: url(../assets/img/tomato.png);
+            background-image: url(../assets/img/pig.png);
         }
     </style>
 </head>
