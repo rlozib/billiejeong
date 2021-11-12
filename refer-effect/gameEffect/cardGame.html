@@ -43,7 +43,9 @@
         a {text-decoration: none;}
 
         body {
-            background: #0F8258;
+            background: url(../assets/img/bgmain.png);
+            background-size: cover;
+            background-repeat: no-repeat;
         }
 
         /* title */
@@ -134,10 +136,10 @@
             left: 50%; top: 50%;
             transform: translate(-50%, -50%);
             perspective:  600px;
-            border: 6px solid f3eed4(87, 87, 87);
+            border: 6px solid #dbd5b8;
             border-radius: 1vw;
             padding: 1vw;
-            background-color: #f3eed4;
+            background-color: #dbd5b8;
         }
         .cardWrap.is-disabled {
             pointer-events: none;
@@ -149,7 +151,7 @@
             transition: all 0.6s;
             cursor: pointer;
             border-radius: 4%;
-            border: 5px solid rgb(228, 219, 189);
+            border: 5px solid rgb(177, 170, 150);
         }
         /* .cardWrap .card:hover {
             transform: rotateY(-180deg);
@@ -173,7 +175,7 @@
             left: 0; top: 0;
             width: 100%; height: 100%;
             border-radius: .4vw;
-            background-color: #f3eed4;
+            background-color: #f3edcc;
             backface-visibility: hidden;
             background-position: center;
             background-repeat: no-repeat;
@@ -188,34 +190,34 @@
 
         /* card img */
         .cardWrap .card .front {
-            background-image: url(../assets/img/paper.png);
+            background-image: url(../assets/img/poker-chip.png);
         }
         .card[data-type=img1] .back {
-            background-image: url(../assets/img/bird.png);
+            background-image: url(../assets/img/bishop.png);
         }
         .card[data-type=img2] .back {
-            background-image: url(../assets/img/crab.png);
+            background-image: url(../assets/img/rock.png);
         }
         .card[data-type=img3] .back {
-            background-image: url(../assets/img/dog.png);
+            background-image: url(../assets/img/diamond.png);
         }
         .card[data-type=img4] .back {
-            background-image: url(../assets/img/elephant.png);
+            background-image: url(../assets/img/king.png);
         }
         .card[data-type=img5] .back {
-            background-image: url(../assets/img/fish.png);
+            background-image: url(../assets/img/heart.png);
         }
         .card[data-type=img6] .back {
-            background-image: url(../assets/img/fox.png);
+            background-image: url(../assets/img/spades.png);
         }
         .card[data-type=img7] .back {
-            background-image: url(../assets/img/frog.png);
+            background-image: url(../assets/img/clubs.png);
         }
         .card[data-type=img8] .back {
-            background-image: url(../assets/img/penguin.png);
+            background-image: url(../assets/img/knight.png);
         }
         .card[data-type=img9] .back {
-            background-image: url(../assets/img/pig.png);
+            background-image: url(../assets/img/dice.png);
         }
     </style>
 </head>
