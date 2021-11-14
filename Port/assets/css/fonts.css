@@ -1,0 +1,42 @@
+/* 메인 폰트*/
+@font-face{
+    font-family: 'motter-corpus-std-regular', sans-serif;
+    /* font-family:"motter-corpus-std-regular"; */
+    src:url("https://www.dafontfree.net/data/48/m/45987/MotterCorpusStd-Regular.otf") format("woff"),
+    url("https://www.dafontfree.net/data/48/m/45987/MotterCorpusStd-Regular.otf") format("opentype"),
+    url("https://www.dafontfree.net/data/48/m/45987/MotterCorpusStd-Regular.otf") format("truetype");}
+
+/*서브 폰트*/
+@font-face {
+    font-family: "GT Pressura Mono";
+    src: url("http://db.onlinewebfonts.com/t/55996701a4199ae18957385be79a99d7.eot"); /* IE9*/
+    src: url("http://db.onlinewebfonts.com/t/55996701a4199ae18957385be79a99d7.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("http://db.onlinewebfonts.com/t/55996701a4199ae18957385be79a99d7.woff2") format("woff2"), /* chrome firefox */
+    url("http://db.onlinewebfonts.com/t/55996701a4199ae18957385be79a99d7.woff") format("woff"), /* chrome firefox */
+    url("http://db.onlinewebfonts.com/t/55996701a4199ae18957385be79a99d7.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
+    url("http://db.onlinewebfonts.com/t/55996701a4199ae18957385be79a99d7.svg#GT Pressura Mono") format("svg"); /* iOS 4.1- */
+}
+
+@font-face {
+    font-family: 'Always In My Heart Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Always In My Heart Regular'), url('Always In My Heart.woff') format('woff');
+}
+
+/*한글 폰트*/
+@font-face {
+    font-family: 'Cafe24Ohsquare';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Cafe24Ohsquare.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cafe24SsurroundAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+

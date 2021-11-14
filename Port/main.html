@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billie Jeong's Portfolio</title>
+
+    <!-- SEO -->
+    <meta name="author" content="billiejeong" />
+    <meta name="description" content="리액트 포트폴리오 사이트입니다." />
+    <meta name="keywords" content="리액트, 포트폴리오, 웹표준, 웹접근성, 사이트만들기, 포트폴리오, 빌리정" />
+    <meta name="robots" content="all" />
+
+
+    <!-- 아이콘 -->
+    <link rel="icon" href="assets/img/icon_256.png" />
+    <link rel="apple-touch-icon" href="assets/img/icon_256.png" />
+    <link rel="shortcut icon" href="assets/img/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/icon_192.png" />
+    <link rel="icon" type="image/png" sizes="256x256" href="assets/img/icon_256.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icon_16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon_32.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="assets/css/vars.css" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    
+
+</head>
+<body>
+    <header>
+        <div class="bgm">
+            <span class="btn-sound">
+                <i class="fa fa-volume-off" aria-hidden="true"></i>
+            </span>
+        </div>
+        <div class="ham">
+            <span></span>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#">as</a></li>
+                    <li><a href="#">as</a></li>
+                    <li><a href="#">as</a></li>
+                    <li><a href="#">as</a></li>
+                    <li><a href="#">as</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        const Menu = $(".menu");
+        const Ham = $(".ham");
+
+        Ham.click(function(e){
+            e.preventDefault();
+            Menu.toggleClass("block");
+        })
+
+
+    </script>
+</body>
+</html>
