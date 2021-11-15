@@ -1,7 +1,7 @@
 header {
     display: flex;
-    height: 5vh;
-    
+    height: 8vh;
+    background: #333;
 }
 .bgm {
     

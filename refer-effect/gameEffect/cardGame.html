@@ -43,7 +43,7 @@
         a {text-decoration: none;}
 
         body {
-            background: url(../assets/img/bgmain.png);
+            background: #f3ceab70;
             background-size: cover;
             background-repeat: no-repeat;
         }
@@ -57,12 +57,12 @@
             font-family: 'CookieRunOTF-Bold';
             margin-bottom: 20px;
             font-size: 50px;
-            color: #fff;
+            color: #E59F3F;
         }
         .score {
             font-family: 'CookieRun-Regular';
             font-size: 30px;
-            color: #fff;
+            color: #E59F3F;
         }
         .score p {
             margin-bottom: 5px;
@@ -136,22 +136,22 @@
             left: 50%; top: 50%;
             transform: translate(-50%, -50%);
             perspective:  600px;
-            border: 6px solid #dbd5b8;
+            /* border: 6px solid #C1DBD8; */
             border-radius: 1vw;
             padding: 1vw;
-            background-color: #dbd5b8;
+            background-color: #F9E9DA;
         }
         .cardWrap.is-disabled {
             pointer-events: none;
         }
         .cardWrap .card {
-            width: 8vw;
-            height: 20vh;
+            width: 6.5vw;
+            height: 13vh;
             transform-style: preserve-3d;
             transition: all 0.6s;
             cursor: pointer;
-            border-radius: 4%;
-            border: 5px solid rgb(177, 170, 150);
+            border-radius: 50%;
+            /* border: 4px solid rgb(177, 170, 150); */
         }
         /* .cardWrap .card:hover {
             transform: rotateY(-180deg);
@@ -174,8 +174,8 @@
             position: absolute;
             left: 0; top: 0;
             width: 100%; height: 100%;
-            border-radius: .4vw;
-            background-color: #f3edcc;
+            border-radius: 50%;
+            /* background-color: #ffc97d; */
             backface-visibility: hidden;
             background-position: center;
             background-repeat: no-repeat;
@@ -190,34 +190,34 @@
 
         /* card img */
         .cardWrap .card .front {
-            background-image: url(../assets/img/poker-chip.png);
+            background-image: url(../assets/img/chips.png);
         }
         .card[data-type=img1] .back {
-            background-image: url(../assets/img/bishop.png);
+            background-image: url(../assets/img/dice.png);
         }
         .card[data-type=img2] .back {
-            background-image: url(../assets/img/rock.png);
+            background-image: url(../assets/img/diamonds.png);
         }
         .card[data-type=img3] .back {
-            background-image: url(../assets/img/diamond.png);
-        }
-        .card[data-type=img4] .back {
-            background-image: url(../assets/img/king.png);
-        }
-        .card[data-type=img5] .back {
-            background-image: url(../assets/img/heart.png);
-        }
-        .card[data-type=img6] .back {
             background-image: url(../assets/img/spades.png);
         }
+        .card[data-type=img4] .back {
+            background-image: url(../assets/img/horseshoe.png);
+        }
+        .card[data-type=img5] .back {
+            background-image: url(../assets/img/gambling.png);
+        }
+        .card[data-type=img6] .back {
+            background-image: url(../assets/img/hearts.png);
+        }
         .card[data-type=img7] .back {
-            background-image: url(../assets/img/clubs.png);
+            background-image: url(../assets/img/clover.png);
         }
         .card[data-type=img8] .back {
-            background-image: url(../assets/img/knight.png);
+            background-image: url(../assets/img/roulette.png);
         }
         .card[data-type=img9] .back {
-            background-image: url(../assets/img/dice.png);
+            background-image: url(../assets/img/slot-machine.png);
         }
     </style>
 </head>
