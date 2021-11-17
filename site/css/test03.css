@@ -1,0 +1,265 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#wrap {
+    font-family: 'NanumSquare';
+}
+
+/* header */
+#header {
+    background: #fff;
+}
+
+#header .container-clova {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 85px;
+}
+
+.header-logo {
+    font-family: 'GmarketSans';
+    font-weight: 800;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.header-logo span.sec {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {}
+
+nav ul li a {
+    font-size: 16px;
+    color: rgba(0, 0, 0, .6);
+    padding: 34px 36px;
+    white-space: nowrap;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    font-weight: 700;
+    color: #000;
+}
+
+.login {}
+
+.login ul {
+    overflow: hidden;
+}
+
+.login ul li {
+    float: left;
+}
+
+.login ul li a {
+    display: inline-block;
+    padding: 8px 13px;
+    border: 1px solid rgba(0, 0, 0, .4);
+    border-radius: 3px;
+    font-size: 12px;
+    transition: all .4s;
+}
+
+.login ul li a:first-child {
+    margin-right: 8px;
+}
+
+.login ul li a:hover {
+    color: #fff;
+    border: 1px solid #05d686;
+    background-color: #05d686;
+}
+
+/* banner */
+#banner {
+    background-image: url('../img/naverclova_banner.png');
+    width: 100%;
+    height: 390px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+/* cont1 */
+.cont1 {
+    margin-top: 149px;
+    background: #fff;
+}
+
+.title {
+    text-align: center;
+}
+
+.title h2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.title p {
+    margin-top: 8px;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: -.42px;
+}
+
+.item {
+    margin-top: 44px;
+}
+
+.item-wrap {
+    width: 1203px;
+    margin: 44px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 375px);
+    gap: 27px;
+}
+
+.item-box {
+    display: inline;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    width: 375px;
+    position: relative;
+}
+
+.item-box .item-img {
+    height: 361px;
+}
+
+.item-box .item-detail {
+    padding: 40px;
+}
+
+.item-box .item-detail h3 {
+    font-family: 'GmarketSans';
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.item-box .item-detail p {
+    margin-top: 10px;
+    font-size: 17px;
+    line-height: 30px;
+    letter-spacing: -.5px;
+    color: #4a4a4a;
+}
+
+.item-box .item-detail span a {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, .6);
+    border: 1px solid #e3e3e3;
+    border-radius: 2px;
+    padding: 8px 17px;
+    margin: 10px 6px 0 0;
+}
+
+.item-box .item-detail span a.green {
+    font-weight: 700;
+    color: #fff;
+    border: 1px solid #05d686;
+    background-color: #05d686;
+}
+
+/* cont2 */
+.cont2 {
+    margin: 96px 0 255px;
+}
+
+/* cont3 */
+.cont3 {
+    padding: 75px 0 70px;
+    text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    background-color: #f7f7f7;
+}
+
+.cont3 h2 {
+    font-size: 32px;
+    line-height: 46px;
+}
+
+.cont3 p {
+    margin-top: 12px;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -.25px;
+    color: rgba(0, 0, 0, .5);
+}
+
+.cont3 span a {
+    display: inline-block;
+    margin-top: 21px;
+    padding: 16px 30px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    color: #fff;
+    text-align: center;
+    border-radius: 25px;
+    background-color: #2284f5;
+}
+
+/* footer */
+#footer {
+    background: #000;
+    color: #666;
+    padding: 40px 0;
+}
+
+.footer-logo {
+    font-family: 'GmarketSans';
+    font-weight: 800;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo span.sec {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+.footer-bar {
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bar {
+    overflow: hidden;
+}
+
+.bar.left {
+    float: left;
+}
+
+.bar.right {
+    float: right;
+}
+
+.bar li {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 13px;
+}
+
+.bar li:first-child {
+    margin-left: 0;
+}

@@ -1,0 +1,9 @@
+:root {
+    font-size: 16px;
+    line-height: 1.4;
+    --font-main: 'motter-corpus-std-regular';
+    --font-sub1: 'GT Pressura Mono';
+    --font-sub2: 'Always In My Heart Regular';
+    --font-kor1: 'Cafe24Ohsquare';
+    --font-kor2: 'Cafe24SsurroundAir';
+}

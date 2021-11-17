@@ -1,67 +1,87 @@
-header {
-    display: flex;
-    height: 8vh;
-    background: #333;
+#header {
+   
 }
 .bgm {
-    
-    
-    
-}
-.btn-sound {
-    position: absolute;
-    width: 150px;
-    height: 20px;
-    right: 5px; top: 0;
-}
-.ham {
-    position: absolute;
-    right: 0px; top: 0px;
-    cursor: pointer;
-    width: 30px; height: 30px;
-}
-.ham span {
-    width: 20px; height: 3px;
-    background: #000;
-    display: block;
-    position: absolute;
-    left: 5px; top: 13px;
-}
-.ham span::before {
-    content: '';
-    width: 20px; height: 3px;
-    background: #000;
-    position: absolute;
-    left: 0; top: 7px;
-}
-.ham span::after {
-    content: '';
-    width: 20px; height: 3px;
-    background: #000;
-    position: absolute;
-    left: 0; bottom: 7px;
-}
-
-.btn-sound {
-    padding: 10px 20px;
-    background: #000;
+    background: #F1A349;
+    width: 40px;
+    height: 40px;
+    right: 4.5vw; top: 3vh;
+    border-radius: 5px;
+    line-height: 35px;
+    text-align: center;
+    position: fixed;
+    z-index: 100000;
     color: #fff;
 }
+.btn-sound {
+    
+}
+
+.ham {
+    position: fixed;
+    z-index: 100000;
+    background: #F1A349;
+    right: 1.3vw; top: 3vh;
+    cursor: pointer;
+    width: 40px; 
+    height: 40px;
+    border-radius: 5px;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+}
+
+
 nav{
-    background: rgba(0, 0, 0, 0.329);
+    font-family: var(--font-kor1);
+    background: #296650;
     width: 40vw;
     height: 100vh;
     position: absolute;
     right: 0; top: 0;
     color: #fff;
     display: none;
+    text-transform: uppercase;
+    z-index: 10000;
 }
 nav.block {
     display: block;
 }
-nav ul {}
+nav ul {
+    
+}
 nav ul li a {
+    
     display: block;
     font-size: 2vw;
     padding: 50px 20px;
+   
+}
+
+#main {}
+#banner {
+    position: relative;
+    max-width: 100%;
+    width: 100vw;
+    height: 1080px;
+    background: #BA3844;
+}
+.banner_img {
+    background: url("../img/dancingqueen.gif");
+    position: absolute;
+    width: 1700px;
+    height: 874px;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.banner_text {
+    position: absolute;
+    bottom: 3vw;
+    overflow: hidden;
+    width: 100%;
+    height: 430px;
+    background: url("../img/billiejeong_text.svg");
 }

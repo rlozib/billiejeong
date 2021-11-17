@@ -4,11 +4,12 @@
     /* font-family:"motter-corpus-std-regular"; */
     src:url("https://www.dafontfree.net/data/48/m/45987/MotterCorpusStd-Regular.otf") format("woff"),
     url("https://www.dafontfree.net/data/48/m/45987/MotterCorpusStd-Regular.otf") format("opentype"),
-    url("https://www.dafontfree.net/data/48/m/45987/MotterCorpusStd-Regular.otf") format("truetype");}
+    url("https://www.dafontfree.net/data/48/m/45987/MotterCorpusStd-Regular.otf") format("truetype");
+}
 
 /*서브 폰트*/
 @font-face {
-    font-family: "GT Pressura Mono";
+    font-family: 'GT Pressura Mono';
     src: url("http://db.onlinewebfonts.com/t/55996701a4199ae18957385be79a99d7.eot"); /* IE9*/
     src: url("http://db.onlinewebfonts.com/t/55996701a4199ae18957385be79a99d7.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
     url("http://db.onlinewebfonts.com/t/55996701a4199ae18957385be79a99d7.woff2") format("woff2"), /* chrome firefox */

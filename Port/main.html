@@ -8,8 +8,8 @@
 
     <!-- SEO -->
     <meta name="author" content="billiejeong" />
-    <meta name="description" content="리액트 포트폴리오 사이트입니다." />
-    <meta name="keywords" content="리액트, 포트폴리오, 웹표준, 웹접근성, 사이트만들기, 포트폴리오, 빌리정" />
+    <meta name="description" content="포트폴리오 사이트입니다." />
+    <meta name="keywords" content="포트폴리오, 웹표준, 웹접근성, 사이트만들기, 포트폴리오, 빌리정" />
     <meta name="robots" content="all" />
 
 
@@ -28,28 +28,57 @@
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     
+    <!--fontawsome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
+    <style>
+        .noise {
+            width: 100%;
+            height: 100%;
+            background: url("./assets/img/noise.png");
+        }
+    </style>
 </head>
 <body>
-    <header>
+    <header id="header">
         <div class="bgm">
             <span class="btn-sound">
+                <!-- <i class="fa fa-volume-up" aria-hidden="true"></i> -->
                 <i class="fa fa-volume-off" aria-hidden="true"></i>
             </span>
         </div>
         <div class="ham">
-            <span></span>
-            <nav class="menu">
-                <ul>
-                    <li><a href="#">as</a></li>
-                    <li><a href="#">as</a></li>
-                    <li><a href="#">as</a></li>
-                    <li><a href="#">as</a></li>
-                    <li><a href="#">as</a></li>
-                </ul>
-            </nav>
+            <i class="fa fa-bars" aria-hidden="true"></i>
+            <!-- <i class="fa fa-times" aria-hidden="true"></i> -->
+            <!-- <span></span> -->
         </div>
+            <nav class="menu">
+                <div class="noise">
+                    <ul>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">site</a></li>
+                        <li><a href="#">script</a></li>
+                        <li><a href="#">reference</a></li>
+                        <li><a href="#">css animation</a></li>
+                        <li><a href="#">contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+
     </header>
+    <main id="main">
+        <section id="banner">
+            <div class="noise">
+                <div class="banner_img">
+                    <div class="noise">
+                        <div class="banner_text"></div>
+                    </div>
+                </div>
+                
+            </div>
+
+        </section>
+    </main>
     
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
