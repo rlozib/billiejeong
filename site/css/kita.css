@@ -1,0 +1,196 @@
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nanum Gothic';
+}
+a {
+    color: #333;
+    text-decoration: none;
+}
+ol,
+ul,
+li {
+    list-style: none;
+}
+#wrap {
+    margin: 0 auto;
+}
+.container {
+    width: 1100px;
+    margin: 0 auto;
+}
+header {
+    height: 100px;
+}
+.logo {
+    margin-top: 25px;
+    float: left;
+}
+.logo img {
+    width: 150px;
+    
+}
+nav {
+    float: right;
+    height: 30px;
+    text-align: center;
+}
+nav .mainmenu {
+    width: 600px;
+    line-height: 30px;
+}
+nav .mainmenu > li {
+    width: 25%;
+    height: 100%;
+    float: left;
+    color: #000;
+    transition: all 0.4s;
+    
+}
+nav .mainmenu > li > a {
+    
+}
+nav .mainmenu > li:hover {
+    background-color: rgb(154, 107, 107);
+    color: #000;
+}
+nav .submenu {
+    display: none;
+}
+nav .submenu li {
+    background-color: #ddd;
+    transition: all 0.4s;
+}
+nav .submenu li:hover {
+    background-color: rgb(213, 211, 110);
+    color: #000;
+}
+
+#banner {
+    height: 400px;
+    position: relative;
+}
+.sliderWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sliderImg {}
+.sliderImg img {
+    width: 100%;
+}
+.slider {
+    position: absolute;
+    left: 0; top: 0;
+}
+.slider::before {
+    position: absolute;
+    left: 5px; top: 5px;
+    background: rgba(0,0,0,.4);
+    color: #fff;
+    padding: 5px 10px 3px;
+    font-family: inherit;
+}
+.slider::before {content: attr(data-name);}
+.slider:nth-child(1) {z-index: 5;}
+.slider:nth-child(2) {z-index: 4;}
+.slider:nth-child(3) {z-index: 3;}
+.slider:nth-child(4) {z-index: 2;}
+.slider:nth-child(5) {z-index: 1;}
+
+#contents {
+    width: 100%;
+    background: #F3F7F8;
+}
+.cont1 {
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 145px;
+    position: relative;
+}
+.cont1 h2 {
+    margin-top: 150px;
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+    position: absolute;
+    left: 50%; top: 0;
+    transform: translate(-50%, -50%);
+}
+.cont1 .more {
+    margin-top: 140px;
+    position: absolute;
+    right: 0; top: 0;
+}
+.cont1 .more img {
+    width: 30px;
+    height: 30px;
+}
+.cardWrap {
+    margin-top: 200px;
+    display: flex;
+    gap: 20px;
+}
+.cardWrap .card {
+    position: relative;
+    display: inline-block;
+    width: 260px;
+    height: 200px;
+    border: solid 1px #e6e6e6;
+    box-sizing: border-box;
+    background: #fff;
+    justify-content: space-between;
+}
+.card .dday {
+    position: absolute;
+    border: 1px solid #92A7BA;
+    color: #547388;
+    border-radius: 5px;
+    padding: 5px 5px;
+    font-size: 11px;
+    margin: 20px;
+}
+.card p {
+    position: absolute;
+    font-size: 15px;
+    top: 55px; left: 20px;
+}
+.card .bu::before {
+    content: '사업기간';
+    position: absolute;
+    top: 0px;
+    left: -60px;
+    background: #6990D5;
+    color: #fff;
+    border-radius: 5px;
+    padding: 3px;
+}
+.card .bu {
+    font-size: 13px;
+    position: relative;
+    top: 120px;
+    left: 80px;
+    color: #333;
+    
+}
+.card .cu::before {
+    content: '모집기간';
+    position: absolute;
+    top: 0;
+    left: -55px;
+    background: #6990D5;
+    color: #fff;
+    border-radius: 5px;
+    padding: 3px;
+    
+}
+.card .cu {
+    position: relative;
+    font-size: 13px;
+    top: 150px;
+    left: 0px;
+    color: #333;
+}
