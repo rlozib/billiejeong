@@ -203,19 +203,21 @@ nav ul li a {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    background: url(../img/megabox.jpg) center center;
+    background: url(../img/naver.jpg) center center;
     background-attachment: fixed;
     background-size: cover;
     overflow: hidden;
     z-index: 10;
 }
-#siteCoding .megaboxSite {
+
+/* 네이버사이트 */
+#siteCoding .naverSite {
     position: relative;
     width: 100%;
     height: 1080px;
     background: #296650;
 }
-#siteCoding .megaboxSite .desc {
+.naverSite .desc {
     font-family: var(--font-kor1);
     color: #fff;
     font-size: 24px;
@@ -226,7 +228,7 @@ nav ul li a {
     top: 50%;
     transform: translate(-50%, -50%);
 }
-#siteCoding .megaboxSite .title {
+.naverSite .title {
     font-family: var(--font-main);
     font-size: 5vw;
     color: #e59f3f;
@@ -237,4 +239,407 @@ nav ul li a {
     top: 58%; left: 50%;
     transform: translate(-50%,-50%);
 }
+.naverSite .code_btn {
+    width: 155px;
+    height: 46px;
+    padding: 17px 16px 16px 15px;
+    border-radius: 10px;
+    background-color: #a2343c;
+    position: absolute;
+    right: 220px;
+    bottom: 35px;
+}
+.naverSite .code_btn a {
+    font-family: var(--font-main);
+    font-size: .7vw;
+    text-align: center;
+    color: #eadcd4;
+    text-transform: uppercase;
+    position: absolute;
+    left: 25px;
+}
+.naverSite .site_btn {
+    width: 155px;
+    height: 46px;
+    padding: 17px 16px 16px 15px;
+    border-radius: 10px;
+    background-color: #a2343c;
+    position: absolute;
+    right:45px;
+    bottom: 35px;
+}
+.naverSite .site_btn a {
+    font-family: var(--font-main);
+    font-size: .7vw;
+    text-align: center;
+    color: #eadcd4;
+    text-transform: uppercase;
+    position: absolute;
+    left: 35px;
+}
+
+/* 애플사이트 */
+#siteCoding .appleSite {
+    position: relative;
+    width: 100%;
+    height: 1080px;
+    background: #E5983A;
+}
+.appleSite .desc {
+    font-family: var(--font-kor1);
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.appleSite .title {
+    font-family: var(--font-main);
+    font-size: 5vw;
+    color: #a2343c;
+    text-align: center;
+    position: absolute;
+    display: inline-block;
+    text-transform: uppercase;
+    top: 58%; left: 50%;
+    transform: translate(-50%,-50%);
+}
+.appleSite .code_btn {
+    width: 155px;
+    height: 46px;
+    padding: 17px 16px 16px 15px;
+    border-radius: 10px;
+    background-color: #a2343c;
+    position: absolute;
+    left: 45px;
+    bottom: 35px;
+}
+.appleSite .code_btn a {
+    font-family: var(--font-main);
+    font-size: .7vw;
+    text-align: center;
+    color: #eadcd4;
+    text-transform: uppercase;
+    position: absolute;
+    left: 25px;
+}
+.appleSite .site_btn {
+    width: 155px;
+    height: 46px;
+    padding: 17px 16px 16px 15px;
+    border-radius: 10px;
+    background-color: #a2343c;
+    position: absolute;
+    left: 220px;
+    bottom: 35px;
+}
+.appleSite .site_btn a {
+    font-family: var(--font-main);
+    font-size: .7vw;
+    text-align: center;
+    color: #eadcd4;
+    text-transform: uppercase;
+    position: absolute;
+    left: 35px;
+}
+
+/* 메가박스사이트 */
+#siteCoding .megaSite {
+    position: relative;
+    width: 100%;
+    height: 1080px;
+    background: #BA3844;
+}
+.megaSite .desc {
+    font-family: var(--font-kor1);
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.megaSite .title {
+    font-family: var(--font-main);
+    font-size: 5vw;
+    color: #e59f3f;
+    text-align: center;
+    position: absolute;
+    display: inline-block;
+    text-transform: uppercase;
+    top: 58%; left: 50%;
+    transform: translate(-50%,-50%);
+}
+.megaSite .code_btn {
+    width: 155px;
+    height: 46px;
+    padding: 17px 16px 16px 15px;
+    border-radius: 10px;
+    background-color: #a2343c;
+    position: absolute;
+    right: 220px;
+    bottom: 35px;
+}
+.megaSite .code_btn a {
+    font-family: var(--font-main);
+    font-size: .7vw;
+    text-align: center;
+    color: #eadcd4;
+    text-transform: uppercase;
+    position: absolute;
+    left: 25px;
+}
+.megaSite .site_btn {
+    width: 155px;
+    height: 46px;
+    padding: 17px 16px 16px 15px;
+    border-radius: 10px;
+    background-color: #a2343c;
+    position: absolute;
+    right:45px;
+    bottom: 35px;
+}
+.megaSite .site_btn a {
+    font-family: var(--font-main);
+    font-size: .7vw;
+    text-align: center;
+    color: #eadcd4;
+    text-transform: uppercase;
+    position: absolute;
+    left: 35px;
+}
+
+
+/* php사이트 */
+#siteCoding .phpSite {
+    position: relative;
+    width: 100%;
+    height: 1080px;
+    background: #1C2048;
+}
+.phpSite .desc {
+    font-family: var(--font-kor1);
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.phpSite .title {
+    font-family: var(--font-main);
+    font-size: 5vw;
+    color: #a2343c;
+    text-align: center;
+    position: absolute;
+    display: inline-block;
+    text-transform: uppercase;
+    top: 58%; left: 50%;
+    transform: translate(-50%,-50%);
+}
+.phpSite .code_btn {
+    width: 155px;
+    height: 46px;
+    padding: 17px 16px 16px 15px;
+    border-radius: 10px;
+    background-color: #a2343c;
+    position: absolute;
+    left: 45px;
+    bottom: 35px;
+}
+.phpSite .code_btn a {
+    font-family: var(--font-main);
+    font-size: .7vw;
+    text-align: center;
+    color: #eadcd4;
+    text-transform: uppercase;
+    position: absolute;
+    left: 25px;
+}
+.phpSite .site_btn {
+    width: 155px;
+    height: 46px;
+    padding: 17px 16px 16px 15px;
+    border-radius: 10px;
+    background-color: #a2343c;
+    position: absolute;
+    left: 220px;
+    bottom: 35px;
+}
+.phpSite .site_btn a {
+    font-family: var(--font-main);
+    font-size: .7vw;
+    text-align: center;
+    color: #eadcd4;
+    text-transform: uppercase;
+    position: absolute;
+    left: 35px;
+}
+
+
+/* 리액트사이트 */
+#siteCoding .reactSite {
+    position: relative;
+    width: 100%;
+    height: 1080px;
+    background: #296650;
+}
+.reactSite .desc {
+    font-family: var(--font-kor1);
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.reactSite .title {
+    font-family: var(--font-main);
+    font-size: 5vw;
+    color: #e59f3f;
+    text-align: center;
+    position: absolute;
+    display: inline-block;
+    text-transform: uppercase;
+    top: 58%; left: 50%;
+    transform: translate(-50%,-50%);
+}
+.reactSite .code_btn {
+    width: 155px;
+    height: 46px;
+    padding: 17px 16px 16px 15px;
+    border-radius: 10px;
+    background-color: #a2343c;
+    position: absolute;
+    right: 220px;
+    bottom: 35px;
+}
+.reactSite .code_btn a {
+    font-family: var(--font-main);
+    font-size: .7vw;
+    text-align: center;
+    color: #eadcd4;
+    text-transform: uppercase;
+    position: absolute;
+    left: 25px;
+}
+.reactSite .site_btn {
+    width: 155px;
+    height: 46px;
+    padding: 17px 16px 16px 15px;
+    border-radius: 10px;
+    background-color: #a2343c;
+    position: absolute;
+    right:45px;
+    bottom: 35px;
+}
+.reactSite .site_btn a {
+    font-family: var(--font-main);
+    font-size: .7vw;
+    text-align: center;
+    color: #eadcd4;
+    text-transform: uppercase;
+    position: absolute;
+    left: 35px;
+}
+
+/* 팀사이트 */
+#siteCoding .teamSite {
+    position: relative;
+    width: 100%;
+    height: 1080px;
+    background: #E5983A;
+}
+.teamSite .desc {
+    font-family: var(--font-kor1);
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.teamSite .title {
+    font-family: var(--font-main);
+    font-size: 5vw;
+    color: #a2343c;
+    text-align: center;
+    position: absolute;
+    display: inline-block;
+    text-transform: uppercase;
+    top: 58%; left: 50%;
+    transform: translate(-50%,-50%);
+}
+.teamSite .code_btn {
+    width: 155px;
+    height: 46px;
+    padding: 17px 16px 16px 15px;
+    border-radius: 10px;
+    background-color: #a2343c;
+    position: absolute;
+    left: 45px;
+    bottom: 35px;
+}
+.teamSite .code_btn a {
+    font-family: var(--font-main);
+    font-size: .7vw;
+    text-align: center;
+    color: #eadcd4;
+    text-transform: uppercase;
+    position: absolute;
+    left: 25px;
+}
+.teamSite .site_btn {
+    width: 155px;
+    height: 46px;
+    padding: 17px 16px 16px 15px;
+    border-radius: 10px;
+    background-color: #a2343c;
+    position: absolute;
+    left: 220px;
+    bottom: 35px;
+}
+.teamSite .site_btn a {
+    font-family: var(--font-main);
+    font-size: .7vw;
+    text-align: center;
+    color: #eadcd4;
+    text-transform: uppercase;
+    position: absolute;
+    left: 35px;
+}
+
+
+/* 캔버스 */
+#canvas {
+    position: relative;
+    width: 100%;
+    height: 1080px;
+}
+#canvas .canvas_bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("../img/canvas.jpg");
+    /* left: 50%; top: 50%;
+    transform: translate(-50%,-50%); */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+}
+#canvas .canvas_text {}
+#canvas .canvas_text em {}
+
 
