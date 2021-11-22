@@ -91,9 +91,8 @@ nav ul li a {
     background: #ecded6;
     width: 100%;
     height: 1080px;
-    
 }
-.aboutMe_text {
+.aboutMe_text1 {
     padding-top: 360px;
     font-family: var(--font-main);
     font-size: 7vw;
@@ -102,12 +101,12 @@ nav ul li a {
     position: relative;
     display: block;
 }
-.aboutMe_text span {
+.aboutMe_text1 span {
     position: relative;
     display: block;
     /* border-bottom: 5px solid #e59f3f; */
 }
-.aboutMe_text span::after {
+.aboutMe_text1 span::after {
     content: "";
     position: absolute;
     width: 20vw;
@@ -118,7 +117,7 @@ nav ul li a {
     background: #e59f3f;
     border-radius: 5px;
 }
-/* .aboutMe_text .text_line::before {
+/* .aboutMe_text1 .text_line::before {
     content: "";
     position: absolute;
     width: 12vw;
@@ -127,10 +126,115 @@ nav ul li a {
     background: #e59f3f;
     border-radius: 5px;
 }
-.aboutMe_text .text_line {
+.aboutMe_text1 .text_line {
     position: relative;
     width: 10vw;
     height: 1vh;
     background: #e59f3f;
     border-radius: 5px;
 } */
+
+#aboutMe2 {
+    width: 100%;
+    height: 1080px;
+    background: #BF3D49;
+}
+#aboutMe2 .aboutMe2_img {
+    float: left;
+    width: 1130px;
+    height: 1080px;
+}
+#aboutMe2 .aboutMe2_img img {}
+#aboutMe2 .aboutMe_text2 {
+    padding-top: 360px;
+    font-family: var(--font-main);
+    font-size: 5vw;
+    color: #e59f3f;
+    text-align: center;
+    position: relative;
+    display: block;
+}
+#aboutMe2 .aboutMe_text2 span {
+    position: relative;
+    display: block;
+}
+#aboutMe2 .aboutMe_text2 p {
+    font-family: var(--font-kor1);
+    font-size: 1.3vw;
+    color: #e59f3f;
+    position: relative;
+    display: inline-block;
+    top: -40px;
+}
+#aboutMe2 .scroll_circle {
+    width: 230px;
+    height: 230px;
+    position: absolute;
+    left: 77%;
+
+}
+#siteCoding_intro {
+    background: #ecded6;
+    width: 100%;
+    height: 1080px;
+}
+#siteCoding_intro .siteCoding_text {
+    padding-top: 360px;
+    font-family: var(--font-main);
+    font-size: 7vw;
+    color: #e59f3f;
+    text-align: center;
+    position: relative;
+    display: block;
+}
+#siteCoding_intro .siteCoding_text span {
+    position: relative;
+    display: block;
+}
+#siteCoding_intro .siteCoding_text em {
+    border-bottom: 7px solid #e59f3f;
+}
+#siteCoding {
+    width: 100%;
+    height: auto;
+}
+#siteCoding #cursor {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: url(../img/megabox.jpg) center center;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+    z-index: 10;
+}
+#siteCoding .megaboxSite {
+    position: relative;
+    width: 100%;
+    height: 1080px;
+    background: #296650;
+}
+#siteCoding .megaboxSite .desc {
+    font-family: var(--font-kor1);
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#siteCoding .megaboxSite .title {
+    font-family: var(--font-main);
+    font-size: 5vw;
+    color: #e59f3f;
+    text-align: center;
+    position: absolute;
+    display: inline-block;
+    text-transform: uppercase;
+    top: 58%; left: 50%;
+    transform: translate(-50%,-50%);
+}
+
