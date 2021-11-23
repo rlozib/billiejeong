@@ -14,13 +14,13 @@
 
 
     <!-- 아이콘 -->
-    <link rel="icon" href="assets/img/icon_256.png" />
+    <!-- <link rel="icon" href="assets/img/icon_256.png" />
     <link rel="apple-touch-icon" href="assets/img/icon_256.png" />
     <link rel="shortcut icon" href="assets/img/favicon.ico" />
     <link rel="icon" type="image/png" sizes="192x192" href="assets/img/icon_192.png" />
     <link rel="icon" type="image/png" sizes="256x256" href="assets/img/icon_256.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icon_16.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon_32.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon_32.png" /> -->
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/fonts.css" />
@@ -35,7 +35,16 @@
         .noise {
             width: 100%;
             height: 100%;
+            background: url("./assets/img/noise15.png");
+            background-repeat: repeat;
+            background-position: top left;
+        }
+        .noise7 {
+            width: 100%;
+            height: 100%;
             background: url("./assets/img/noise7.png");
+            background-repeat: repeat;
+            background-position: top left;
         }
     </style>
 </head>
@@ -67,17 +76,25 @@
 
     </header>
     <main id="main">
+        <section id="top">
+            <div class="noise">
+                <h6>welcome</h6>
+                <span>billie</span>
+                <span>jeong</span>
+                <h5>portfolio</h5>
+            </div>
+        </section>
         <section id="banner">
             <div class="noise">
                 <div class="banner_img">
-                    <div class="noise">
+                    <div class="noise7">
                         <div class="banner_text"></div>
                     </div>
                 </div>
             </div>
         </section>
         <section id="aboutMe1">
-            <div class="noise">
+            <div class="noise7">
                 <div class="aboutMe_text1">
                    <span>HAPPY</span>
                    <span>PLAY</span>
@@ -102,7 +119,7 @@
             </div>
         </section>
         <section id="siteCoding_intro">
-            <div class="noise">
+            <div class="noise7">
                 <div class="siteCoding_text">
                     <span>LET ME</span>
                     <span><em>SHOW</em> YOU</span>
@@ -112,18 +129,18 @@
         </section>
         <section id="siteCoding">
             <div id="cursor"></div>
-                <div class="naverSite">
-                    <div class="noise">
-                        <p class="desc">네이버 웨일 사이트를 구현하였습니다.</p>
-                        <div class="title">naver</div>
-                        <div class="code_btn"><a href="#c">view coding</a></div>
-                        <div class="site_btn"><a href="#c">view site</a></div>
-                    </div>
-                </div>
                 <div class="appleSite">
                     <div class="noise">
                         <p class="desc">애플사이트에 영감을 받아 포트폴리오를 제작하였습니다.</p>
                         <div class="title">apple site</div>
+                        <div class="code_btn"><a href="#c">view coding</a></div>
+                        <div class="site_btn"><a href="#c">view site</a></div>
+                    </div>
+                </div>
+                <div class="teamSite">
+                    <div class="noise7">
+                        <p class="desc">팀프로젝트에서 선수(Player), 회원가입 페이지를 코딩하였습니다.</p>
+                        <div class="title">team project</div>
                         <div class="code_btn"><a href="#c">view coding</a></div>
                         <div class="site_btn"><a href="#c">view site</a></div>
                     </div>
@@ -152,23 +169,40 @@
                         <div class="site_btn"><a href="#c">view site</a></div>
                     </div>
                 </div>
-                <div class="teamSite">
-                    <div class="noise">
-                        <p class="desc">팀프로젝트에서 선수(Player), 회원가입 페이지를 코딩하였습니다.</p>
-                        <div class="title">tram project</div>
+                <div class="vueSite">
+                    <div class="noise7">
+                        <p class="desc">VUE를 이용해 포트폴리오 사이트 구현하였습니다.</p>
+                        <div class="title">vue site</div>
                         <div class="code_btn"><a href="#c">view coding</a></div>
                         <div class="site_btn"><a href="#c">view site</a></div>
                     </div>
                 </div>
         </section>
-        <canvas id="canvas">
+        <section id="canvas">
             <div class="noise">
                 <div class="canvas_bg"></div>
                 <div class="canvas_text">
                     <em>script reffer</em>
                 </div>
             </div>
-        </canvas>
+        </section>
+        <section id="scriptV">
+            <div class="noise7">
+                <div class="topIcon"></div>
+                <h2>script view</h2>
+                <div class="effect">
+                    <iframe src="https://rlozib.github.io/dothome21/refer-effect/sliderEffect/javascriptSE01.html" frameborder="0"></iframe>
+                    <div class="info yellow">
+                        <h1><span>slider</span> <span>effect</span></h1>
+                        <div class="desc">스크립트를 효과를 이용한 슬라이드 예제입니다.</div>
+                        <div class="siteIcon"></div>
+                        <div class="view_btn">사이트 보기
+                            <div class="line"></div>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+        </section>
     </main>
     
 
