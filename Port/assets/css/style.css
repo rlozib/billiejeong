@@ -685,14 +685,16 @@ nav ul li a {
     width: 100%;
     height: 4400px;
     background: #ecded6;
+    position: relative;
 
 }
 #scriptV .topIcon {
     background: url(../img/horseshoe.png);
     width: 110px;
     height: 118px;
-    /* object-fit: contain; */
-    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 130%);
     
 }
 #scriptV h2 {
