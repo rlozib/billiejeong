@@ -1,3 +1,9 @@
+.container {
+    position: relative;
+    width: 1710px;
+    margin: 0 auto;
+}
+
 #header {
    
 }
@@ -686,6 +692,7 @@ nav ul li a {
     height: 4400px;
     background: #ecded6;
     position: relative;
+    
 
 }
 #scriptV .topIcon {
@@ -708,14 +715,14 @@ nav ul li a {
 }
 #scriptV .effect{
     display: flex;
+    justify-content: space-between;
 }
 #scriptV .effect iframe{
-    width: 1242px;
-    height: 534px;
+    width: 1240px;
+    height: 530px;
     border-radius: 40px;
 }
 #scriptV .info {
-    
     text-transform: uppercase;
 }
 #scriptV .info.yellow {
