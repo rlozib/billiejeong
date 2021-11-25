@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,16 +13,15 @@
     <meta name="robots" content="all" />
 
 
-    
-
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/fonts.css" />
     <link rel="stylesheet" href="assets/css/vars.css" />
     <link rel="stylesheet" href="assets/css/reset.css" />
-    <link rel="stylesheet" href="assets/css/oldstyle.css" />
-    
-    <!--fontawsome-->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 
     <style>
         .noise {
@@ -44,18 +43,11 @@
     </style>
 </head>
 <body>
+
     <header id="header">
-        <div class="bgm">
-            <span class="btn-sound">
-                <!-- <i class="fa fa-volume-up" aria-hidden="true"></i> -->
-                <i class="fa fa-volume-off" aria-hidden="true"></i>
-            </span>
-        </div>
-        <div class="ham">
-            <i class="fa fa-bars" aria-hidden="true"></i>
-            <!-- <i class="fa fa-times" aria-hidden="true"></i> -->
-            <!-- <span></span> -->
-        </div>
+        <div class="ham"><span></span></div>
+        <div class="bgm"><i class="fa fa-volume-off" aria-hidden="true"></i></div>
+    
         <nav class="menu">
             <div class="noise">
                 <ul>
@@ -68,26 +60,35 @@
                 </ul>
             </div>
         </nav>
-
     </header>
-    <main id="main">
+    
+    <div id="contents">
         <section id="top">
             <div class="noise">
-                <h6>welcome</h6>
-                <span>billie</span>
-                <span>jeong</span>
-                <h5>portfolio</h5>
-            </div>
+                <div class="top_text">
+                    <h1><strong>billie</strong> <em>jeong</em></h1>
+                </div>
+                <span class="particletext confetti">Confetti</span>
+                <!-- <span class="particletext hearts">Hearts</span> -->
+                </div>
         </section>
+        <!-- //top -->
+
         <section id="banner">
             <div class="noise">
-                <div class="banner_img">
-                    <div class="noise7">
-                        <div class="banner_text"></div>
+                <div class="bannerWrap">
+                    <div class="wavetext"></div>
+                    <div class="textWrap">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- //banner -->
+
         <section id="aboutMe1">
             <div class="noise7">
                 <div class="aboutMe_text1">
@@ -122,6 +123,7 @@
                 </div>
             </div>
         </section>
+
         <section id="siteCoding">
             <div id="cursor"></div>
                 <div class="appleSite">
@@ -325,7 +327,7 @@
                     <span class="address">wjddmswl3712@gmail.com</span>
                 </div>
                 <div class="name">
-                    <em>billie</em><em>jeong</em>
+                    <em>billie<br>jeong</em>
                 </div>
             </div>
         </section>
@@ -334,21 +336,15 @@
         <span>billie</span>
         <span>jeong</span>
     </footer>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    </div>
+    <!-- //contents -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
-   
+    <script src="./assets/js/circle.js"></script>
+    <script src="./assets/js/banner.js"></script>
     <script>
-        // const Menu = $(".menu");
-        // const Ham = $(".ham");
-
-        // Ham.click(function(e){
-        //     e.preventDefault();
-        //     Menu.toggleClass("block");
-        // })
-
-
         
     </script>
 </body>

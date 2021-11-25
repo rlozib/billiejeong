@@ -30,8 +30,9 @@
     font-family: 'Always In My Heart Regular';
     font-style: normal;
     font-weight: normal;
-    src: local('Always In My Heart Regular'), url('Always In My Heart.woff') format('woff');
+    src: local('Always In My Heart Regular'), url('../fonts/Always\ In\ My\ Heart.woff') format('woff');
 }
+
 
 /*한글 폰트*/
 @font-face {
