@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -48,18 +48,20 @@
         <div class="ham"><span></span></div>
         <div class="bgm"><i class="fa fa-volume-off" aria-hidden="true"></i></div>
     
+        
         <nav class="menu">
             <div class="noise">
                 <ul>
-                    <li><a href="#">about</a></li>
-                    <li><a href="#">site</a></li>
-                    <li><a href="#">script</a></li>
-                    <li><a href="#">reference</a></li>
-                    <li><a href="#">css animation</a></li>
-                    <li><a href="#">contact</a></li>
+                    <li><a href="#banner">about</a></li>
+                    <li><a href="#siteCoding_intro">site coding</a></li>
+                    <li><a href="#canvas">script effect</a></li>
+                    <li><a href="#referBook">reference book</a></li>
+                    <li><a href="#cssAni">css animation</a></li>
+                    <li><a href="#photo">contact</a></li>
                 </ul>
             </div>
         </nav>
+        <div class="nav_bg"></div>
     </header>
     
     <div id="contents">
@@ -177,7 +179,9 @@
         </section>
         <section id="canvas">
             <div class="noise">
-                <div class="canvas_bg"></div>
+                <div class="canvas_bg">
+                    <div class="noise7"></div>
+                </div>
                 <div class="canvas_text">
                     <em>script reffer</em>
                 </div>
@@ -254,18 +258,22 @@
                 <h2>reference book</h2>
                 <div class="referWrap">
                     <div class="referL">
-                        <div class="referText">
-                            <em>reference book</em>
-                            <h3>javascript</h3>
+                        <div class="noise7">
+                            <div class="referText">
+                                <em>reference book</em>
+                                <h3>javascript</h3>
+                            </div>
+                            <iframe src="https://rlozib.github.io/dothome21/refer-javascript/index.html" frameborder="0"></iframe>
                         </div>
-                        <iframe src="https://rlozib.github.io/dothome21/refer-javascript/index.html" frameborder="0"></iframe>
                     </div>
                     <div class="referR">
-                        <div class="referText">
-                            <em>reference book</em>
-                            <h3>jquery</h3>
+                        <div class="noise">
+                            <div class="referText">
+                                <em>reference book</em>
+                                <h3>jquery</h3>
+                            </div>
+                            <iframe src="https://rlozib.github.io/dothome21/refer-jquery/index.html" frameborder="0"></iframe>
                         </div>
-                        <iframe src="https://rlozib.github.io/dothome21/refer-jquery/index.html" frameborder="0"></iframe>
                     </div>
                 </div>
             </div>
@@ -331,12 +339,12 @@
                 </div>
             </div>
         </section>
-    </main>
+    </div>
     <footer id="footer">
         <span>billie</span>
         <span>jeong</span>
     </footer>
-    </div>
+    
     <!-- //contents -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -345,7 +353,15 @@
     <script src="./assets/js/circle.js"></script>
     <script src="./assets/js/banner.js"></script>
     <script>
-        
+        const Menu = $(".menu");
+        const MenuBg = $(".nav_bg");
+        const Ham = $(".ham");
+
+        Ham.click(function(e){
+            e.preventDefault();
+            Menu.toggleClass("block");
+            MenuBg.toggleClass("block");
+        })
     </script>
 </body>
 </html>

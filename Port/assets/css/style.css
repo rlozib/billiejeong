@@ -6,8 +6,14 @@
 
 /*-------------------*/
 /* layout */
+body {
+    margin: 0 auto;
+    width: 100%;
+    box-sizing:border-box;
+}
 #contents {
     overflow: hidden;
+    
 }
 
 
@@ -20,7 +26,8 @@
     height: 40px;
     background: #e39c3d;
     border-radius: 4px;
-    z-index: 10000;
+    z-index: 1000000;
+    cursor: pointer;
 }
 
 #header .ham span {
@@ -54,7 +61,7 @@
 
 #header .bgm {
     position: fixed;
-    right: 65px;
+    right: 70px;
     top: 20px;
     width: 40px;
     height: 40px;
@@ -66,31 +73,54 @@
     color: #fff;
     font-size: 20px;
     z-index: 10000;
+    cursor: pointer;
 }
-nav {
+
+.nav_bg {
+    width: 100%;
+    height: 1080px;
+    background: #000;
+    opacity: .5;
+    position: fixed; 
+    z-index: 89999;
+    right: 0;
+    top: 0;
+    display: none;
+}
+.nav_bg.block {
+    display: block;
+}
+.menu {
+    opacity: 1;
+    position: fixed;
     font-family: var(--font-main);
     background: #296650;
     width: 40vw;
     height: 100vh;
-    position: absolute;
     right: 0;
     top: 0;
-    color: #fff;
     display: none;
     text-transform: uppercase;
-    z-index: 10000;
+    z-index: 90000;
 }
 
-nav.block {
+.menu.block {
     display: block;
 }
 
-nav ul {}
+.menu ul {
+    padding-top: 6vw;
+}
+.menu ul li {}
 
-nav ul li a {
+.menu ul li a {
     display: block;
     font-size: 2vw;
-    padding: 20px 100px;
+    padding: 2vw 6vw;
+    color: #E5983A;
+}
+.menu ul li a:hover {
+    color: #fff;
 }
 
 
@@ -1552,6 +1582,9 @@ nav ul li a {
     position: absolute;
     left: 50%; top: 50%;
     transform: translate(-50%, -50%);
+}
+#contact .contact-btn a {
+    line-height: 1;
 }
 #contact .contact {
     position: absolute;
