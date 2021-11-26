@@ -1,4 +1,4 @@
-var text = "I wanna billie jeong!";
+var text = "I'm your billie jeong!";
 
 for(var i in text) { 
     if(text[i] === " ") {
