@@ -28,9 +28,13 @@ body {
     border-radius: 4px;
     z-index: 1000000;
     cursor: pointer;
+    text-align: center;
+    line-height: 2.5vw;
+    color: #fff;
 }
 
-#header .ham span {
+
+/* #header .ham span {
     width: 20px;
     height: 3px;
     background: #fff;
@@ -57,7 +61,7 @@ body {
     position: absolute;
     left: 0;
     top: 6px;
-}
+} */
 
 #header .bgm {
     position: fixed;
@@ -534,7 +538,7 @@ body {
 .aboutMe_text1 h2 strong::after {
     content: '';
     width: 100%;
-    height: 10px;
+    height: .7vw;
     background: #e39c3d;
     position: absolute;
     left: 0;
@@ -629,7 +633,17 @@ body {
     
 }
 #siteCoding_intro .siteCoding_text em {
-    border-bottom: 7px solid #e59f3f;
+    /* content: '';
+    width: 30%;
+    height: .7vw;
+    background: #e59f3f;
+    border-radius: 1vw;
+    position: absolute;
+    display: inline-block;
+    left: 40%;
+    bottom: 1.2vw; */
+    border-bottom: .7vw solid #e59f3f;
+
 }
 #siteCoding {
     height: auto;
@@ -779,7 +793,7 @@ body {
 
 /*스크립트 예제*/
 #scriptV {
-    height: 3500px;
+    height: 4000px;
     background: #ecded6;
     position: relative;
 }
@@ -805,20 +819,18 @@ body {
 /* 스크립트 공통요소 */
 #scriptV .info h3 {
     font-family: var(--font-main);
-    font-size: 5vw;
+    font-size: 4vw;
+    line-height: 1;
 }
 
-#scriptV .info h3 span {
-    /* display: block; */
-
-}
+#scriptV .info h3 span {}
 #scriptV .iWrap {
     flex: 0 0 65%;
 
 }
 
 #scriptV iframe {
-    width: 90%;
+    width: 100%;
     height: 25vw;
     border-radius: 40px;
 }
@@ -829,66 +841,12 @@ body {
     text-transform: uppercase;
 }
 #scriptV .info .desc {
-    font-size: 24px;
+    font-size: 1.3vw;
     font-family: var(--font-kor1);
 }
 #scriptV .info .view_btn .line {
     width: 10vw;
     height: 0.7vw;
-}
-
-/* 컬러 */
-/*옐로우*/
-#scriptV .info.yellow {
-    color: #e59f3f;
-    text-align: right;
-}
-#scriptV .info.yellow .siteIcon {
-    background: url(../img/card.png) no-repeat;
-}
-#scriptV .info.yellow .view_btn .line {
-    background: url("../img/y_line.svg") no-repeat;
-}
-
-/*네이비*/
-#scriptV .info.navy {
-    color: #415a6e;
-    text-align: left;
-}
-#scriptV .info.navy .siteIcon {
-    background: url(../img/b_dice.png) no-repeat;
-}
-#scriptV .info.navy .view_btn .line {
-    background: url(../img/b_line.svg) no-repeat;
-}
-
-/*레드*/
-#scriptV .info.red {
-    color: #b0464b;
-    text-align: right;
-}
-
-#scriptV .info.red .siteIcon {
-    background: url(../img/seven.png) no-repeat center;
-    background-size: conver;
-}
-
-#scriptV .info.red .view_btn .line {
-    background: url(../img/r_line.svg) no-repeat;
-}
-
-/*그린*/
-#scriptV .info.green {
-    color: #193b30;
-    text-align: left;
-}
-
-#scriptV .info.green .siteIcon {
-    background: url(../img/g_dice.png) no-repeat;
-}
-
-#scriptV .info.green .view_btn .line {
-    background: url(../img/g_line.svg) no-repeat;
 }
 
 /* 좌측 스크립트 */
@@ -910,7 +868,7 @@ body {
 #scriptV .scriptExL .info .view_btn {
     position: absolute;
     font-family: var(--font-kor2);
-    font-size: 1.7vw;
+    font-size: 1.5vw;
     right: 1vw;
     bottom: 0;
 
@@ -921,14 +879,14 @@ body {
 #scriptV .scriptExR {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 290px;
+    margin-bottom: 20vw;
 }
 
 
 #scriptV .scriptExR .info .siteIcon {
     position: absolute;
-    width: 4.5vw;
-    height: 11vh;
+    width: 5vw;
+    height: 12vh;
     right: 55%;
     bottom: 3vw;
 }
@@ -941,6 +899,65 @@ body {
     bottom: 0;
 
 }
+
+/* 컬러 */
+/*옐로우*/
+#scriptV .info.yellow {
+    color: #e59f3f;
+    text-align: right;
+}
+#scriptV .info.yellow .siteIcon {
+    background: url(../img/card.png) no-repeat center;
+    background-size: auto;
+}
+#scriptV .info.yellow .view_btn .line {
+    background: url("../img/y_line.svg") no-repeat;
+}
+
+/*네이비*/
+#scriptV .info.navy {
+    color: #415a6e;
+    text-align: left;
+}
+#scriptV .info.navy .siteIcon {
+    background: url(../img/b_dice.png) no-repeat center;
+    background-size: auto;
+}
+#scriptV .info.navy .view_btn .line {
+    background: url(../img/b_line.svg) no-repeat;
+}
+
+/*레드*/
+#scriptV .info.red {
+    color: #b0464b;
+    text-align: right;
+}
+
+#scriptV .info.red .siteIcon {
+    background: url(../img/seven.png) no-repeat center;
+    background-size: auto;
+}
+
+#scriptV .info.red .view_btn .line {
+    background: url(../img/r_line.svg) no-repeat;
+}
+
+/*그린*/
+#scriptV .info.green {
+    color: #193b30;
+    text-align: left;
+}
+
+#scriptV .info.green .siteIcon {
+    background: url(../img/g_dice.png) no-repeat center;
+    background-size: auto;
+}
+
+#scriptV .info.green .view_btn .line {
+    background: url(../img/g_line.svg) no-repeat;
+}
+
+
 
 #referBook {
     width: 100%;
