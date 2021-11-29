@@ -20,16 +20,16 @@ body {
 /* hdeader */
 #header .ham {
     position: fixed;
-    right: 30px;
-    top: 20px;
-    width: 40px;
-    height: 40px;
+    right: 1vw;
+    top: 1vw;
+    width: 2.1vw;
+    height: 2.1vw;
     background: #e39c3d;
     border-radius: 4px;
     z-index: 1000000;
     cursor: pointer;
     text-align: center;
-    line-height: 2.5vw;
+    line-height: 2.3vw;
     color: #fff;
 }
 
@@ -65,10 +65,10 @@ body {
 
 #header .bgm {
     position: fixed;
-    right: 80px;
-    top: 20px;
-    width: 40px;
-    height: 40px;
+    right: 3.5vw;
+    top: 1vw;
+    width: 2.1vw;
+    height: 2.1vw;
     background: #e39c3d;
     border-radius: 4px;
     display: flex;
