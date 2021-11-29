@@ -425,7 +425,7 @@ figcaption {
 
 .info h1 {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.5vw;
   line-height: 1.6;
   border-bottom: 2px dashed #ffffff;
   display: inline-block;
@@ -439,7 +439,7 @@ figcaption {
 
 .info p {
   font-weight: 300;
-  font-size: 16px;
+  font-size: 1.3vw;
 }
 
 .info li {
