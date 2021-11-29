@@ -1,6 +1,6 @@
 .container {
     position: relative;
-    width: 1710px;
+    width: 1700px;
     margin: 0 auto;
 }
 
@@ -562,9 +562,17 @@ body {
     height: 100vh;
 }
 .aboutMe2_Left {
+    /* width: 50%; */
     width: 50%;
     background: url(../img/about1.jpg) center center;
 }
+.aboutMe2_Left .happy_photo {
+    
+}
+.aboutMe2_Left .play_photo {
+    
+}
+.aboutMe2_Left .enjoy_photo {}
 .aboutMe_Right {
     width: 50%;
     font-family: var(--font-kor3);
@@ -826,7 +834,7 @@ body {
 #scriptV .info h3 span {}
 #scriptV .iWrap {
     flex: 0 0 65%;
-
+    
 }
 
 #scriptV iframe {
