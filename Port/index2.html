@@ -84,16 +84,19 @@
         <section id="aboutMe2">
             <div class="aboutMe2">
                 <div class="aboutMe2_Left">
-                    <div class="happy_photo">
-                        <!-- <img src="./assets/img/about1.jpg" alt="happy"> -->
+                    <!-- <div class="happy_photo">
+                        <img src="./assets/img/about1.jpg" alt="happy">
                     </div>
                     <div class="play_photo">
-                        <!-- <img src="./assets/img/about2.jpg" alt="play"> -->
+                        <img src="./assets/img/about2.jpg" alt="play">
                     </div>
-                    <div class="enjoy_photo"></div>
+                    <div class="enjoy_photo"></div> -->
                 </div>
                 <div class="aboutMe_Right">
-                    <div class="happy">
+                    <div class="tabWrap">
+                        <div class="tab-btn"><span class="active">HAPPY</span><span>PLAY</span><span>ENJOY</span></div>
+                    </div>
+                    <div class="tab-cont happy">
                         <h3>안녕하세요!</h3>
                         <p>정은지 입니다. 디자인을 사랑하는 저는 웹디자인에 관심을 갖게 되었고
                         저만의 사이트를 만들고자 코딩 공부를 하게 되었습니다.
@@ -103,27 +106,15 @@
                         노력하여 성장해나가는 것이 제 다음 꿈입니다. 
                         꿈을 위해 노력한 제 흔적들을 이 공간에 담아보았습니다.</p>
                     </div>
-                    <!-- <div class="play">
-                        <h3>안녕하세요!</h3>
-                        <p>정은지 입니다. 디자인을 사랑하는 저는 웹디자인에 관심을 갖게 되었고
-                        저만의 사이트를 만들고자 코딩 공부를 하게 되었습니다.
-                        장장 6개월동안 배우면서 코딩에 매력을 느끼게 되었고. 
-                        자연스럽게 웹퍼블리셔라는 직업을 꿈꾸게 되었습니다.
-                        좋아하는 일인 만큼 책임감을 가지고 꾸준히 성장하도록
-                        노력하여 성장해나가는 것이 제 다음 꿈입니다. 
-                        꿈을 위해 노력한 제 흔적들을 이 공간에 담아보았습니다.</p>
+                    <div class="tab-cont play">
+                        <h3>플레이</h3>
+                        <p>플레이화면입니다</p>
                     </div>
-                    <div class="enjoy">
-                        <h3>안녕하세요!</h3>
-                        <p>정은지 입니다. 디자인을 사랑하는 저는 웹디자인에 관심을 갖게 되었고
-                        저만의 사이트를 만들고자 코딩 공부를 하게 되었습니다.
-                        장장 6개월동안 배우면서 코딩에 매력을 느끼게 되었고. 
-                        자연스럽게 웹퍼블리셔라는 직업을 꿈꾸게 되었습니다.
-                        좋아하는 일인 만큼 책임감을 가지고 꾸준히 성장하도록
-                        노력하여 성장해나가는 것이 제 다음 꿈입니다. 
-                        꿈을 위해 노력한 제 흔적들을 이 공간에 담아보았습니다.</p>
-                    </div> -->
-                    <div class="word"><span class="active">HAPPY</span><span>PLAY</span><span>ENJOY</span></div>
+                    <div class="tab-cont enjoy">
+                        <h3>인조이!</h3>
+                        <p>인조이화면입니다</p>
+                    </div>
+ 
                 </div> 
             </div>     
         </section>
@@ -353,6 +344,25 @@
 
         const $bgm = $(".bgm"),
               $themeSong = $("#theme-song")[0];
+              
+        const tabBtn = $(".tab-btn span");        
+        const tabCont = $(".tab-cont");           
+
+        tabBtn.click(function(e){
+            e.preventDefault();
+            let target = $(this);    
+
+            tabBtn.removeClass("active");
+            target.addClass("active");
+
+            let index = target.index();
+            
+            tabCont.css("display","none");
+            tabCont.eq(index).css("display","block");
+        });
+
+            
+
 
 
 

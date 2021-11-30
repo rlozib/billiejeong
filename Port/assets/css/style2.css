@@ -29,7 +29,7 @@ body {
     z-index: 1000000;
     cursor: pointer;
     text-align: center;
-    line-height: 2.3vw;
+    line-height: 2.1vw;
     color: #fff;
 }
 
@@ -542,7 +542,7 @@ body {
     background: #e39c3d;
     position: absolute;
     left: 0;
-    bottom: -0.1vw;
+    bottom: -0.4vw;
     border-radius: 15px;
 }
 .aboutMe_text1 .s1 {
@@ -584,34 +584,45 @@ body {
     padding: 0 5%;
     position: relative;
 }
+
+.aboutMe_Right .tab-cont {}
+.aboutMe_Right .tab-cont.happy {}
+.aboutMe_Right .tab-cont.play {
+    display: none;
+}
+.aboutMe_Right .tab-cont.enjoy {
+    display: none;
+}
 .aboutMe_Right h3 {
     font-size: 4vw;
     margin-bottom: 1vw;
 }
+
 .aboutMe_Right p {
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     line-height: 1.6;
     word-break: break-all;
 }
-.aboutMe_Right .word {
+.aboutMe_Right .tab-btn {
     position: absolute;
     left: 0;
     bottom: 3vw;
     width: 100%;
+    cursor: pointer;
 }
 
-.aboutMe_Right .word span {
+.aboutMe_Right .tab-btn span {
     display: inline-block;
     padding: 1vw 2vw;
     font-size: 3vw;
     line-height: 1;
-    /* padding-top: 0.9vw; */
-    padding-bottom: 0.4vw;
-    /* margin-bottom: 1vw; */
+    padding-top: 0.9vw;
+    padding-bottom: 0.5vw;
+    margin-bottom: 1vw;
     font-family: var(--font-main);
 }
 
-.aboutMe_Right .word span.active {
+.aboutMe_Right .tab-btn span.active {
     background: #e39c3d;
     color: #A5323C;
     border-radius: 100px;
