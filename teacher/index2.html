@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style2.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header id="header">
+        <div class="ham"><span></span></div>
+        <div class="music"><i class="fa fa-volume-off" aria-hidden="true"></i></div>
+    </header>
+    
+    <div id="contents">
+        <section id="section1">
+            <div class="sec1">
+                <h1><strong>billie</strong> <em>jeong</em></h1>
+            </div>
+            <span class="particletext hearts">Hearts</span>
+        </section>
+        <!-- //section1 -->
+
+        <section id="section2">
+            <div class="sec2">
+                <div class="wavetext"></div>
+                <div class="textWrap">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </section>
+        <!-- //section2 -->
+
+        <section id="section3">
+            <div class="sec3">
+                <h2><strong class="s1">HAPPY</strong> <strong class="s2">PLAY</strong> <strong class="s3">ENJOY</strong></h2>
+            </div>
+        </section>
+        <!-- //section3 -->
+
+        <section id="section4">
+            <div class="sec4">
+                <div class="left"></div>
+                <div class="right">
+                    <div>
+                        <h3>안녕하세요!</h3>
+                        <p>웹에 관심이 많았던 저는 웹디자인을 배우는 코딩을 접하게 되었습니다. <br>배워보지도 못한 영역이라 처음엔 개념이 안 잡혀있어서 어려웠지만, <br>매일매일 메모장에 그날의 수업을 웹 수업 1일 차, 2일 차 이렇게 적어가며 네이버 클라우드에 저장해 집에서도 복습했습니다. 그렇게 배우다 보니 코딩의 매력에 빠져 퍼블리셔라는 직업을 알게 되었습니다.</p>
+                        
+                    </div>
+                    <div class="word"><span class="active">HAPPY</span><span>PLAY</span><span>ENJOY</span></div>
+                </div>
+            </div>
+        </section>
+        <!-- //section4 -->
+
+        <section id="section5"></section><!-- //section5 -->
+        <section id="section6"></section><!-- //section6 -->
+    </div>
+    <!-- //contents -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        var text = "I wanna billie jeong!";
+
+        for(var i in text) { 
+            if(text[i] === " ") {
+                $(".wavetext").append( $("<span>").html("&nbsp;") ); 
+            } else {  
+                $(".wavetext").append( $("<span>").text(text[i]) ); 
+            }
+        }
+        function hearts() {
+            $.each($(".particletext.hearts"), function(){
+                var heartcount = ($(this).width()/50) *35;
+                for(var i = 0; i <= heartcount; i++) {
+                    var size = ($.rnd(60, 320)/10);
+                    $(this).append('<span class="particle" style="top:' + $.rnd(20,80) + '%; left:' + $.rnd(0,95) + '%;width:' + size + 'px; height:' + size + 'px;animation-delay: ' + ($.rnd(0,30)/10) + 's;"></span>');
+                }
+            });
+        }
+        jQuery.rnd = function(m,n) {
+            m = parseInt(m);
+            n = parseInt(n);
+            return Math.floor( Math.random() * (n - m + 1) ) + m;
+        }
+
+        hearts();
+    </script>
+</body>
+</html>

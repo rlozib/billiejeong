@@ -1,6 +1,6 @@
 .container {
     position: relative;
-    width: 1700px;
+    width: 1600px;
     margin: 0 auto;
 }
 
@@ -817,9 +817,10 @@ body {
     position: relative;
 }
 #scriptV .topIcon {
-    background: url(../img/horseshoe.png);
-    width: 110px;
-    height: 118px;
+    background: url(../img/horseshoe.png) no-repeat center;
+    background-size: cover;
+    width: 5.6vw;
+    height: 6vw;
     position: absolute;
     left: 50%;
     transform: translate(-50%, 210%);
@@ -830,8 +831,8 @@ body {
     color: #4b4e69;
     font-size: 2vw;
     text-align: center;
-    padding-top: 21.18vw;
-    padding-bottom: 14.58vw;
+    padding-top: 20vw;
+    padding-bottom: 10vw;
 
 }
 
@@ -856,16 +857,21 @@ body {
 
 #scriptV .info {
     position: relative;
-    flex: 0 0 33%;
+    flex: 0 0 28%;
     text-transform: uppercase;
 }
 #scriptV .info .desc {
     font-size: 1.3vw;
+    line-height: 2;
     font-family: var(--font-kor1);
+    white-space: nowrap;
 }
 #scriptV .info .view_btn .line {
-    width: 10vw;
+    width: 8.5vw;
     height: 0.7vw;
+}
+@media (max-width: 1730px){
+
 }
 
 /* 좌측 스크립트 */
@@ -890,6 +896,7 @@ body {
     font-size: 1.5vw;
     right: 1vw;
     bottom: 0;
+    cursor: pointer;
 
 }
 
@@ -916,6 +923,7 @@ body {
     font-size: 1.7vw;
     left: 1vw;
     bottom: 0;
+    cursor: pointer;
 
 }
 
@@ -985,9 +993,10 @@ body {
     position: relative;
 }
 #referBook .topIcon {
-    background: url(../img/horseshoe.png);
-    width: 110px;
-    height: 118px;
+    background: url(../img/horseshoe.png) no-repeat center;
+    background-size: cover;
+    width: 5.6vw;
+    height: 6vw;
     position: absolute;
     left: 50%;
     transform: translate(-50%, 130%);
@@ -998,8 +1007,8 @@ body {
     color: #4b4e69;
     font-size: 2vw;
     text-align: center;
-    padding-top: 305px;
-    padding-bottom: 150px;
+    padding-top: 16vw;
+    padding-bottom: 7vw;
     text-transform: uppercase;
 }
 
@@ -1010,16 +1019,18 @@ body {
 }
 #referBook .referL {
     flex: 0 0 50%;
-    height: 850px;
+    min-height: 100vh;    
     background: #e79f3e;
     display: inline-block;
     color: #bf3d49;
     position: relative;
+    /* opacity: 0; */
+    transition: opacity .4s cubic-bezier(.36, .33, 0, 1);
 }
 
 #referBook .referR {
     flex: 0 0 50%;
-    height: 850px;
+    min-height: 100vh;
     background: #296650;
     display: inline-block;
     color: #ebdbd2;
@@ -1029,14 +1040,14 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -90%);
 }
 
 .referWrap .referR .referText {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -90%);
 }
 
 #referBook .referWrap em {
@@ -1064,9 +1075,10 @@ body {
     position: relative;
 }
 #cssAni .topIcon{
-    background: url(../img/horseshoe.png);
-    width: 110px;
-    height: 118px;
+    background: url(../img/horseshoe.png) no-repeat center;
+    background-size: cover;
+    width: 5.6vw;
+    height: 6vw;
     position: absolute;
     left: 50%;
     transform: translate(-50%, 130%);
@@ -1076,8 +1088,8 @@ body {
     color: #4b4e69;
     font-size: 2vw;
     text-align: center;
-    padding-top: 305px;
-    padding-bottom: 150px;
+    padding-top: 16vw;
+    padding-bottom: 7vw;
     text-transform: uppercase;
 }
 #cssAni .cardWrap {
