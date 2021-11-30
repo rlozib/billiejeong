@@ -15,9 +15,23 @@ body {
     overflow: hidden;
     
 }
+.scroll {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    background: #ecded6;
+    z-index: 10000;
+    color: #e39c3d;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 1vw;
+    padding: 0px 20px;
+    font-family: var(--font-main);
+}
 
-
-/* hdeader */
+/* heeader */
 #header .ham {
     position: fixed;
     right: 1vw;
@@ -538,7 +552,7 @@ body {
 .aboutMe_text1 h2 strong::after {
     content: '';
     width: 100%;
-    height: .7vw;
+    height: .5vw;
     background: #e39c3d;
     position: absolute;
     left: 0;
@@ -595,7 +609,7 @@ body {
 }
 .aboutMe_Right h3 {
     font-size: 4vw;
-    margin-bottom: 1vw;
+    margin-bottom: 2vw;
 }
 
 .aboutMe_Right p {
@@ -606,18 +620,18 @@ body {
 .aboutMe_Right .tab-btn {
     position: absolute;
     left: 0;
-    bottom: 3vw;
+    bottom: 1vw;
     width: 100%;
     cursor: pointer;
 }
 
 .aboutMe_Right .tab-btn span {
     display: inline-block;
-    padding: 1vw 2vw;
-    font-size: 3vw;
+    padding: 2vw 2vw;
+    font-size: 2vw;
     line-height: 1;
     padding-top: 0.9vw;
-    padding-bottom: 0.5vw;
+    padding-bottom: 0.8vw;
     margin-bottom: 1vw;
     font-family: var(--font-main);
 }
@@ -632,58 +646,75 @@ body {
 #siteCoding_intro {
     background: #ecded6;
     height: 100vh;
+    
 }
-#siteCoding_intro .siteCoding_text {
-    font-family: var(--font-main);
-    font-size: 7vw;
-    color: #e59f3f;
+.siteCoding_text {
+    /* font-size: 7vw;
     text-align: center;
     height: 100vh;
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; */
+    height: 100vh;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    
+    font-family: var(--font-main);
+    color: #e59f3f;
     
 }
-#siteCoding_intro .siteCoding_text span {
-    position: relative;
+.siteCoding_text h2 {
+    /* position: relative;
+    display: block; */
+    font-size: 5vw;
+    line-height: 1;
+    text-align: center;
+    
+}
+.siteCoding_text h2 strong {
+    /* border-bottom: .7vw solid #e59f3f; */
     display: block;
-    
+    font-size: 4.6vw;
+    position: relative;
+    color: #e39c3d;
+    margin-bottom: 2vw;
 }
-#siteCoding_intro .siteCoding_text em {
-    /* content: '';
-    width: 30%;
-    height: .7vw;
-    background: #e59f3f;
-    border-radius: 1vw;
+.siteCoding_text h2 strong::after {
+    content: '';
+    width: 100%;
+    height: .5vw;
+    background: #e39c3d;
     position: absolute;
+    left: 0;
+    bottom: -0.4vw;
+    border-radius: 15px;
+}
+.siteCoding_text .s1 {
+    font-size: 4.3vw;
     display: inline-block;
-    left: 40%;
-    bottom: 1.2vw; */
-    border-bottom: .7vw solid #e59f3f;
+}
+.siteCoding_text .s2 {
+    font-size: 5.9vw;
+}
+.siteCoding_text .s3 { 
+    display: inline-block;
+}
 
-}
+/*밑에 겹치게 픽스드 주기*/
 #siteCoding {
-    height: auto;
-}
-#siteCoding #cursor {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background: url(../img/naver.jpg) center center;
-    background-attachment: fixed;
-    background-size: cover;
-    overflow: hidden;
-    z-index: 10;
+    height: 600vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
 }
 #siteCoding .desc {
-    font-family: var(--font-kor1);
+    font-family: var(--font-kor2);
     color: #fff;
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     font-weight: bold;
     display: inline-block;
+    z-index: 100;
 }
 .site {
     position: relative;
@@ -693,26 +724,31 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+}
+.btn {
+    z-index: 1000;
 }
 .btn > div {
     border-radius: 10px;
     display: inline-block;
 }
-.site .title.yellow {
+.site .title {
     font-family: var(--font-main);
-    font-size: 5vw;
-    color: #e59f3f;
+    font-size: 7vw;
     text-align: center;
     display: inline-block;
     text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+    text-transform: uppercase;
+    z-index: 100;
+}
+.site .title.yellow {  
+    color: #e59f3f; 
 }
 .site .title.red {
-    font-family: var(--font-main);
-    font-size: 5vw;
-    color: #a2343c;
-    text-align: center;
-    display: inline-block;
-    text-transform: uppercase;
+    color: #a2343c; 
 }
 .btn.left {
     position: absolute;
@@ -746,6 +782,24 @@ body {
 /* 애플사이트 */
 #siteCoding .appleSite {
     background: #296650;
+}
+.appleSite .cursor {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: url(../img/apple.jpg) center center;
+    background-attachment: fixed;
+    background-size: cover;
+    border: 10px solid #fff;
+    overflow: hidden;
+    z-index: 1;
+    /* cursor: none; */
+    transition: border 0.2s ease;
+    mix-blend-mode: luminosity;
+}
+.appleSite .cursor.active {
+    border: 2vw solid #3f6e5d;
 }
 
 /* 팀사이트 */
@@ -870,8 +924,10 @@ body {
     width: 8.5vw;
     height: 0.7vw;
 }
-@media (max-width: 1730px){
-
+@media (max-width: 1620px){
+    .container {
+        width: 1200px;
+    }
 }
 
 /* 좌측 스크립트 */
