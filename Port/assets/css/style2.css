@@ -48,34 +48,34 @@ body {
 }
 
 
-/* #header .ham span {
-    width: 20px;
-    height: 3px;
+#header .ham span {
+    width: 1vw;
+    height: .17vw;
     background: #fff;
     display: block;
-    margin: 18px 10px;
+    margin: 1vw 0.6vw;
     position: relative;
 }
 
 #header .ham span::before {
     content: '';
-    width: 20px;
-    height: 3px;
+    width: 1vw;
+    height: .17vw;
     background: #fff;
     position: absolute;
     left: 0;
-    bottom: 6px;
+    bottom: 0.4vw;
 }
 
 #header .ham span::after {
     content: '';
-    width: 20px;
-    height: 3px;
+    width: 1vw;
+    height: .17vw;
     background: #fff;
     position: absolute;
     left: 0;
-    top: 6px;
-} */
+    top: 0.4vw;
+}
 
 #header .bgm {
     position: fixed;
@@ -782,6 +782,8 @@ body {
 /* 애플사이트 */
 #siteCoding .appleSite {
     background: #296650;
+    position: absolute;
+    z-index: 100;
 }
 .appleSite .cursor {
     position: absolute;
@@ -805,28 +807,38 @@ body {
 /* 팀사이트 */
 #siteCoding .teamSite {
     background: #E5983A;
+    position: absolute;
+    z-index: 90;
 }
 
 
 /* 메가박스사이트 */
 #siteCoding .megaSite {
     background: #BA3844;
+    position: absolute;
+    z-index: 80;
 }
 
 /* php사이트 */
 #siteCoding .phpSite {
     background: #1C2048;
+    position: absolute;
+    z-index: 70;
 }
 
 /* 리액트사이트 */
 #siteCoding .reactSite {
     background: #296650;
+    position: absolute;
+    z-index: 60;
 }
 
 
 /* 뷰사이트 */
 #siteCoding .vueSite {
     background: #E5983A;
+    position: absolute;
+    z-index: 50;
 }
 
 
