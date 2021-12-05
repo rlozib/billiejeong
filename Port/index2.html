@@ -396,6 +396,24 @@
             document.querySelector(".scroll").innerHTML = scrollTop;
         })
 
+        document.querySelectorAll(".menu ul li a").forEach(el => {
+            el.addEventListener("click", e => {
+                e.preventDefault();
+                document.querySelector(el.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth"
+                })
+            })
+        })
+
+        const Menu = $(".menu");
+        const MenuBg = $(".nav_bg");
+        const Ham = $(".ham");
+
+        Ham.click(function(e){
+            e.preventDefault();
+            Menu.toggleClass("block");
+            MenuBg.toggleClass("block");
+        })
         //스크롤이 됐을 때
         $(window).scroll(function(){
             let scrollTop = $(window).scrollTop();      //scrollTop() : 브라우저의 위치 값
@@ -466,15 +484,7 @@
         });
 
 
-        const Menu = $(".menu");
-        const MenuBg = $(".nav_bg");
-        const Ham = $(".ham");
-
-        Ham.click(function(e){
-            e.preventDefault();
-            Menu.toggleClass("block");
-            MenuBg.toggleClass("block");
-        })
+        
 
 
         

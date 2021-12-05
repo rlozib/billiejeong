@@ -18,7 +18,7 @@ body {
 .scroll {
     position: fixed;
     left: 20px;
-    bottom: 20px;
+    top: 20px;
     background: #ecded6;
     z-index: 90000;
     color: #e39c3d;
@@ -1054,7 +1054,27 @@ body {
 }
 @media (max-width: 1620px){
     .container {
+        width: 1440px;
+    }
+}
+@media (max-width: 1440px){
+    .container {
         width: 1200px;
+    }
+}
+@media (max-width: 1290px){
+    .container {
+        width: 960px;
+    }
+}
+@media (max-width: 960px){
+    .container {
+        width: 780px;
+    }
+}
+@media (max-width: 768px){
+    .container {
+        width: 680px;
     }
 }
 
@@ -1068,9 +1088,9 @@ body {
 
 #scriptV .scriptExL .info .siteIcon {
     position: absolute;
-    width: 5vw;
-    height: 12vh;
-    left: 55%;
+    width: 100%;
+    height: 17vh;
+    right: 0;
     bottom: 3vw;
 }
 
@@ -1095,9 +1115,9 @@ body {
 
 #scriptV .scriptExR .info .siteIcon {
     position: absolute;
-    width: 5vw;
-    height: 12vh;
-    right: 55%;
+    width: 100%;
+    height: 17vh;
+    left: 0%;
     bottom: 3vw;
 }
 
@@ -1285,7 +1305,7 @@ body {
 }
 #cssAni .cardWrap {
     display: flex;
-    align-items: stretch;
+    align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
     max-width: 980px;
@@ -1435,6 +1455,12 @@ body {
     background: url(../img/r_line.svg) no-repeat;
 }
 
+/* @media (max-width:1200px) {
+    .cardWrap {
+        width: 720px;
+    }
+} */
+
 /*photo*/
 #photo {
     position: fixed;
@@ -1447,8 +1473,8 @@ body {
 }
 #photo .intImg {
     z-index: 1000;
-    height: 35vw;
-    padding-top: 3vw;
+    height: 90%;
+    padding-top: 10%;
 }
 
 #photo .intImg svg {
