@@ -181,16 +181,28 @@ body {
     position: relative;
 }
 
-.top_text em::after {
+.top_text em::before {
     content: 'portfolio';
     position: absolute;
     left: 50%;
-    bottom: -30px;
-    transform: translateX(-50%);
+    top:  -130px;
+    transform: translate(-50%, -50%);
     font-size: 16px;
     font-family: var(--font-sub2);
     letter-spacing: 4px;
 }
+.top_text em::after {
+    content: '음악을 재생해 주세요!';
+    position: absolute;
+    left: 50%;
+    bottom: -35px;
+    transform: translateX(-50%);
+    font-size: 16px;
+    font-family: var(--font-kor1);
+    letter-spacing: 4px;
+    white-space: nowrap;
+}
+
 
 .particletext.hearts {
     color: #A5323C;
