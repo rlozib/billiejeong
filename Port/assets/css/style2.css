@@ -29,6 +29,8 @@ body {
     font-size: 1vw;
     padding: 0px 20px;
     font-family: var(--font-main);
+    will-change: transform;
+    overflow: hidden;
 }
 
 /* heeader */
@@ -594,7 +596,7 @@ body {
 .aboutMe2_Left .enjoy_photo {}
 .aboutMe_Right {
     width: 50%;
-    font-family: var(--font-kor3);
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -613,14 +615,16 @@ body {
     display: none;
 }
 .aboutMe_Right h3 {
-    font-size: 4vw;
+    font-size: 2vw;
     margin-bottom: 2vw;
+    font-family: var(--font-kor1);
 }
 
 .aboutMe_Right p {
     font-size: 1.2vw;
     line-height: 1.6;
     word-break: break-all;
+    font-family: var(--font-kor2);
 }
 .aboutMe_Right .tab-btn {
     position: absolute;
@@ -795,8 +799,8 @@ body {
 }
 .appleSite .cursor {
     position: absolute;
-    width: 400px;
-    height: 400px;
+    width: 20%;
+    height: 20vw;
     border-radius: 50%;
     background: url(../img/apple.jpg) center center;
     background-attachment: fixed;
@@ -804,7 +808,7 @@ body {
     border: 10px solid #fff;
     overflow: hidden;
     z-index: 1;
-    /* cursor: none; */
+    cursor: none;
     transition: border 0.2s ease;
     mix-blend-mode: luminosity;
 }
@@ -830,7 +834,7 @@ body {
     border: 10px solid #fff;
     overflow: hidden;
     z-index: 1;
-    /* cursor: none; */
+    cursor: none;
     transition: border 0.2s ease;
     mix-blend-mode: luminosity;
 }
@@ -856,7 +860,7 @@ body {
     border: 10px solid #fff;
     overflow: hidden;
     z-index: 1;
-    /* cursor: none; */
+    cursor: none;
     transition: border 0.2s ease;
     mix-blend-mode: luminosity;
 }
@@ -882,7 +886,7 @@ body {
     border: 10px solid #fff;
     overflow: hidden;
     z-index: 1;
-    /* cursor: none; */
+    cursor: none;
     transition: border 0.2s ease;
     mix-blend-mode: luminosity;
 }
@@ -908,7 +912,7 @@ body {
     border: 10px solid #fff;
     overflow: hidden;
     z-index: 1;
-    /* cursor: none; */
+    cursor: none;
     transition: border 0.2s ease;
     mix-blend-mode: luminosity;
 }
@@ -935,7 +939,7 @@ body {
     border: 10px solid #fff;
     overflow: hidden;
     z-index: 1;
-    /* cursor: none; */
+    cursor: none;
     transition: border 0.2s ease;
     mix-blend-mode: luminosity;
 }
@@ -989,7 +993,8 @@ body {
 
 /*스크립트 예제*/
 #scriptV {
-    height: 400vh;
+    height: 4005px;
+    /* height: 400vh; */
     background: #ecded6;
     position: fixed;
     width: 100%;
@@ -1054,29 +1059,45 @@ body {
 }
 @media (max-width: 1620px){
     .container {
-        width: 1440px;
+        width: 1400px;
     }
 }
 @media (max-width: 1440px){
     .container {
-        width: 1200px;
+        width: 1280px;
     }
 }
 @media (max-width: 1290px){
     .container {
+        width: 1024px;
+    }
+}
+@media (max-width: 1080px){
+    .container {
         width: 960px;
     }
 }
-@media (max-width: 960px){
+@media (max-width: 980px){
     .container {
-        width: 780px;
+        width: 820px;
     }
 }
 @media (max-width: 768px){
     .container {
-        width: 680px;
+        width: 480px;
     }
 }
+@media (max-width: 720px){
+    .container {
+        width: 480px;
+    }
+}
+@media (max-width: 480px){
+    .container {
+        width: 320px;
+    }
+}
+
 
 /* 좌측 스크립트 */
 #scriptV .scriptExL {
@@ -1090,8 +1111,7 @@ body {
     position: absolute;
     width: 100%;
     height: 17vh;
-    right: 0;
-    bottom: 3vw;
+    bottom: 0;
 }
 
 #scriptV .scriptExL .info .view_btn {
@@ -1117,8 +1137,7 @@ body {
     position: absolute;
     width: 100%;
     height: 17vh;
-    left: 0%;
-    bottom: 3vw;
+    bottom: 0;
 }
 
 #scriptV .scriptExR .info .view_btn {
@@ -1139,10 +1158,10 @@ body {
 }
 #scriptV .info.yellow .siteIcon {
     background: url(../img/card.png) no-repeat center;
-    background-size: auto;
+    background-size: 18%;
 }
 #scriptV .info.yellow .view_btn .line {
-    background: url("../img/y_line.svg") no-repeat;
+    background: url("../img/y_line.svg") no-repeat center;
 }
 
 /*네이비*/
@@ -1152,10 +1171,10 @@ body {
 }
 #scriptV .info.navy .siteIcon {
     background: url(../img/b_dice.png) no-repeat center;
-    background-size: auto;
+    background-size: 20%;
 }
 #scriptV .info.navy .view_btn .line {
-    background: url(../img/b_line.svg) no-repeat;
+    background: url(../img/b_line.svg) no-repeat center;
 }
 
 /*레드*/
@@ -1166,11 +1185,11 @@ body {
 
 #scriptV .info.red .siteIcon {
     background: url(../img/seven.png) no-repeat center;
-    background-size: auto;
+    background-size: 18%;
 }
 
 #scriptV .info.red .view_btn .line {
-    background: url(../img/r_line.svg) no-repeat;
+    background: url(../img/r_line.svg) no-repeat center;
 }
 
 /*그린*/
@@ -1181,11 +1200,11 @@ body {
 
 #scriptV .info.green .siteIcon {
     background: url(../img/g_dice.png) no-repeat center;
-    background-size: auto;
+    background-size: 20%;
 }
 
 #scriptV .info.green .view_btn .line {
-    background: url(../img/g_line.svg) no-repeat;
+    background: url(../img/g_line.svg) no-repeat center;
 }
 
 
@@ -1204,8 +1223,8 @@ body {
     background-size: cover;
     width: 5.6vw;
     height: 6vw;
-    position: absolute;
-    left: 50%;
+    position: relative;
+    left: 50%; top: -5%;
     transform: translate(-50%, 130%);
 }
 
@@ -1214,8 +1233,7 @@ body {
     color: #4b4e69;
     font-size: 2vw;
     text-align: center;
-    padding-top: 16vw;
-    padding-bottom: 7vw;
+    padding: 100px 0 100px;
     text-transform: uppercase;
 }
 
@@ -1231,8 +1249,10 @@ body {
     display: inline-block;
     color: #bf3d49;
     position: relative;
-    /* opacity: 0; */
     transition: opacity .4s cubic-bezier(.36, .33, 0, 1);
+}
+#referBook .referL:hover {
+    /* opacity: 0; */
 }
 
 #referBook .referR {
@@ -1465,7 +1485,7 @@ body {
 #photo {
     position: fixed;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: #1C2048;
     left: 50%;
     top: 50%;
@@ -1473,7 +1493,8 @@ body {
 }
 #photo .intImg {
     z-index: 1000;
-    height: 90%;
+    width: 100%;
+    height: 80%;
     padding-top: 10%;
 }
 
@@ -1503,7 +1524,7 @@ body {
     transform: translate(-50%, -50%);
 }
 #contact h2 {
-    padding-top: 10vw;
+    padding-top: 150px;
     font-size: 5.5vw;
     line-height: 1.15;
     text-align: center;
@@ -1512,23 +1533,22 @@ body {
     display: inline-block;
     background: #E59F3F;
     border-radius: .3vw;
+    padding: .6vw 2vw;
+    position: absolute;
+    left: 50%; top: 45%;
+    transform: translate(-50%, -50%);
+}
+#contact .contact-btn a {
     color: #fff;
     text-transform: uppercase;
     font-size: 1vw;
     text-align: center;
-    padding: .6vw 2vw;
-    margin-top: .3vw;
-    position: absolute;
-    left: 50%; top: 50%;
-    transform: translate(-50%, -50%);
-}
-#contact .contact-btn a {
-    line-height: 1;
+    
 }
 #contact .contact {
     position: absolute;
     left: 50%;
-    top: 65%;
+    top: 55%;
     transform: translate(-50%, -50%);
 }
 #contact .email {
@@ -1553,7 +1573,7 @@ body {
 #contact .name {
     position: absolute;
     left: 50%;
-    top: 75%;
+    top: 65%;
     transform: translate(-50%, -50%);
 }
 
@@ -1570,7 +1590,7 @@ body {
     background-color: #E5983A;
     width: 10vw;
     height: 0.2vw;
-    left: -270%;
+    left: -11vw;
     top: 45%;
 }
 #contact .name em::after {
@@ -1579,13 +1599,17 @@ body {
     background-color: #E5983A;
     width: 10vw;
     height: 0.2vw;
-    right: -270%;
+    right: -11vw;
     top: 45%;
 }
 #footer {
     width: 100%;
-    height: 6vw;
+    height: 8vh;
     background: #000;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 #footer span {
     text-align: center;
