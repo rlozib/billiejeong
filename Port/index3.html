@@ -457,6 +457,15 @@
             document.querySelector(".scroll").innerHTML = scrollTop;
         })
 
+        document.querySelectorAll(".menu ul li a").forEach(el => {
+            el.addEventListener("click", e => {
+                e.preventDefault();
+                document.querySelector(el.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth"
+                })
+            })
+        })
+
         //스크롤이 됐을 때
         $(window).scroll(function(){
             let scrollTop = $(window).scrollTop();      //scrollTop() : 브라우저의 위치 값
