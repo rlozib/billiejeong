@@ -1516,9 +1516,9 @@ table {
 #mainCont2 .contWrap .Bcircle {
   position: absolute;
   top: 55vh;
-  right: -920px;
-  width: 2900px;
-  height: 2900px;
+  left: -70vw;
+  width: 200vw;
+  height: 200vw;
   border-radius: 50em;
   border: 1px solid #1e1e1e;
   z-index: 2;
