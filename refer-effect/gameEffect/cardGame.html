@@ -386,7 +386,7 @@
 
             //만약에 카드1와 카드2가 같다면 dataMatch -> true
             if(selectedCards.length == 2){
-                //버그 방시
+                //버그 방지
                 $cardWrap.addClass(playStop);
                 card1 = selectedCards.eq(0).attr(dataType);
                 card2 = selectedCards.eq(1).attr(dataType);
