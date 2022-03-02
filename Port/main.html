@@ -30,11 +30,12 @@
 <body>
     <div class="scroll"><span>0</span></div>
     <div class="cursor"></div>
+    <div class="cursor-follower"></div>
     <header id="header">
-        <div class="ham"><span></span>
-            <!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
+        <div class="ham">
+            <span></span>
         </div>
-        
+
         <div class="bgm">
             <i class="fa fa-volume-off" aria-hidden="true"></i>
             <!-- <i class="fa fa-volume-up" aria-hidden="true"></i> -->
@@ -97,7 +98,7 @@
                         <div class="tab-btn"><span class="active">HAPPY</span><span>PLAY</span><span>ENJOY</span></div>
                     </div>
                     <div class="tab-cont happy">
-                        <h3>행복이 성공의 요소이다. 만약 당신이 지금 하는 일을 사랑한다면, 당신은 성공할 것이다.</h3>
+                        <h3>행복이 성공의 열쇠이다.<br>당신이 하고 있는 일을 사랑한다면 성공할 것이다.</h3>
                         <p>디자인을 사랑하는 저는 웹디자인에 관심을 갖게 되었고
                         저만의 사이트를 만들고자 코딩 공부를 하게 되었습니다.
                         장장 6개월동안 배우면서 코딩에 매력을 느끼게 되었고. 
@@ -107,14 +108,14 @@
                         꿈을 위해 노력한 제 흔적들을 이 공간에 담아보았습니다.</p>
                     </div>
                     <div class="tab-cont play">
-                        <h3>많이 이해하고 싶은 사람은 누구든지 많이 놀아야 한다.</h3>
+                        <h3>많이 이해하고 싶은 사람은 <br>누구든지 많이 놀아야 한다.</h3>
                         <p>어렸을 때부터 도전을 두려워하던 저에게 아버지께서 '도전을 두려워 하지말라.
                         경험해 보는 것이 중요하다. 경험이 최고의 스승이다.' 라고 하시며 늘 응원해주셨습니다.
                         기회가 생긴다면 두려워 하지않고 끊임없이 도전하여 다양한 경험을 많이 할 것입니다.
                         </p>
                     </div>
                     <div class="tab-cont enjoy">
-                        <h3>남의 생활과 비교하지 말고 네 자신의 생활을 즐겨라.</h3>
+                        <h3>남의 생활과 비교하지 말고 <br>네 자신의 생활을 즐겨라.</h3>
                         <p>공부하면서 저보다 뛰어난 친구들과 자꾸 비교하게 되고 그래서 주눅들었던 적이 있습니다. 
                         하지만 포기하지 않고 제자리에서 꾸준히 노력하다 보니 저의 성장하는 모습을 보게 되었고
                         나 자신을 포기하지 않고 묵묵히 노력하면 해내지 못할 것이 없다고 생각하게 되었습니다.
@@ -142,7 +143,7 @@
                     <a href="https://github.com/rlozib/dothome21/blob/main/refer-effect/parallaxEffect/parallaxApple.html">VIEW CODING</a>
                     <a href="https://rlozib.github.io/dothome21/refer-effect/parallaxEffect/parallaxApple.html">VIEW SITE</a>
                 </div>
-                <div class="cursor"></div>
+                <div class="zoom-mouse"></div>
             </div>
         </section>
         <!--appleSite-->
@@ -157,7 +158,7 @@
                     <a href="https://github.com/rlozib/dothome21/tree/main/PF">VIEW CODING</a>
                     <a href="http://rlozib3712.dothome.co.kr/playerfourm/pages/main.php">VIEW SITE</a>
                 </div>
-                <div class="cursor"></div>
+                <div class="zoom-mouse"></div>
             </div>
         </section>
         <!--teamSite-->
@@ -172,7 +173,7 @@
                     <a href="https://github.com/rlozib/dothome21/tree/main/mega">VIEW CODING</a>
                     <a href="https://rlozib.github.io/dothome21/mega/index.html">VIEW SITE</a>
                 </div>
-                <div class="cursor"></div>
+                <div class="zoom-mouse"></div>
             </div>
         </section>
         <!--megaSite-->
@@ -187,7 +188,7 @@
                     <a href="https://github.com/rlozib/dothome21/tree/main/site-php">VIEW CODING</a>
                     <a href="http://billiejeong.dothome.co.kr/site-php/pages/main.php">VIEW SITE</a>
                 </div>
-                <div class="cursor"></div>
+                <div class="zoom-mouse"></div>
             </div>
         </section>
         <!--phpSite-->
@@ -202,7 +203,7 @@
                     <a href="https://github.com/rlozib/react123">VIEW CODING</a>
                     <a href="https://billiesreact.web.app/">VIEW SITE</a>
                 </div>
-                <div class="cursor"></div>
+                <div class="zoom-mouse"></div>
             </div>
         </section>
         <!--reactSite-->
@@ -217,7 +218,7 @@
                     <a href="https://github.com/rlozib/vue234">VIEW CODING</a>
                     <a href="https://billiesvue.web.app/">VIEW SITE</a>
                 </div>
-                <div class="cursor"></div>
+                <div class="zoom-mouse"></div>
             </div>
         </section>
         <!--vueSite-->
@@ -454,7 +455,11 @@
 
     <script src="./assets/js/circle.js"></script>
     <script src="./assets/js/banner.js"></script>
+    <script src="./assets/js/mouse.js"></script>
     <script>
+        //쿠키 설정
+        // document.cookie = "crossCookie=bar; SameSite=None; Secure";
+
         var s = skrollr.init();
         
         window.addEventListener("scroll", () => {
@@ -496,16 +501,6 @@
             tl.to(".hearts", {opacity:1}, "+=1")
         },2000);
 
-        //mouse
-        $(window).mousemove(function(e){
-            gsap.to(".site .cursor", {duration: 0.4, left: e.clientX - 200, top: e.clientY - 200});
-        });
-
-        $(".site .textWrap h2").hover(function(){
-            $(".site .cursor").addClass("active");
-        }, function(){
-            $(".site .cursor").removeClass("active");
-        });
 
 
         const tabBtn = $(".tab-btn span");        
@@ -554,8 +549,7 @@
             e.preventDefault();
             Menu.toggleClass("block");
             MenuBg.toggleClass("block");
-        })
-
+        });
 
         
     </script>
