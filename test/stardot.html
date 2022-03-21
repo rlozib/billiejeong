@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>별찍기</title>
+</head>
+
+<body>
+    <script>
+        {
+            let star = 1;
+            let AddStar = 2;
+            let subSpcae = 1;
+            let Length = 5;
+            let Space = Length - subSpcae;
+
+            for (let i = 0; i < Length; i++) {
+                for (let j = 0; j < Space; j++) {
+                    document.write("&nbsp");
+                }
+                for (let j = 0; j < star; j++) {
+                    document.write("*");
+                }
+                Space -= subSpcae; //Space=Space-subSpcae
+                star += AddStar; //star=star+AddStar
+                document.write("<br>");
+            }
+        }
+        {
+            let Length = 5;
+            let star = Length * 2 - 1;
+            let subStar = 2;
+            let subSpace = -1;
+            let Space = 0;
+
+
+
+            for (let i = 0; i < Length; i++) {
+                for (let j = 0; j < Space; j++) {
+                    document.write("&nbsp");
+                }
+                for (let j = 0; j < star; j++) {
+                    document.write("*");
+                }
+                Space -= subSpace; //Space=Space+subSpace
+                star -= subStar; //star=star-subStar
+                document.write("<br>");
+            }
+        }
+
+        
+    </script>
+    <script>
+
+    </script>
+</body>
+
+</html>

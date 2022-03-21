@@ -12,18 +12,46 @@ li {
 #wrap {
     font-family: 'Nanum Gothic';
 }
-#header {
+.container {
     width: 1200px;
-    background: #888;
+    margin: 0 auto;
+}
+#header {
+    width: 100%;
     margin: 0 auto;
     height: 100px;
     font-weight: 800;
 }
 #header h1 {
-    width: 200px;
+    float: left;
+    margin-top: 20px;
 } 
-#header img {}
-#header .nav {} 
-#header .nav ul {} 
+#header img {
+    width: 200px;
+}
+#header .nav {
+    float: right;
+} 
+#header .nav ul {
+    margin-top: 38px;
+    display: flex;
+    justify-content: space-between;
+} 
 #header .nav ul li {} 
-#header .nav ul li a {} 
+#header .nav ul li::after {
+    content: '|';
+    padding: 0 20px ;
+
+} 
+#header .nav ul li:last-child::after {
+    content: none;
+}
+#header .nav ul li a {}
+
+.contents {}
+.banner {}
+.banner img {
+    width: 100%;
+}
+.banner h2 {}
+.banner p {}
