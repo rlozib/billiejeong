@@ -7,6 +7,7 @@
 /* layout */
 body {
     box-sizing:border-box;
+    
 }
 #main {
     width: 100%;
@@ -1254,7 +1255,8 @@ body {
 #cssAni {
     background: #ecded6;
     position: relative;
-    height: 150vh;
+    /* height: 150vh; */
+    height: 1500px;
 }
 #cssAni h2 {
     font-family: var(--font-kor2);
@@ -1599,7 +1601,7 @@ body {
 }
 #footer {
     width: 100%;
-    height: 8vh;
+    /* height: 8vh; */
     background: #000;
     position: relative;
 }
@@ -1615,6 +1617,7 @@ body {
 }
 #footer span:last-child {
     padding-top: 0;
+    padding-bottom: 2vw;
 }
 
 
