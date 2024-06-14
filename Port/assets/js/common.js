@@ -4,7 +4,7 @@ document.cookie = "crossCookie=bar; SameSite=None; Secure";
 var s = skrollr.init();
 
 window.addEventListener("scroll", () => {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
+    let scrollTop = Math.floor(window.pageYOffset || document.documentElement.scrollTop || window.scrollY);
 
     document.querySelector(".scroll").innerHTML = scrollTop;
 })
