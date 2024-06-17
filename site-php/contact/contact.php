@@ -147,7 +147,7 @@
             </section>
             <section class="section_info">
                 <h2 class="ir_so">서비스 이용정도</h2>
-                <address>&copy;webstoryboy. All rights reserved.</address>
+                <address>&copy;billiejeong. All rights reserved.</address>
             </section>
         </div>
         <a href="#" class="link_top">
