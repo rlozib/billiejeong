@@ -28,7 +28,7 @@
 				<!-- <i class="fa fa-volume-up" aria-hidden="true"></i> -->
 				<i class="fa fa-volume-off" aria-hidden="true"></i>
 			</span>
-			<audio id="theme-song" src="./assets/audio/Billie Jean .mp3" loop="loop"></audio>
+			<audio id="theme-song" src="../assets/audio/gameshow-brazz-658.mp3" loop="loop"></audio>
 		</article>
 		<div class="circle-wrap">
 			<div class="circle-inner">
@@ -75,8 +75,8 @@
 				</div>
 				<div class="menu">
 					<div>
-						<a href="https://www.instagram.com/rlozi._b/" target="_blank"><img class="fixed" src="assets/images/logo1.svg"
-								alt="로고"></a>
+						<a href="https://www.instagram.com/rlozi._b/" target="_blank"><img class="fixed"
+								src="assets/images/logo1.svg" alt="로고"></a>
 						<div>
 							<ul class="fixed">
 								<li class="l1"><a href="https://github.com/rlozib/" target="_blank">Git<span
@@ -225,13 +225,13 @@
 							</defs>
 							<path class="blob cls-1"></path>
 							<g class="cls-2">
-								<image class="cls-3" width="100%" height="100%" xlink:href="assets/images/about1.jpg" />
+								<image class="cls-3" width="110%" height="100%" xlink:href="assets/images/about3.jpg" />
 							</g>
 							<g class="cls-2">
-								<image class="cls-3" width="100%" height="100%" xlink:href="assets/images/about2.jpg" />
+								<image class="cls-3" width="100%" height="85%" xlink:href="assets/images/about2.jpg" />
 							</g>
 							<g class="cls-2">
-								<image class="cls-3" width="100%" height="100%" xlink:href="assets/images/about3.jpg" />
+								<image class="cls-3" width="100%" height="100%" xlink:href="assets/images/about10.jpg" />
 							</g>
 						</svg>
 					</div>
@@ -336,7 +336,8 @@
 				<div class="t2 fixed">
 					팀 내에서 조장 포지션을 맡아 UI/UX 컨셉 도출부터 프로토타입 제작에 참여하고, 편집 기능 스크립트부터 PHP를 이용한 글쓰기, 게시판 등 사이트를 제작하였습니다.
 				</div>
-				<div class="button fixed"><a href="http://rlozib3712.dothome.co.kr/playerfourm/pages/main.php" target="_blank">view
+				<div class="button fixed"><a href="http://rlozib3712.dothome.co.kr/playerfourm/pages/main.php"
+						target="_blank">view
 						site</a></div>
 			</div>
 			<div class="sec4-img1 fixed">
@@ -381,7 +382,8 @@
 				<div class="t2 fixed">
 					MYSQL과 데이터베이스를 사용하여 완성하였고, 회원가입, 게시판, 댓글 작성 등 PHP를 활용하여 만든 포트폴리오 사이트입니다.
 				</div>
-				<div class="button fixed"><a href="http://billiejeong.dothome.co.kr/site-php/pages/main.php" target="_blank">view
+				<div class="button fixed"><a href="http://billiejeong.dothome.co.kr/site-php/pages/main.php"
+						target="_blank">view
 						site</a></div>
 			</div>
 			<div class="sec6-img1 fixed">
@@ -781,7 +783,6 @@
 		};
 
 		$btnSound.on("click", sound);
-
 		//가로모드
 		const contentWrap = $(".contentWrap");
 		const contentItem = $(".content__item");
@@ -815,7 +816,7 @@
 		//스크롤 값 출력
 		var s = skrollr.init();
 		window.addEventListener("scroll", () => {
-			let scrollTop = document.documentElement.scrollTop || window.scrollY || window.PageYOffset;
+			let scrollTop = Math.floor(document.documentElement.scrollTop || window.scrollY || window.PageYOffset);
 			document.querySelector(".scroll").innerHTML = scrollTop;
 		})
 

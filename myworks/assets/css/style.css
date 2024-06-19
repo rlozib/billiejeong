@@ -222,8 +222,7 @@ a:active {
     top: 0;
     left: 0;
     z-index: 2;
-    cursor: url("../images/ic-mouse-hover.png"),
-        auto;
+    cursor: pointer;
     width: 3vw;
     height: 3vw;
     opacity: 0;
@@ -346,7 +345,7 @@ a:active {
 
 .outer-menu .menu>div img {
     width: 10vw;
-    top: 40%;
+    top: 42%;
     left: 50%;
 }
 
@@ -372,17 +371,16 @@ a:active {
 
 .outer-menu .menu>div>div>ul {
     list-style: none;
-    padding: 0 1em;
     margin: 0;
     display: block;
     max-height: 100vh;
-    top: 52%;
+    top: 53%;
 }
 
 .outer-menu .menu>div>div>ul>li {
     padding: 0;
-    margin: 4vw;
-    font-size: 5vw;
+    margin: 3vw;
+    font-size: 4vw;
     display: block;
 }
 
@@ -449,9 +447,9 @@ a:active {
 }
 
 .outer-menu .menu .line1 {
-    /* width: 25vw; height: 0.9vw; */
+    /* width: 25vw; height: 0.6vw; */
     width: 0vw;
-    height: 0.9vw;
+    height: 0.6vw;
     background: #e91c0d;
     display: inline-block;
     border-radius: 5px;
@@ -463,8 +461,8 @@ a:active {
 
 .outer-menu .menu .line2 {
     width: 0vw;
-    height: 0.9vw;
-    /* width: 25vw; height: 0.9vw; */
+    height: 0.6vw;
+    /* width: 25vw; height: 0.6vw; */
     background: #e91c0d;
     display: inline-block;
     border-radius: 5px;
@@ -476,8 +474,8 @@ a:active {
 
 .outer-menu .menu .line3 {
     width: 0vw;
-    height: 0.9vw;
-    /* width: 25vw; height: 0.9vw; */
+    height: 0.6vw;
+    /* width: 25vw; height: 0.6vw; */
     background: #e91c0d;
     display: inline-block;
     border-radius: 5px;
@@ -489,8 +487,8 @@ a:active {
 
 .outer-menu .menu .line4 {
     width: 0vw;
-    height: 0.8vw;
-    /* width: 25vw; height: 0.8vw; */
+    height: 0.6vw;
+    /* width: 25vw; height: 0.6vw; */
     background: #e91c0d;
     display: inline-block;
     border-radius: 5px;
@@ -558,7 +556,7 @@ a:active {
     width: 2.5vw;
     height: 2.5vw;
     text-align: center;
-    line-height: 1.8vw;
+    line-height: 2.5vw;
     /* background-color: #e91c0d; */
     border: 0.25vw solid rgba(233, 28, 13, 1);
     border-radius: 50%;
@@ -586,7 +584,7 @@ a:active {
     width: 3vw;
     height: 3vw;
     text-align: center;
-    line-height: 2.7vw;
+    line-height: 3vw;
     /* background-color: #e91c0d; */
     border: 0.25vw solid rgba(233, 28, 13, 1);
     border-radius: 50%;
@@ -596,6 +594,7 @@ a:active {
     left: 2.5vw;
     bottom: 2.5vw;
     z-index: 99999;
+		cursor: pointer;
 }
 
 .audio .btn-sound .fa-volume-off {
@@ -2174,22 +2173,22 @@ a:active {
 #section16 .sec16-text2 .box .p4 {
     position: relative;
     font-size: 1.3vw;
-    right: 8.3vw;
+    right: 11.6vw;
 }
 
 #section16 .sec16-text2 .box span.s1 {
     position: absolute;
-    margin-left: 10vw;
+    margin-left: 4vw;
 }
 
 #section16 .sec16-text2 .box span.s2 {
     position: absolute;
-    margin-left: 9vw;
+    margin-left: 3vw;
 }
 
 #section16 .sec16-text2 .box span.s3 {
     position: absolute;
-    margin-left: 9.5vw;
+    margin-left: 3.5vw;
 }
 
 #section16 .sec16-text2 .box span.s4 {
@@ -2249,6 +2248,12 @@ a:active {
     position: absolute;
     left: 0;
     top: 0;
+}
+
+#section1 #slider .slider-wrap .cls-3 {
+    width: 100%;
+		height: 100%;
+		object-fit: cover;
 }
 
 #section3 #svg {
