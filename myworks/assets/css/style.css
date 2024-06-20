@@ -17,6 +17,11 @@ body {
 }
 
 /* layout */
+
+.button.fixed {
+	padding-top: 2px;
+}
+
 .contentWrap {
     position: fixed;
     left: 0;
@@ -38,6 +43,8 @@ body {
 #contents>div {
     position: relative;
 }
+
+
 
 #section1 {
     z-index: 1000;
@@ -593,6 +600,7 @@ a:active {
     position: fixed;
     left: 2.5vw;
     bottom: 2.5vw;
+		padding-top: 2px;
     z-index: 99999;
 		cursor: pointer;
 }
