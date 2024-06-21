@@ -220,8 +220,8 @@ a:active {
 
 .outer-menu {
     position: fixed;
-    top: 2vw;
-    left: 2vw;
+    top: 30px;
+    left: 30px;
 }
 
 .outer-menu .checkbox-toggle {
@@ -230,8 +230,8 @@ a:active {
     left: 0;
     z-index: 2;
     cursor: pointer;
-    width: 3vw;
-    height: 3vw;
+    width: 30px;
+    height: 30px;
     opacity: 0;
 }
 
@@ -273,12 +273,11 @@ a:active {
     top: 0vw;
     left: 0;
     z-index: 1;
-    width: 3vw;
-    height: 3vw;
-    padding: 0.5em 1em;
+    width: 30px;
+    height: 30px;
+    padding: 8px 16px;
     border-radius: 0 0.12em 0.12em 0;
-    cursor: url("../images/ic-mouse-hover.png"),
-        auto;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -288,9 +287,9 @@ a:active {
     border-radius: 3px;
     position: relative;
     flex: none;
-    width: 2.5vw;
-    height: 0.42vw;
-    /* width: 32px; height: 8px; */
+    width: 30px;
+    height: 3px;
+    /* width: 32px; height: 12px; */
     background: #E91C0D;
     transition: all 0.4s ease;
     display: flex;
@@ -303,17 +302,17 @@ a:active {
     content: '';
     position: absolute;
     z-index: 1;
-    top: -0.8vw;
+    top: -10px;
     left: 0;
     width: 100%;
-    height: 0.4vw;
+    height: 2.8px;
     border-radius: 3px;
     background: inherit;
     /* transition: all 0.4s ease; */
 }
 
 .outer-menu .hamburger>div:after {
-    top: 0.8vw;
+    top: 10px;
 }
 
 .outer-menu .menu {
@@ -453,6 +452,39 @@ a:active {
     transition: width 0.4s ease;
 }
 
+
+@media (max-width: 1024px) {
+    .outer-menu .menu>div img {
+        width: 150px;
+        top: 33%;
+    }
+
+    .outer-menu .menu>div>div>ul {
+        top: 55%
+    }
+
+    .outer-menu .menu>div>div>ul>li {
+        margin: 8vw;
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 460px) {
+    .outer-menu .menu>div img {
+        width: 60px;
+        top: 25%;
+    }
+
+    .outer-menu .menu>div>div>ul {
+        top: 50%
+    }
+
+    .outer-menu .menu>div>div>ul>li {
+        margin: 30px;
+        font-size: 30px;
+    }
+}
+
 .outer-menu .menu .line1 {
     /* width: 25vw; height: 0.6vw; */
     width: 0vw;
@@ -507,14 +539,14 @@ a:active {
 
 .scroll {
     position: fixed;
-    right: 2.5vw;
-    bottom: 2.5vw;
-    width: 3vw;
-    height: 3vw;
+    right: 30px;
+    bottom: 30px;
+    width: 48px;
+    height: 48px;
     background: #e91c0d;
     text-align: center;
-    line-height: 3vw;
-    font-size: 0.5vw;
+    line-height: 50px;
+    font-size: 10px;
     color: #fff;
     border-radius: 50%;
     z-index: 99999;
@@ -560,59 +592,58 @@ a:active {
 /* audio */
 .loading .loading_audio .btn-sound {
     display: block;
-    width: 2.5vw;
-    height: 2.5vw;
+    width: 30px;
+    height: 30px;
     text-align: center;
-    line-height: 2.5vw;
+    line-height: 30px;
     /* background-color: #e91c0d; */
-    border: 0.25vw solid rgba(233, 28, 13, 1);
+    border: 2px solid rgba(233, 28, 13, 1);
     border-radius: 50%;
     cursor: url("../images/ic-mouse-hover.png"),
         auto;
     position: absolute;
     left: 50%;
-    top: 94%;
-    transform: translate(-50%, -50%);
+    bottom: 40px;
+    transform: translateX(-50%);
+    padding-top: 2px;
     z-index: 99999;
 }
 
 .loading .loading_audio .btn-sound .fa-volume-off {
     color: #e91c0d;
-    font-size: 1.2vw;
+    font-size: 18px;
 }
 
 .loading .loading_audio .btn-sound .fa-volume-up {
     color: #e91c0d;
-    font-size: 1.2vw;
+    font-size: 18px;
 }
 
 .audio .btn-sound {
     display: block;
-    width: 3vw;
-    height: 3vw;
+    width: 40px;
+    height: 40px;
     text-align: center;
-    line-height: 3vw;
+    line-height: 40px;
     /* background-color: #e91c0d; */
-    border: 0.25vw solid rgba(233, 28, 13, 1);
+    border: 3px solid rgba(233, 28, 13, 1);
     border-radius: 50%;
-    cursor: url("../images/ic-mouse-hover.png"),
-        auto;
     position: fixed;
-    left: 2.5vw;
-    bottom: 2.5vw;
-		padding-top: 2px;
+    left: 30px;
+    bottom: 30px;
+    padding-top: 2.5px;
     z-index: 99999;
-		cursor: pointer;
+    cursor: pointer;
 }
 
 .audio .btn-sound .fa-volume-off {
     color: #e91c0d;
-    font-size: 1.5vw;
+    font-size: 22px;
 }
 
 .audio .btn-sound .fa-volume-up {
     color: #e91c0d;
-    font-size: 1.5vw;
+    font-size: 22px;
 }
 
 /* circle */
@@ -731,10 +762,17 @@ a:active {
 
 .header .logo {
     position: fixed;
-    width: 3.5vw;
-    height: 3.5vw;
-    right: 2.5vw;
-    top: 2.5vw;
+    width: 50px;
+    height: 50px;
+    right: 30px;
+    top: 30px;
+}
+
+@media (max-width: 460px){
+    .header .logo {
+        width: 45px;
+        height: 45px;
+    }
 }
 
 .header .logo.up {
@@ -1483,6 +1521,15 @@ a:active {
 }
 
 /* section9 */
+
+#section9 .btn-view {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+
 #section9 .sec9-img1 {
     position: relative;
     right: -300%;
@@ -1542,6 +1589,7 @@ a:active {
     left: 100%;
     top: 10%;
     animation: fly 1.5s infinite alternate;
+    z-index: 9999;
 }
 
 #section9 .sec9-text2 .t1 {
@@ -1588,6 +1636,7 @@ a:active {
     left: 100%;
     top: 10%;
     animation: fly 1.5s infinite alternate;
+    z-index: 9999;
 }
 
 #section9 .sec9-text5 .t1 {
@@ -1633,6 +1682,7 @@ a:active {
     left: 100%;
     top: 10%;
     animation: fly 1.5s infinite alternate;
+    z-index: 9999;
 }
 
 #section9 .sec9-text8 .t1 {
