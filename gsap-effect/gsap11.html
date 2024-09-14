@@ -21,7 +21,7 @@
             color: #fff;
             font-family: "NexonLv1Gothic";
             font-weight: 300;
-            background-color: #111;
+            background-color: #333;
         }
         #parallax__title {
             position: fixed;
@@ -60,19 +60,45 @@
             background: #fff;
             color: #000;
         }
+        #parallax__nav {
+            position: fixed;
+            right: 20px;
+            top: 20px;
+            z-index: 1000;
+            background-color: rgba(0,0,0,0.4);
+            padding: 15px 20px;
+            border-radius: 50px;
+            text-align: center;
+        }
+        #parallax__nav li {
+            list-style: none;
+            display: inline;
+        }
+        #parallax__nav li a {
+            display: inline-block;
+            width: 30px; 
+            height: 30px;
+            padding: 5px;
+            text-align: center;
+            line-height: 30px;
+            transition: all 0.3s;
+        }
+        #parallax__nav li a.active {
+            background: #fff;
+            color: #000;
+            border-radius: 30px;
+        }
 
         /* parallax__cont */
         #parallax__cont {
             max-width: 1600px;
             width: 98%;
             margin: 0 auto;
-            /* background-color: rgba(255,255,255,0.1); */
         }
         .parallax__item {
             width: 1000px;
             max-width: 70vw;
             margin: 30vw auto;
-            /* background-color: rgba(255,255,255,0.3); */
             text-align: left;
             margin-right: 0;
             position: relative;
@@ -123,31 +149,31 @@
             transform: scale(1.025);
         }
         #section1 .parallax__item__img {
-            background-image: url(assets/img/images01@2.jpg);
+            background-image: url(asswts/img/images01@2.jpg);
         }
         #section2 .parallax__item__img {
-            background-image: url(assets/img/images02@2.jpg);
+            background-image: url(asswts/img/images02@2.jpg);
         }
         #section3 .parallax__item__img {
-            background-image: url(assets/img/images03@2.jpg);
+            background-image: url(asswts/img/images03@2.jpg);
         }
         #section4 .parallax__item__img {
-            background-image: url(assets/img/images04@2.jpg);
+            background-image: url(asswts/img/images04@2.jpg);
         }
         #section5 .parallax__item__img {
-            background-image: url(assets/img/images05@2.jpg);
+            background-image: url(asswts/img/images05@2.jpg);
         }
         #section6 .parallax__item__img {
-            background-image: url(assets/img/images06@2.jpg);
+            background-image: url(asswts/img/images06@2.jpg);
         }
         #section7 .parallax__item__img {
-            background-image: url(assets/img/images07@2.jpg);
+            background-image: url(asswts/img/images07@2.jpg);
         }
         #section8 .parallax__item__img {
-            background-image: url(assets/img/images08@2.jpg);
+            background-image: url(asswts/img/images08@2.jpg);
         }
         #section9 .parallax__item__img {
-            background-image: url(assets/img/images09@2.jpg);
+            background-image: url(asswts/img/images09@2.jpg);
         }
         .parallax__item__desc {
             font-size: 4vw;
@@ -166,20 +192,20 @@
 </head>
 <body>
     <header id="parallax__title">
-        <h1>GSAP Parallax Effect04</h1>
-        <p>GSAP scrollTrigger - 이질감 효과</p>
+        <h1>GSAP Parallax Effect11</h1>
+        <p>GSAP scrollTrigger - 메뉴 숨기기 효과</p>
         <ul>
             <li><a href="gsap01.html">1</a></li>
             <li><a href="gsap02.html">2</a></li>
             <li><a href="gsap03.html">3</a></li>
-            <li class="active"><a href="gsap04.html">4</a></li>
+            <li><a href="gsap04.html">4</a></li>
             <li><a href="gsap05.html">5</a></li>
             <li><a href="gsap06.html">6</a></li>
             <li><a href="gsap07.html">7</a></li>
             <li><a href="gsap08.html">8</a></li>
             <li><a href="gsap09.html">9</a></li>
             <li><a href="gsap10.html">10</a></li>
-            <li><a href="gsap11.html">11</a></li>
+            <li class="active"><a href="gsap11.html">11</a></li>
             <li><a href="gsap12.html">12</a></li>
             <li><a href="gsap13.html">13</a></li>
             <li><a href="gsap14.html">14</a></li>
@@ -187,6 +213,21 @@
         </ul>
     </header>
     <!-- //parallax__title  -->
+
+    <nav id="parallax__nav">
+        <ul>
+            <li><a href="#section1" class="active">s1</a></li>
+            <li><a href="#section2">s2</a></li>
+            <li><a href="#section3">s3</a></li>
+            <li><a href="#section4">s4</a></li>
+            <li><a href="#section5">s5</a></li>
+            <li><a href="#section6">s6</a></li>
+            <li><a href="#section7">s7</a></li>
+            <li><a href="#section8">s8</a></li>
+            <li><a href="#section9">s9</a></li>
+        </ul>
+    </nav>
+    <!-- //parallax__nav -->
 
     <main id="parallax__cont">
         <section id="section1" class="parallax__item">
@@ -284,36 +325,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
     <script>
-        // 이질감 효과
-        
-		// 01. 이질감 표현하기
-		// gsap.to(".parallax__item__desc", {
-		// 	yPercent: -300,
-		// 	ease: "none",
-		// 	duration: 0.5,
-		// 	scrollTrigger: {
-		// 		trigger: ".parallax__item__desc",
-		// 		start: "top bottom",
-		// 		end: "bottom top",
-		// 		markers: true,
-		// 		scrub: true
-		// 	}
-		// });
+        // 메뉴 숨기기 효과
+		const showNav = gsap.from("#parallax__nav", { 
+			yPercent: -200,
+			paused: true,
+			duration: 0.2
+		}).progress(1);
 
-		// 02. 여러개 이질감 표현가기
-		gsap.utils.toArray(".parallax__item__desc").forEach(item => {
-			gsap.to(item, {
-				yPercent: -200,
-				ease: "none",
-				duration: 0.5,
-				scrollTrigger: {
-					trigger: item,
-					start: "top bottom",
-					end: "bottom top",
-					markers: false,
-					scrub: 0.5
-				}
-			});
+		ScrollTrigger.create({
+			start: "top top",
+			end: 99999,
+			onUpdate: (self) => {
+				self.direction === -1 ? showNav.play() : showNav.reverse()
+			}
 		});
     </script>
 </body>

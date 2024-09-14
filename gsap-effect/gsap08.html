@@ -156,27 +156,51 @@
             margin-left: -4vw;
             z-index: 100;
             position: relative;
-            word-break: keep-all;
         }
         .parallax__item:nth-child(even) .parallax__item__desc {
             margin-left: auto;
             margin-right: -4vw;
         }
+
+        /* option */
+        .parallax__progress progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10000;
+            width: 100%;
+            height: 5px;
+            border: none;
+            background: transparent;
+        }
+
+        progress::-webkit-progress-bar {
+            background: transparent;
+        }
+
+        progress::-webkit-progress-value {
+                background: linear-gradient(to left, #db38b5,#01b3e3,#25ce7b,#fdc741,#ff6b01,#fc4236);
+                background-attachment: fixed;
+        }
+        progress::-moz-progress-bar {
+                background: linear-gradient(to left, #db38b5,#01b3e3,#25ce7b,#fdc741,#ff6b01,#fc4236);
+                background-attachment: fixed;
+        }
     </style>
 </head>
 <body>
     <header id="parallax__title">
-        <h1>GSAP Parallax Effect04</h1>
-        <p>GSAP scrollTrigger - 이질감 효과</p>
+        <h1>GSAP Parallax Effect08</h1>
+        <p>GSAP scrollTrigger - 진행바 효과</p>
         <ul>
             <li><a href="gsap01.html">1</a></li>
             <li><a href="gsap02.html">2</a></li>
             <li><a href="gsap03.html">3</a></li>
-            <li class="active"><a href="gsap04.html">4</a></li>
+            <li><a href="gsap04.html">4</a></li>
             <li><a href="gsap05.html">5</a></li>
             <li><a href="gsap06.html">6</a></li>
             <li><a href="gsap07.html">7</a></li>
-            <li><a href="gsap08.html">8</a></li>
+            <li class="active"><a href="gsap08.html">8</a></li>
             <li><a href="gsap09.html">9</a></li>
             <li><a href="gsap10.html">10</a></li>
             <li><a href="gsap11.html">11</a></li>
@@ -187,6 +211,11 @@
         </ul>
     </header>
     <!-- //parallax__title  -->
+
+		<div class="parallax__progress">
+			<progress max="100" value="0"></progress>
+		</div>
+		<!-- //parallax__progress  -->
 
     <main id="parallax__cont">
         <section id="section1" class="parallax__item">
@@ -282,39 +311,14 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
     <script>
-        // 이질감 효과
+        // 진행바 효과
         
-		// 01. 이질감 표현하기
-		// gsap.to(".parallax__item__desc", {
-		// 	yPercent: -300,
-		// 	ease: "none",
-		// 	duration: 0.5,
-		// 	scrollTrigger: {
-		// 		trigger: ".parallax__item__desc",
-		// 		start: "top bottom",
-		// 		end: "bottom top",
-		// 		markers: true,
-		// 		scrub: true
-		// 	}
-		// });
-
-		// 02. 여러개 이질감 표현가기
-		gsap.utils.toArray(".parallax__item__desc").forEach(item => {
-			gsap.to(item, {
-				yPercent: -200,
-				ease: "none",
-				duration: 0.5,
-				scrollTrigger: {
-					trigger: item,
-					start: "top bottom",
-					end: "bottom top",
-					markers: false,
-					scrub: 0.5
-				}
-			});
-		});
+        gsap.to("progress", {
+            value: 100,
+            ease: "none",
+            scrollTrigger: {scrub: 0.3}
+        });
     </script>
 </body>
 </html>
