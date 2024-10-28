@@ -71,9 +71,8 @@
   height: 350px;
   margin-bottom: 1%;
   float: left;
-
   border-bottom: 3px solid #75a877;
-  background-color: #fff;
+  box-shadow: 1px 1px 12px 2px rgba(0, 0, 0, 0.09);
 }
 .color-shape:first-child:hover {
     border-bottom: 3px solid #a92c76;
