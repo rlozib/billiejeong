@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GSAP Scroll Effect</title>
+	<link rel="stylesheet" href="/assets/css/index.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="wheel-frame pix">
+			<div class="wheel">
+				<div class="wheel-support pix"></div>
+				<div class="hamster puff pix">
+					<div class="ear pix"></div>
+					<div class="head puff pix"></div>
+					<div class="bum puff pix"></div>
+				</div>
+			</div>
+		</div>
+		<input type="range" name="speed" min="0" max="11" value="3">
+
+		<nav class="menu">
+        <ul>
+            <li><a href="gsap01.html">1</a></li>
+            <li><a href="gsap02.html">2</a></li>
+            <li><a href="gsap03.html">3</a></li>
+            <li><a href="gsap04.html">4</a></li>
+            <li><a href="gsap05.html">5</a></li>
+            <li><a href="gsap06.html">6</a></li>
+            <li><a href="gsap07.html">7</a></li>
+            <li><a href="gsap08.html">8</a></li>
+            <li><a href="gsap09.html">9</a></li>
+            <li><a href="gsap10.html">10</a></li>
+            <li><a href="gsap11.html">11</a></li>
+            <li><a href="gsap12.html">12</a></li>
+            <li><a href="gsap13.html">13</a></li>
+            <li><a href="gsap14.html">14</a></li>
+            <li><a href="gsap15.html">15</a></li>
+        </ul>
+    </nav>
+	</div>
+
+	<script>
+		function init() {
+			const wrapper = document.querySelector('.wrapper')
+			const wheel = document.querySelector('.wheel')
+			const defaultHamsterEnergy = 1000
+			const hamster = {
+				energy: defaultHamsterEnergy,
+				speedFactor: 4,
+				isRunning: true,
+			}
+
+			const setSpeed = () => {
+				wrapper.style.setProperty('--hamster-speed', `${1 / hamster.speedFactor}s`)
+				wrapper.style.setProperty('--wheel-speed', `${2 / hamster.speedFactor}s`)
+				wrapper.style.setProperty('--wheel-angle', `${0.4 * hamster.speedFactor}deg`)
+			}
+
+			document.querySelector('input').addEventListener('input', e => {
+				hamster.speedFactor = e.target.value
+				setSpeed()
+			})
+
+			setInterval(() => {
+				if (hamster.isRunning) {
+					hamster.energy -= (hamster.speedFactor * hamster.speedFactor)
+				}
+				if (hamster.isRunning && hamster.energy < 0) {
+					hamster.isRunning = false
+					wheel.classList.add('spinning')
+					setTimeout(() => {
+						hamster.energy = defaultHamsterEnergy
+						hamster.isRunning = true
+						wheel.classList.remove('spinning')
+					}, 6 * 1000)
+				}
+			}, 500)
+
+			setSpeed()
+		}
+
+		window.addEventListener('DOMContentLoaded', init)
+	</script>
+</body>
+
+</html>
