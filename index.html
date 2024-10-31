@@ -93,6 +93,22 @@
         .works {
             background-color: #dce4e1a6;
         }
+
+        .new-box::after {
+            content:"NEW";
+            width: 50px;
+            height: 25px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: rgb(232, 161, 73);
+            font-size: 11px;
+            font-weight: bold;
+            color: #fefefe;
+            padding-top: 2px;
+        }
     </style>
 </head>
 
@@ -178,6 +194,27 @@
 
             <div class="row" id="middle" style="margin-left:16px;">
                 <div id="container" class="clearfix">
+
+                    <!-- box -->
+                    <section class="color-shape site new-box">
+                        <a href="gsap-effect/" target="_blank">
+                            <div class="image-wrap">
+                                <div class="hover-wrap">
+                                    <span class="overlay-img-donut">gsap effect</span>
+                                    <span class="overlay-text-thumb-donut">GSAP</span>
+                                    <span class="overlay-text-thumb1-donut">EFFECT</span>
+                                    <span class="overlay-text-thumb2-donut">gsap</span>
+                                </div>
+                                <img src="assets/img/book22.png" alt="portfolio">
+                                <div class="img-text donutImg">
+                                    <h5>GSAP</h5>
+                                    <p>Effect</p>
+                                    <span>GSAP</span>
+                                </div>
+                            </div>
+                        </a>
+                    </section>
+                    <!-- //box -->
 
                     <!-- box -->
                     <section class="color-shape works site">
@@ -616,27 +653,6 @@
                                     <h5>Vue</h5>
                                     <p>뷰</p>
                                     <span>Vue</span>
-                                </div>
-                            </div>
-                        </a>
-                    </section>
-                    <!-- //box -->
-
-                    <!-- box -->
-                    <section class="color-shape site">
-                        <a href="gsap-effect/" target="_blank">
-                            <div class="image-wrap">
-                                <div class="hover-wrap">
-                                    <span class="overlay-img-donut">gsap effect</span>
-                                    <span class="overlay-text-thumb-donut">GSAP</span>
-                                    <span class="overlay-text-thumb1-donut">EFFECT</span>
-                                    <span class="overlay-text-thumb2-donut">gsap</span>
-                                </div>
-                                <img src="assets/img/book22.png" alt="portfolio">
-                                <div class="img-text donutImg">
-                                    <h5>GSAP</h5>
-                                    <p>Effect</p>
-                                    <span>GSAP</span>
                                 </div>
                             </div>
                         </a>
