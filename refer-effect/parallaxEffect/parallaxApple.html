@@ -583,8 +583,8 @@
                 perspective: 500px;
             }
             .s4Text3 iframe {
-                width: 60vw;
-                height: 60vh;
+                width: 100vw;
+                height: 100vh;
                 transform-style: preserve-3d;
                 transform: translate3d(-50%, -50%, 0);
             }
@@ -762,22 +762,13 @@
                 <iframe class="i4 fixed" src="contact.html"
                     data-49000="transform: translate(-50%,-150%); opacity: 0;"
                     data-49500="transform: translate(-50%,-100%); opacity: 0.4;"
-                    data-49750="transform: translate(-50%,-80%); opacity: 0.7;"
-                    data-50000="transform: translate(-50%,-80%); opacity: 1;"
+                    data-49750="transform: translate(-50%,-50%); opacity: 0.7;"
+                    data-50000="transform: translate(-50%,-50%); opacity: 1;"
                 ></iframe>
             </div>
 
         </section>
         <!--//section4-->
-
-        <section id="section5">
-            <div class="s5Text1">
-               
-            </div>
-        </section>
-        <!--//section5-->
-        <section id="section6"></section><!--//section6-->
-        <section id="section7"></section><!--//section7-->
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
@@ -786,6 +777,8 @@
 
         window.addEventListener("scroll", () => {
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
+
+            scrollTop = Math.round(scrollTop); //scrollTop 값 반올림
         
             document.querySelector(".scroll").innerHTML = scrollTop;
         })
